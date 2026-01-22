@@ -1,53 +1,26 @@
-[gd_scene load_steps=140 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=124 format=4 uid="uid://dq2lmhp70qitb"]
 
-[ext_resource type="Shader" uid="uid://dgg6fspmcxi88" path="res://Theme/dot.gdshader" id="2_bjebc"]
-[ext_resource type="MeshLibrary" uid="uid://cpeckd6dxuhv1" path="res://MeshLibraries/ML1.tres" id="2_hbghi"]
-[ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="3_1pe0h"]
-[ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="3_5rr72"]
-[ext_resource type="Texture2D" uid="uid://gmyncbqtw8c7" path="res://MeshLibraries/stylized_medieval_carry_bag/textures/Material_baseColor.png" id="4_ihfcg"]
-[ext_resource type="PackedScene" uid="uid://bq5vxgerfb6rg" path="res://MeshLibraries/Objects/stool.tscn" id="4_rka8t"]
-[ext_resource type="Shader" uid="uid://y5j3apk18mqq" path="res://Theme/dot_dither.gdshader" id="5_gyffv"]
-[ext_resource type="Texture2D" uid="uid://dan6h5nwenrps" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_baseColor.png" id="5_j7kpp"]
-[ext_resource type="Texture2D" uid="uid://ctwiu0etadklo" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_metallicRoughness.png" id="6_bjebc"]
-[ext_resource type="Texture2D" uid="uid://dx85u3bv258o2" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_normal.png" id="7_5rr72"]
-[ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/vogue/Vogue.ttf" id="8_bjebc"]
-[ext_resource type="Texture2D" uid="uid://d38dwrw8lo2ah" path="res://MeshLibraries/door/textures/material_2_baseColor.jpeg" id="12_3qmij"]
-[ext_resource type="Texture2D" uid="uid://38340057sq8c" path="res://MeshLibraries/door/textures/material_2_metallicRoughness.png" id="13_kb5eu"]
-[ext_resource type="Texture2D" uid="uid://d3txvt5j2i8p2" path="res://MeshLibraries/door/textures/material_2_normal.png" id="14_lfy8a"]
-[ext_resource type="Texture2D" uid="uid://cv8de0cn2ev03" path="res://MeshLibraries/door/textures/material_1_baseColor.jpeg" id="15_ethxx"]
-[ext_resource type="Texture2D" uid="uid://bn5i5o7dbwqdr" path="res://MeshLibraries/door/textures/material_1_metallicRoughness.png" id="16_3o2xh"]
-[ext_resource type="Texture2D" uid="uid://c1nklsl7fau6x" path="res://MeshLibraries/door/textures/material_1_normal.png" id="17_duihb"]
-[ext_resource type="Texture2D" uid="uid://c1hajkbjs5qhd" path="res://MeshLibraries/door/textures/material_baseColor.jpeg" id="18_b6mmh"]
-[ext_resource type="Texture2D" uid="uid://cp65y6tfvrqjl" path="res://MeshLibraries/door/textures/material_metallicRoughness.png" id="19_ttn6t"]
-[ext_resource type="Texture2D" uid="uid://7bipc8p2sh3" path="res://MeshLibraries/door/textures/material_normal.png" id="20_ia5ws"]
-
-[sub_resource type="Gradient" id="Gradient_bjebc"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.8627451, 0.9529412, 0.9529412, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5rr72"]
-gradient = SubResource("Gradient_bjebc")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gyffv"]
-texture = SubResource("GradientTexture2D_5rr72")
-
-[sub_resource type="Gradient" id="Gradient_1pe0h"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.20784314, 0.20784314, 0.10980392, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_27bay"]
-gradient = SubResource("Gradient_1pe0h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sof0w"]
-texture = SubResource("GradientTexture2D_27bay")
-
-[sub_resource type="Environment" id="Environment_2a3ug"]
-background_mode = 1
-background_color = Color(0.010172402, 0.012225552, 0.0122257015, 1)
+[ext_resource type="MeshLibrary" uid="uid://cpeckd6dxuhv1" path="res://MeshLibraries/ML1.tres" id="1_wbpbn"]
+[ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="2_a6rn7"]
+[ext_resource type="PackedScene" uid="uid://bq5vxgerfb6rg" path="res://MeshLibraries/Objects/stool.tscn" id="3_4on3e"]
+[ext_resource type="Material" uid="uid://bjsocgfgxmntf" path="res://Theme/glowing_texture.tres" id="3_a6rn7"]
+[ext_resource type="Texture2D" uid="uid://gmyncbqtw8c7" path="res://MeshLibraries/stylized_medieval_carry_bag/textures/Material_baseColor.png" id="4_bssq0"]
+[ext_resource type="Texture2D" uid="uid://dan6h5nwenrps" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_baseColor.png" id="5_jk4ss"]
+[ext_resource type="Texture2D" uid="uid://ctwiu0etadklo" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_metallicRoughness.png" id="6_r5om4"]
+[ext_resource type="Texture2D" uid="uid://dx85u3bv258o2" path="res://MeshLibraries/simple_old_shotgun/textures/MainMat.006_normal.png" id="7_jky6x"]
+[ext_resource type="Texture2D" uid="uid://d38dwrw8lo2ah" path="res://MeshLibraries/door/textures/material_2_baseColor.jpeg" id="8_4sf5t"]
+[ext_resource type="Texture2D" uid="uid://38340057sq8c" path="res://MeshLibraries/door/textures/material_2_metallicRoughness.png" id="9_3mr0t"]
+[ext_resource type="Texture2D" uid="uid://d3txvt5j2i8p2" path="res://MeshLibraries/door/textures/material_2_normal.png" id="10_6sq2s"]
+[ext_resource type="Texture2D" uid="uid://cv8de0cn2ev03" path="res://MeshLibraries/door/textures/material_1_baseColor.jpeg" id="11_4v3wx"]
+[ext_resource type="Texture2D" uid="uid://bn5i5o7dbwqdr" path="res://MeshLibraries/door/textures/material_1_metallicRoughness.png" id="12_y1wlr"]
+[ext_resource type="Texture2D" uid="uid://c1nklsl7fau6x" path="res://MeshLibraries/door/textures/material_1_normal.png" id="13_n2jt6"]
+[ext_resource type="Texture2D" uid="uid://c1hajkbjs5qhd" path="res://MeshLibraries/door/textures/material_baseColor.jpeg" id="14_h75vw"]
+[ext_resource type="Texture2D" uid="uid://cp65y6tfvrqjl" path="res://MeshLibraries/door/textures/material_metallicRoughness.png" id="15_7vxqa"]
+[ext_resource type="Texture2D" uid="uid://7bipc8p2sh3" path="res://MeshLibraries/door/textures/material_normal.png" id="16_qw8h8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qmij"]
 albedo_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
-albedo_texture = ExtResource("3_1pe0h")
+albedo_texture = ExtResource("2_a6rn7")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ity1e"]
@@ -85,68 +58,20 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_wpf27")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gjkv5"]
-albedo_texture = ExtResource("3_1pe0h")
+albedo_texture = ExtResource("2_a6rn7")
 uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ihfcg"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rka8t"]
 albedo_color = Color(0.8983909, 0.898391, 0.8983909, 1)
-albedo_texture = ExtResource("3_1pe0h")
+albedo_texture = ExtResource("2_a6rn7")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_gyffv"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1pe0h"]
-render_priority = 0
-shader = ExtResource("5_gyffv")
-shader_parameter/num_levels = 6
-shader_parameter/depth_threshold = 0.05
-shader_parameter/reverse_depth_threshold = 0.25
-shader_parameter/normal_threshold = 0.6
-shader_parameter/darken_amount = 0.3
-shader_parameter/lighten_amount = 1.5
-shader_parameter/luminance_weights = Vector3(0.174, 0.927, 0.114)
-shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
-shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
-shader_parameter/dither_repeat = 1.0
-shader_parameter/dither_strength = 0.110000005225
-shader_parameter/min_dither_brightness = 0.1
-shader_parameter/color_a = Color(0, 0, 0, 1)
-shader_parameter/color_b = Color(0.8980392, 1, 1, 1)
-shader_parameter/bayer_mode = 4
-
-[sub_resource type="QuadMesh" id="QuadMesh_27bay"]
-lightmap_size_hint = Vector2i(12, 12)
-material = SubResource("ShaderMaterial_1pe0h")
-flip_faces = true
-size = Vector2(2, 2)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_iae34"]
-render_priority = 0
-shader = ExtResource("2_bjebc")
-shader_parameter/depth_threshold = 0.05
-shader_parameter/reverse_depth_threshold = 0.25
-shader_parameter/normal_threshold = 0.6
-shader_parameter/darken_amount = 0.3
-shader_parameter/lighten_amount = 1.5
-shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
-shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
-shader_parameter/dither_repeat = 0.8
-shader_parameter/dither_strength = 0.9
-shader_parameter/min_dither_brightness = 0.1
-shader_parameter/color_a = Color(0.2, 0.2, 0.09803922, 1)
-shader_parameter/color_b = Color(0.8980392, 1, 1, 1)
-shader_parameter/bayer_mode = 4
-
-[sub_resource type="QuadMesh" id="QuadMesh_7t0pu"]
-lightmap_size_hint = Vector2i(12, 12)
-material = SubResource("ShaderMaterial_iae34")
-flip_faces = true
-size = Vector2(2, 2)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hn12h"]
-albedo_texture = ExtResource("3_1pe0h")
+albedo_texture = ExtResource("2_a6rn7")
 uv1_scale = Vector3(3, 3, 3)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_en083"]
@@ -189,15 +114,49 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l5hcg")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihfcg"]
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_rka8t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sof0w"]
 albedo_color = Color(0.8226427, 0.8226427, 0.8226427, 1)
-albedo_texture = ExtResource("3_1pe0h")
+albedo_texture = ExtResource("2_a6rn7")
 
 [sub_resource type="BoxMesh" id="BoxMesh_j7kpp"]
+
+[sub_resource type="GDScript" id="GDScript_4on3e"]
+resource_name = "Glow"
+script/source = "extends Node3D
+
+@export var glowing_theme : StandardMaterial3D
+
+var glow_tween : Tween
+
+func  _ready() -> void:
+	glow()
+
+func _input(event: InputEvent) -> void:
+	if Input.is_key_pressed(KEY_1):
+		stop_glow()
+
+func stop_glow():
+	glow_tween.kill()
+	glowing_theme.shading_mode = BaseMaterial3D.SHADING_MODE_PER_PIXEL
+	#glowing_theme.albedo_color.b = 1
+
+func glow():
+	glowing_theme.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	
+	glow_tween = create_tween()
+	glow_tween.set_loops()
+	
+	glow_tween.tween_property(glowing_theme, \"albedo_color:g\", 0.7, 0.5)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
+	#the '\\' allows for newline, so that it's more readable
+	
+	glow_tween.tween_property(glowing_theme, \"albedo_color:g\", 0.4, 0.5)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
+"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nf0n2"]
 resource_name = "Material.001"
@@ -815,13 +774,11 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_obfqt")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gyffv"]
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qcudu"]
 resource_name = "Material"
 cull_mode = 2
 shading_mode = 0
-albedo_texture = ExtResource("4_ihfcg")
+albedo_texture = ExtResource("4_bssq0")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_bwuum"]
 _surfaces = [{
@@ -857,22 +814,19 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bwuum")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27bay"]
-albedo_texture = ExtResource("5_j7kpp")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m58uy"]
 resource_name = "MainMat.006"
 cull_mode = 2
-albedo_texture = ExtResource("5_j7kpp")
+albedo_texture = ExtResource("5_jk4ss")
 metallic = 1.0
-metallic_texture = ExtResource("6_bjebc")
+metallic_texture = ExtResource("6_r5om4")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("6_bjebc")
+roughness_texture = ExtResource("6_r5om4")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("7_5rr72")
+normal_texture = ExtResource("7_jky6x")
 ao_enabled = true
-ao_texture = ExtResource("6_bjebc")
+ao_texture = ExtResource("6_r5om4")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1af5n"]
 _surfaces = [{
@@ -1223,20 +1177,20 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_bw4iq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_be5co"]
-albedo_texture = ExtResource("12_3qmij")
+albedo_texture = ExtResource("8_4sf5t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fat1e"]
 resource_name = "material_2"
 cull_mode = 2
-albedo_texture = ExtResource("12_3qmij")
+albedo_texture = ExtResource("8_4sf5t")
 metallic = 1.0
-metallic_texture = ExtResource("13_kb5eu")
+metallic_texture = ExtResource("9_3mr0t")
 metallic_texture_channel = 2
 roughness = 0.7212271
-roughness_texture = ExtResource("13_kb5eu")
+roughness_texture = ExtResource("9_3mr0t")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("14_lfy8a")
+normal_texture = ExtResource("10_6sq2s")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_dmeb2"]
 _surfaces = [{
@@ -1281,14 +1235,14 @@ albedo_color = Color(0.7987912, 0.7987912, 0.79879117, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b54ay"]
 resource_name = "material_1"
 cull_mode = 2
-albedo_texture = ExtResource("15_ethxx")
+albedo_texture = ExtResource("11_4v3wx")
 metallic = 1.0
-metallic_texture = ExtResource("16_3o2xh")
+metallic_texture = ExtResource("12_y1wlr")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("16_3o2xh")
+roughness_texture = ExtResource("12_y1wlr")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("17_duihb")
+normal_texture = ExtResource("13_n2jt6")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_835go"]
 _surfaces = [{
@@ -1326,19 +1280,19 @@ shadow_mesh = SubResource("ArrayMesh_835go")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_swvua"]
 albedo_color = Color(0.72130203, 0.72130215, 0.721302, 1)
-albedo_texture = ExtResource("18_b6mmh")
+albedo_texture = ExtResource("14_h75vw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xpskd"]
 resource_name = "material"
 cull_mode = 2
-albedo_texture = ExtResource("18_b6mmh")
+albedo_texture = ExtResource("14_h75vw")
 metallic = 1.0
-metallic_texture = ExtResource("19_ttn6t")
+metallic_texture = ExtResource("15_7vxqa")
 metallic_texture_channel = 2
-roughness_texture = ExtResource("19_ttn6t")
+roughness_texture = ExtResource("15_7vxqa")
 roughness_texture_channel = 1
 normal_enabled = true
-normal_texture = ExtResource("20_ia5ws")
+normal_texture = ExtResource("16_qw8h8")
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_plwqe"]
 _surfaces = [{
@@ -1374,10 +1328,10 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_plwqe")
 
-[node name="Level1" type="Node3D" unique_id=362291105]
+[node name="Map" type="Node3D" unique_id=1853362266]
 
-[node name="GridMap" type="GridMap" parent="." unique_id=1515769995]
-mesh_library = ExtResource("2_hbghi")
+[node name="GridMap" type="GridMap" parent="." unique_id=780649582]
+mesh_library = ExtResource("1_wbpbn")
 cell_size = Vector3(0.2, 0.2, 0.2)
 cell_center_y = false
 data = {
@@ -1385,409 +1339,306 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 1, 0)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1860670639]
+[node name="Walls" type="Node3D" parent="." unique_id=1839061111]
+transform = Transform3D(3.44, 0, 0, 0, 3.44, 0, 0, 0, 3.44, -0.77441406, 1.1971436, 0.11126709)
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=606328630]
-visible = false
-offset_left = 882.0
-offset_top = 59.0
-offset_right = 1246.0
-offset_bottom = 320.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_gyffv")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1738267872]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1056943021]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_sof0w")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1629585512]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer/MarginContainer" unique_id=2107058403]
-layout_mode = 2
-theme_override_colors/default_color = Color(0.8627451, 0.9529412, 0.9529412, 1)
-theme_override_fonts/normal_font = ExtResource("8_bjebc")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "Hello"
-fit_content = true
-
-[node name="Label3D" type="Label3D" parent="CanvasLayer" unique_id=1332074819]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2509766, 1.1208191, 0)
-visible = false
-billboard = 1
-double_sided = false
-texture_filter = 0
-render_priority = 1
-modulate = Color(18.892157, 18.892157, 18.892157, 1)
-text = "Dark Choices"
-font = ExtResource("8_bjebc")
-font_size = 64
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=645424813]
-offset_left = 26.0
-offset_top = 21.0
-offset_right = 188.0
-offset_bottom = 36.0
-
-[node name="zoom_label" type="RichTextLabel" parent="CanvasLayer/MarginContainer" unique_id=716176583]
-unique_name_in_owner = true
-layout_mode = 2
-theme_override_colors/default_color = Color(0.8627451, 0.9529412, 0.9529412, 1)
-theme_override_fonts/normal_font = ExtResource("8_bjebc")
-bbcode_enabled = true
-text = "Zoom: 100%"
-fit_content = true
-metadata/_edit_lock_ = true
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=91243872]
-texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stretch = true
-stretch_shrink = 2
-metadata/_edit_lock_ = true
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1920117213]
-handle_input_locally = false
-size = Vector2i(640, 360)
-render_target_update_mode = 4
-
-[node name="Level" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1090233854]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport/Level" unique_id=1584832781]
-environment = SubResource("Environment_2a3ug")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport/Level" unique_id=312598613]
-transform = Transform3D(-0.7071068, -0.6830128, -0.1830126, -2.2626695e-08, -0.25881892, 0.9659259, -0.7071068, 0.6830128, 0.1830126, 0, 10, 0)
-light_energy = 0.1
-
-[node name="Walls" type="Node3D" parent="SubViewportContainer/SubViewport/Level" unique_id=1895072147]
-transform = Transform3D(3.44, 0, 0, 0, 3.44, 0, 0, 0, 3.44, -0.77441406, 1.1971436, 0)
-
-[node name="Cylinder" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Level/Walls" unique_id=1687298239]
+[node name="Cylinder" type="MeshInstance3D" parent="Walls" unique_id=1424642107]
 transform = Transform3D(0.98470455, 0, -0.17423253, 0, 1, 0, 0.17423253, 0, 0.98470455, -0.027039975, 0, -0.056173634)
 material_override = SubResource("StandardMaterial3D_3qmij")
 mesh = SubResource("ArrayMesh_806v8")
 
-[node name="Floors" type="Node3D" parent="SubViewportContainer/SubViewport/Level" unique_id=962280006]
+[node name="Floors" type="Node3D" parent="." unique_id=336584938]
 
-[node name="Floor" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Level/Floors" unique_id=1629194378]
+[node name="Floor" type="MeshInstance3D" parent="Floors" unique_id=1990193471]
 transform = Transform3D(6.5, 0, 0, 0, 0.05, 0, 0, 0, 6.5, 0, -0.05, 0)
 material_overlay = SubResource("StandardMaterial3D_gjkv5")
 mesh = SubResource("CylinderMesh_ihfcg")
 
-[node name="Floor2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Level/Floors" unique_id=231101428]
+[node name="Floor2" type="MeshInstance3D" parent="Floors" unique_id=1650355604]
 transform = Transform3D(7, 0, 0, 0, 0.05, 0, 0, 0, 7, 0, -0.09, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_rka8t")
 mesh = SubResource("CylinderMesh_gyffv")
 
-[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1695421303]
-transform = Transform3D(0.5877851, -0.28992587, 0.7552825, 1.1311628e-09, 0.9335804, 0.35836807, -0.8090171, -0.21064341, 0.5487447, 7.5, 4.4239073, 5.5)
-projection = 1
-current = true
-size = 4.0
-far = 97.0
-script = ExtResource("3_5rr72")
-
-[node name="PostProcessing2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Camera3D" unique_id=1492459878]
-transform = Transform3D(0.58201504, -0.00044637313, -0.81317806, -0.301692, 0.928513, -0.21644002, 0.755142, 0.3713, 0.5402741, 0, 0, 0)
-extra_cull_margin = 16000.0
-mesh = SubResource("QuadMesh_27bay")
-
-[node name="PostProcessing" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Camera3D" unique_id=1259355503]
-transform = Transform3D(0.58201504, -0.00044638524, -0.8131782, -0.30169204, 0.928513, -0.21644005, 0.75514203, 0.3713, 0.54027414, 0.060067177, -0.66957533, 1.7443027)
-visible = false
-extra_cull_margin = 16000.0
-mesh = SubResource("QuadMesh_7t0pu")
-
-[node name="Shelf" type="Node3D" parent="." unique_id=1464429698]
+[node name="Shelf" type="Node3D" parent="." unique_id=975610882]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.36282754, 0.08162976, -2.547883)
 
-[node name="shelf_shelf1_0" type="MeshInstance3D" parent="Shelf" unique_id=773318332]
+[node name="shelf_shelf1_0" type="MeshInstance3D" parent="Shelf" unique_id=2002553469]
 transform = Transform3D(0.40370432, 0, 0.41181478, 0, 0.4270585, 0, -0.26943073, 0, 0.6170468, -1.6991222, 0, 0.38683176)
 material_override = SubResource("StandardMaterial3D_hn12h")
 mesh = SubResource("ArrayMesh_u3tgr")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Shelf" unique_id=1532183471]
+[node name="Can" type="MeshInstance3D" parent="Shelf" unique_id=1882542810]
 transform = Transform3D(0.039370097, 0, 0.16322386, 0, 0.1, 0, -0.16554026, 0, 0.038819186, -1.0679315, 0.98071384, 0.36412477)
-material_override = SubResource("StandardMaterial3D_ihfcg")
+material_overlay = ExtResource("3_a6rn7")
 mesh = SubResource("CylinderMesh_rka8t")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Shelf" unique_id=899098182]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Shelf" unique_id=1663380013]
 transform = Transform3D(1.1034273, 0, 0.26070058, 0, 0.33807868, 0, -0.54894674, 0, 0.52402925, -1.4685059, 0.2109375, 0.5187988)
 material_override = SubResource("StandardMaterial3D_sof0w")
 mesh = SubResource("BoxMesh_j7kpp")
 
-[node name="Medkit" type="Node3D" parent="." unique_id=1760473868]
+[node name="Medkit" type="Node3D" parent="." unique_id=1591449540]
 transform = Transform3D(0.22665937, -0.03171944, -9.449869e-09, 5.7318377e-09, -6.777886e-09, 0.23608263, -0.06603455, -0.1088749, -1.19439525e-08, -0.6563535, 1.0217055, -2.8836741)
+script = SubResource("GDScript_4on3e")
+glowing_theme = ExtResource("3_a6rn7")
 
-[node name="Grid_Material_001_0" type="MeshInstance3D" parent="Medkit" unique_id=147799758]
+[node name="Grid_Material_001_0" type="MeshInstance3D" parent="Medkit" unique_id=1040663878]
+material_override = ExtResource("3_a6rn7")
 mesh = SubResource("ArrayMesh_bspx2")
 metadata/_edit_lock_ = true
 
-[node name="Grid_Material_002_0" type="MeshInstance3D" parent="Medkit" unique_id=133533998]
+[node name="Grid_Material_002_0" type="MeshInstance3D" parent="Medkit" unique_id=1129300265]
 material_override = SubResource("StandardMaterial3D_5rr72")
 mesh = SubResource("ArrayMesh_knr0r")
 metadata/_edit_lock_ = true
 
-[node name="Grid_Material_003_0" type="MeshInstance3D" parent="Medkit" unique_id=1645436987]
+[node name="Grid_Material_003_0" type="MeshInstance3D" parent="Medkit" unique_id=63257087]
 mesh = SubResource("ArrayMesh_ktawm")
 metadata/_edit_lock_ = true
 
-[node name="Lamp" type="RigidBody3D" parent="." unique_id=882747318]
+[node name="Lamp" type="RigidBody3D" parent="." unique_id=460306781]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4252048, 0)
 script = SubResource("GDScript_hn12h")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp" unique_id=223034131]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp" unique_id=997389615]
 shape = SubResource("SphereShape3D_hn12h")
 
-[node name="PinJoint3D" type="PinJoint3D" parent="Lamp" unique_id=873509970]
+[node name="PinJoint3D" type="PinJoint3D" parent="Lamp" unique_id=1930424893]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.966784, 0)
 node_a = NodePath("..")
 
-[node name="Lamp" type="Node3D" parent="Lamp" unique_id=232586276]
+[node name="Lamp" type="Node3D" parent="Lamp" unique_id=1731294996]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.88432765, -2.4263663, 0.09336519)
 
-[node name="Cylinder_2" type="Node3D" parent="Lamp/Lamp" unique_id=1238188210]
+[node name="Cylinder_2" type="Node3D" parent="Lamp/Lamp" unique_id=1163691744]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.89528906, 3.0586066, -0.09852219)
 
-[node name="Object_4" type="MeshInstance3D" parent="Lamp/Lamp/Cylinder_2" unique_id=1639374188]
+[node name="Object_4" type="MeshInstance3D" parent="Lamp/Lamp/Cylinder_2" unique_id=1267176128]
 material_override = SubResource("StandardMaterial3D_j7kpp")
 mesh = SubResource("ArrayMesh_ddsuk")
 
-[node name="Plane_3" type="Node3D" parent="Lamp/Lamp" unique_id=1092098671]
+[node name="Plane_3" type="Node3D" parent="Lamp/Lamp" unique_id=1366902172]
 transform = Transform3D(7.2095105e-08, -0.8552847, 0, 0.8552847, 7.2095105e-08, 0, 0, 0, 0.8552847, -0.8985687, 2.9805274, -0.10938394)
 
-[node name="Object_6" type="MeshInstance3D" parent="Lamp/Lamp/Plane_3" unique_id=1103139157]
+[node name="Object_6" type="MeshInstance3D" parent="Lamp/Lamp/Plane_3" unique_id=1398142760]
 material_override = SubResource("StandardMaterial3D_bjebc")
 mesh = SubResource("ArrayMesh_eaht1")
 
-[node name="Circle_4" type="Node3D" parent="Lamp/Lamp" unique_id=98346622]
+[node name="Circle_4" type="Node3D" parent="Lamp/Lamp" unique_id=967782338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.89528906, 2.5087957, -0.09852219)
 
-[node name="Object_8" type="MeshInstance3D" parent="Lamp/Lamp/Circle_4" unique_id=920742639]
+[node name="Object_8" type="MeshInstance3D" parent="Lamp/Lamp/Circle_4" unique_id=402027192]
 material_override = SubResource("StandardMaterial3D_5hph3")
 mesh = SubResource("ArrayMesh_a4e0c")
 
-[node name="Object_9" type="MeshInstance3D" parent="Lamp/Lamp/Circle_4" unique_id=758834062]
+[node name="Object_9" type="MeshInstance3D" parent="Lamp/Lamp/Circle_4" unique_id=1998621183]
 mesh = SubResource("ArrayMesh_jd5r0")
 
-[node name="BezierCurve_5" type="Node3D" parent="Lamp/Lamp" unique_id=1737052457]
+[node name="BezierCurve_5" type="Node3D" parent="Lamp/Lamp" unique_id=1615960304]
 transform = Transform3D(-0.42000002, -3.170912e-08, 3.1709117e-08, 3.170912e-08, -3.5403353e-08, 0.42000002, -3.1709117e-08, 0.42000002, 3.5403353e-08, -0.89528906, 2.3551855, -0.10043913)
 
-[node name="Object_11" type="MeshInstance3D" parent="Lamp/Lamp/BezierCurve_5" unique_id=1984987969]
+[node name="Object_11" type="MeshInstance3D" parent="Lamp/Lamp/BezierCurve_5" unique_id=1012506902]
 mesh = SubResource("ArrayMesh_1xbk1")
 
-[node name="Cylinder_002_6" type="Node3D" parent="Lamp/Lamp" unique_id=1898978073]
+[node name="Cylinder_002_6" type="Node3D" parent="Lamp/Lamp" unique_id=1930145724]
 transform = Transform3D(-0.42000002, -3.170912e-08, 3.1709117e-08, 3.170912e-08, -3.5403353e-08, 0.42000002, -3.1709117e-08, 0.42000002, 3.5403353e-08, -0.89528906, 2.3551855, -0.10043913)
 
-[node name="Object_13" type="MeshInstance3D" parent="Lamp/Lamp/Cylinder_002_6" unique_id=673233568]
+[node name="Object_13" type="MeshInstance3D" parent="Lamp/Lamp/Cylinder_002_6" unique_id=226515814]
 mesh = SubResource("ArrayMesh_j3eok")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamp" unique_id=1900663883]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp" unique_id=1459506950]
 transform = Transform3D(1, 0, 0, 0, -0.04210233, 0.9991133, 0, -0.9991133, -0.04210233, 0, 0.2352941, 0)
 spot_attenuation = -0.55
 spot_angle = 80.18
 
-[node name="Stools" type="CanvasGroup" parent="." unique_id=1104855380]
+[node name="Stools" type="CanvasGroup" parent="." unique_id=519271863]
 
-[node name="Stool" parent="Stools" unique_id=1365498268 instance=ExtResource("4_rka8t")]
+[node name="Stool" parent="Stools" unique_id=1365498268 instance=ExtResource("3_4on3e")]
 transform = Transform3D(0.09650943, 0, -0.026190285, 0, 0.1, 0, 0.026190285, 0, 0.09650943, -0.33560777, -0.13229513, 0)
 
-[node name="Stool2" parent="Stools" unique_id=2084472311 instance=ExtResource("4_rka8t")]
+[node name="Stool2" parent="Stools" unique_id=364091256 instance=ExtResource("3_4on3e")]
 transform = Transform3D(0.0812806, 0, -0.05825344, 0, 0.1, 0, 0.05825344, 0, 0.0812806, -0.005432248, -0.13229513, -0.9949093)
 
-[node name="Stool3" parent="Stools" unique_id=820914939 instance=ExtResource("4_rka8t")]
+[node name="Stool3" parent="Stools" unique_id=1745654373 instance=ExtResource("3_4on3e")]
 transform = Transform3D(0.0812806, 0, -0.05825344, 0, 0.1, 0, 0.05825344, 0, 0.0812806, -0.37191546, -0.13229513, 0.8474157)
 
-[node name="Stool4" parent="Stools" unique_id=2112435462 instance=ExtResource("4_rka8t")]
+[node name="Stool4" parent="Stools" unique_id=921128723 instance=ExtResource("3_4on3e")]
 transform = Transform3D(0.09022243, 0, 0.043126702, 0, 0.099999994, 0, -0.043126702, 0, 0.09022243, -0.1031571, -0.13229513, 1.7282708)
 
-[node name="Vent" type="Node3D" parent="." unique_id=466802509]
+[node name="Vent" type="Node3D" parent="." unique_id=1849828986]
 transform = Transform3D(0.0017711985, 1.8739347e-07, 0.00092890114, -1.1198126e-05, -0.0019998513, 2.1755917e-05, 0.000928834, -2.4467907e-05, -0.0017710654, -2.8602152, 0.34863174, -1.0068218)
 visible = false
 
-[node name="Cube" type="Node3D" parent="Vent" unique_id=1213462946]
+[node name="Cube" type="Node3D" parent="Vent" unique_id=523040073]
 transform = Transform3D(7.3536754, 0, 0, 0, -1.1980658e-06, 100, 0, -7.3536754, -1.6292068e-05, 0, 0, 0)
 metadata/_edit_lock_ = true
 
-[node name="Cube_Material_0" type="MeshInstance3D" parent="Vent/Cube" unique_id=760736140]
+[node name="Cube_Material_0" type="MeshInstance3D" parent="Vent/Cube" unique_id=1184125391]
 mesh = SubResource("ArrayMesh_c40im")
 
-[node name="Cube_001" type="Node3D" parent="Vent" unique_id=1423124872]
+[node name="Cube_001" type="Node3D" parent="Vent" unique_id=621425193]
 transform = Transform3D(7.3536754, 0, 0, 0, 7.3536754, -4.371139e-06, 0, 3.2143936e-07, 100, 0, 109.633995, 92.6)
 metadata/_edit_lock_ = true
 
-[node name="Cube_001_Material_0" type="MeshInstance3D" parent="Vent/Cube_001" unique_id=982048378]
+[node name="Cube_001_Material_0" type="MeshInstance3D" parent="Vent/Cube_001" unique_id=344352433]
 mesh = SubResource("ArrayMesh_xfyvb")
 
-[node name="Cube_002" type="Node3D" parent="Vent" unique_id=1658051911]
+[node name="Cube_002" type="Node3D" parent="Vent" unique_id=1783778525]
 transform = Transform3D(7.3536754, 0, 0, 0, 0.010378054, -99.9999, 0, 7.3536673, 0.14112745, -2.9802322e-06, 14.661583, 199.12961)
 metadata/_edit_lock_ = true
 
-[node name="Cube_002_Material_0" type="MeshInstance3D" parent="Vent/Cube_002" unique_id=522598239]
+[node name="Cube_002_Material_0" type="MeshInstance3D" parent="Vent/Cube_002" unique_id=888553036]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999998, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_1pe0h")
 mesh = SubResource("ArrayMesh_okw3w")
 
-[node name="Cube_003" type="Node3D" parent="Vent" unique_id=1464042266]
+[node name="Cube_003" type="Node3D" parent="Vent" unique_id=507377890]
 transform = Transform3D(7.3536754, 0, 0, 0, -7.3536677, -0.141135, 0, 0.010378609, -99.9999, -2.9802322e-06, -95.10299, 106.68445)
 metadata/_edit_lock_ = true
 
-[node name="Cube_003_Material_0" type="MeshInstance3D" parent="Vent/Cube_003" unique_id=983636415]
+[node name="Cube_003_Material_0" type="MeshInstance3D" parent="Vent/Cube_003" unique_id=1855054280]
 mesh = SubResource("ArrayMesh_eajv1")
 
-[node name="WallShelf" type="Node3D" parent="." unique_id=1982853446]
+[node name="WallShelf" type="Node3D" parent="." unique_id=749959120]
 transform = Transform3D(0.0005093843, -0.00010278861, 0.0019869362, -5.7302197e-05, 0.0019970755, 0.00010566354, -0.004973655, -3.353584e-05, 0.00020227811, -2.7597961, 0.6624756, -0.40582275)
 
-[node name="Cube" type="Node3D" parent="WallShelf" unique_id=948376970]
+[node name="Cube" type="Node3D" parent="WallShelf" unique_id=1538862309]
 transform = Transform3D(110.1771, 0, 0, 0, -1.6987215e-05, 10.733755, 0, -104.266785, -1.7487507e-06, 0, 157.85191, 0)
 metadata/_edit_lock_ = true
 
-[node name="Cube_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube" unique_id=1763046996]
+[node name="Cube_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube" unique_id=503418993]
 material_override = SubResource("StandardMaterial3D_lhbbi")
 mesh = SubResource("ArrayMesh_w2tmv")
 metadata/_edit_lock_ = true
 
-[node name="Cube_001" type="Node3D" parent="WallShelf" unique_id=404628121]
+[node name="Cube_001" type="Node3D" parent="WallShelf" unique_id=1928679951]
 transform = Transform3D(9.779673, 0, 0, 0, -7.5507046e-06, 42.88052, 0, -46.345894, -6.9861235e-06, -93.91836, 107.38489, -57.903885)
 metadata/_edit_lock_ = true
 
-[node name="Cube_001_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube_001" unique_id=1198608873]
+[node name="Cube_001_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube_001" unique_id=1884430297]
 mesh = SubResource("ArrayMesh_nlvmm")
 metadata/_edit_lock_ = true
 
-[node name="Cube_002" type="Node3D" parent="WallShelf" unique_id=773477913]
+[node name="Cube_002" type="Node3D" parent="WallShelf" unique_id=192540621]
 transform = Transform3D(9.779673, 0, 0, 0, -7.5507046e-06, 42.88052, 0, -46.345894, -6.9861235e-06, 92.895195, 107.38489, -57.903885)
 metadata/_edit_lock_ = true
 
-[node name="Cube_002_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube_002" unique_id=430423373]
+[node name="Cube_002_Material_001_0" type="MeshInstance3D" parent="WallShelf/Cube_002" unique_id=2079734397]
 mesh = SubResource("ArrayMesh_frh16")
 metadata/_edit_lock_ = true
 
-[node name="Bag" type="Node3D" parent="." unique_id=181110161]
+[node name="Bag" type="Node3D" parent="." unique_id=1188388606]
 transform = Transform3D(-0.06964591, -0.07378162, 0.17235348, 0.013069985, 0.18150344, 0.082980014, -0.18702573, 0.04015938, -0.058383245, 0.87286377, 0.20593262, -0.13908005)
 
-[node name="Cube_002_0" type="MeshInstance3D" parent="Bag" unique_id=1250571177]
+[node name="Cube_002_0" type="MeshInstance3D" parent="Bag" unique_id=1193392014]
 transform = Transform3D(-0.9999999, 0, 2.9802322e-08, 1.4901161e-08, 0.99993, 0.011620022, 0, 0.01162, -0.9999299, -0.006919861, 1.1725001, -0.40499997)
-material_override = SubResource("StandardMaterial3D_gyffv")
+material_overlay = ExtResource("3_a6rn7")
 mesh = SubResource("ArrayMesh_43ixw")
 metadata/_edit_lock_ = true
 
-[node name="shotgun" type="Node3D" parent="." unique_id=1230078461]
+[node name="shotgun" type="Node3D" parent="." unique_id=799306856]
 transform = Transform3D(0.09084464, -0.07833189, -0.057528466, 0.089085236, 0.035637636, 0.09215173, -0.038848937, -0.10145061, 0.07678991, -2.7808838, 1.2070313, -0.70062256)
 
-[node name="shotgun_006_MainMat_006_0" type="MeshInstance3D" parent="shotgun" unique_id=965933261]
-material_override = SubResource("StandardMaterial3D_27bay")
+[node name="shotgun_006_MainMat_006_0" type="MeshInstance3D" parent="shotgun" unique_id=802816437]
+material_overlay = ExtResource("3_a6rn7")
 mesh = SubResource("ArrayMesh_df703")
 metadata/_edit_lock_ = true
 
-[node name="Journal" type="Node3D" parent="." unique_id=1036367876]
+[node name="Journal" type="Node3D" parent="." unique_id=1975556116]
 transform = Transform3D(0.024140855, 0.1802553, -0.083218075, -0.19823016, 0.026548157, -1.3182977e-10, 0.011046432, 0.08248166, 0.18186466, 5.5386963, 4.3783264, 4.5565796)
 visible = false
 
-[node name="OmniLight3D" type="SpotLight3D" parent="Journal" unique_id=1400195469]
+[node name="OmniLight3D" type="SpotLight3D" parent="Journal" unique_id=64792711]
 transform = Transform3D(0.71238846, 4.9044266, 0.66264963, -0.37637603, -0.6138508, 4.9478817, 4.934657, -0.7548438, 0.28172183, 0.8594761, 16.698647, 1.1164732)
 light_energy = 1.437
 spot_angle = 60.55
 spot_angle_attenuation = 0.26794398
 
-[node name="open_book_full" type="Node3D" parent="Journal" unique_id=1052890224]
+[node name="open_book_full" type="Node3D" parent="Journal" unique_id=820881410]
 
-[node name="book_cover_full" type="Node3D" parent="Journal/open_book_full" unique_id=1705599009]
+[node name="book_cover_full" type="Node3D" parent="Journal/open_book_full" unique_id=771308063]
 transform = Transform3D(14.392017, 0, 0, 0, 0.3435831, 0, 0, 0, 21.437529, 0, 3.2609289, 0)
 
-[node name="book_cover_rightside" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=1186710802]
+[node name="book_cover_rightside" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=1915560639]
 transform = Transform3D(-0.99477345, 2.8909453e-17, 1.2246469e-16, 1.218246e-16, 0.23606358, 1.2246469e-16, -1.218246e-16, 2.8909453e-17, -1, -5.4522663e-18, 0, 0.54010725)
 
-[node name="book_cover_rightside_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_rightside" unique_id=420613637]
+[node name="book_cover_rightside_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_rightside" unique_id=1600809066]
 mesh = SubResource("ArrayMesh_ieyq2")
 
-[node name="book_cover_leftside" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=394202152]
+[node name="book_cover_leftside" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=295534103]
 transform = Transform3D(-0.99477345, 2.8909453e-17, 1.2246469e-16, 1.218246e-16, 0.23606358, 1.2246469e-16, -1.218246e-16, 2.8909453e-17, -1, -5.9448883e-08, 0, -0.53979635)
 
-[node name="book_cover_leftside_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_leftside" unique_id=501014020]
+[node name="book_cover_leftside_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_leftside" unique_id=1649880954]
 mesh = SubResource("ArrayMesh_k7t65")
 
-[node name="book_cover_centerpiece" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=2062836000]
+[node name="book_cover_centerpiece" type="Node3D" parent="Journal/open_book_full/book_cover_full" unique_id=10434076]
 transform = Transform3D(1, 0, 0, 0, 0.75387377, 0, 0, 0, 1, 0, -0.21595097, 0)
 
-[node name="book_cover_centerpiece_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_centerpiece" unique_id=1468166865]
+[node name="book_cover_centerpiece_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_cover_full/book_cover_centerpiece" unique_id=978207901]
 mesh = SubResource("ArrayMesh_042hk")
 
-[node name="book_pages_leftside" type="Node3D" parent="Journal/open_book_full" unique_id=886657021]
+[node name="book_pages_leftside" type="Node3D" parent="Journal/open_book_full" unique_id=1131266883]
 
-[node name="page36" type="Node3D" parent="Journal/open_book_full/book_pages_leftside" unique_id=109254100]
+[node name="page36" type="Node3D" parent="Journal/open_book_full/book_pages_leftside" unique_id=1701957143]
 
-[node name="page36_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_pages_leftside/page36" unique_id=1534649868]
+[node name="page36_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_pages_leftside/page36" unique_id=192608422]
 material_override = SubResource("StandardMaterial3D_ubhxj")
 mesh = SubResource("ArrayMesh_4qq5s")
 
-[node name="book_pages_rightside" type="Node3D" parent="Journal/open_book_full" unique_id=1575490689]
+[node name="book_pages_rightside" type="Node3D" parent="Journal/open_book_full" unique_id=1492194752]
 
-[node name="page77" type="Node3D" parent="Journal/open_book_full/book_pages_rightside" unique_id=114620114]
+[node name="page77" type="Node3D" parent="Journal/open_book_full/book_pages_rightside" unique_id=399886415]
 
-[node name="page77_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_pages_rightside/page77" unique_id=701978625]
+[node name="page77_lambert1_0" type="MeshInstance3D" parent="Journal/open_book_full/book_pages_rightside/page77" unique_id=283912022]
 material_override = SubResource("StandardMaterial3D_65or1")
 mesh = SubResource("ArrayMesh_ut0nf")
 
-[node name="paper_pieces_all" type="Node3D" parent="Journal" unique_id=2051059323]
+[node name="paper_pieces_all" type="Node3D" parent="Journal" unique_id=1992929158]
 visible = false
 
-[node name="paper_piece_page1" type="Node3D" parent="Journal/paper_pieces_all" unique_id=11648127]
+[node name="paper_piece_page1" type="Node3D" parent="Journal/paper_pieces_all" unique_id=194468224]
 
-[node name="paper_piece_page1_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page1" unique_id=1933480630]
+[node name="paper_piece_page1_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page1" unique_id=1771384053]
 mesh = SubResource("ArrayMesh_pveqq")
 
-[node name="paper_piece_page2" type="Node3D" parent="Journal/paper_pieces_all" unique_id=251060554]
+[node name="paper_piece_page2" type="Node3D" parent="Journal/paper_pieces_all" unique_id=1718932764]
 
-[node name="paper_piece_page2_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page2" unique_id=1005963191]
+[node name="paper_piece_page2_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page2" unique_id=2133689503]
 mesh = SubResource("ArrayMesh_38rvs")
 
-[node name="paper_piece_page3" type="Node3D" parent="Journal/paper_pieces_all" unique_id=1028393033]
+[node name="paper_piece_page3" type="Node3D" parent="Journal/paper_pieces_all" unique_id=2114182987]
 
-[node name="paper_piece_page3_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page3" unique_id=612624283]
+[node name="paper_piece_page3_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page3" unique_id=28220905]
 mesh = SubResource("ArrayMesh_snm06")
 
-[node name="paper_piece_page4" type="Node3D" parent="Journal/paper_pieces_all" unique_id=1865147705]
+[node name="paper_piece_page4" type="Node3D" parent="Journal/paper_pieces_all" unique_id=670979036]
 
-[node name="paper_piece_page4_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page4" unique_id=592245520]
+[node name="paper_piece_page4_lambert1_0" type="MeshInstance3D" parent="Journal/paper_pieces_all/paper_piece_page4" unique_id=906029275]
 mesh = SubResource("ArrayMesh_1eq7s")
 
-[node name="BunkerDoor" type="Node3D" parent="." unique_id=1217866987]
+[node name="BunkerDoor" type="Node3D" parent="." unique_id=37954638]
 transform = Transform3D(0.099060275, 0.013677029, -3.0369105e-18, 0, 2.2204459e-17, 0.099999994, 0.013677029, -0.099060275, 2.19958e-17, 0.4683838, 0.75354004, -3.230957)
 
-[node name="Object_3" type="MeshInstance3D" parent="BunkerDoor" unique_id=2023130298]
+[node name="Object_3" type="MeshInstance3D" parent="BunkerDoor" unique_id=1607065374]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, -1.323489e-23, 0, 1.323489e-23, 0.99999994, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_be5co")
+material_overlay = ExtResource("3_a6rn7")
 mesh = SubResource("ArrayMesh_rcsiw")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="BunkerDoor/Object_3" unique_id=272618276]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BunkerDoor/Object_3" unique_id=136722099]
 transform = Transform3D(7.0221324, 4.4703484e-08, -1.0587912e-22, 1.7881393e-07, 1.831462, 2.1175824e-22, -3.970467e-23, 7.940934e-23, 15.562152, 0.015836716, 9.308086, -4.015504)
 mesh = SubResource("BoxMesh_3qmij")
 
-[node name="Object_4" type="MeshInstance3D" parent="BunkerDoor" unique_id=1180280933]
+[node name="Object_4" type="MeshInstance3D" parent="BunkerDoor" unique_id=1798778438]
 material_override = SubResource("StandardMaterial3D_hycyb")
+material_overlay = ExtResource("3_a6rn7")
 mesh = SubResource("ArrayMesh_xsngc")
 metadata/_edit_lock_ = true
 
-[node name="Object_2" type="MeshInstance3D" parent="BunkerDoor" unique_id=1134402274]
+[node name="Object_2" type="MeshInstance3D" parent="BunkerDoor" unique_id=1767493170]
 transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 1.323489e-23, 0, 1.323489e-23, 0.99999994, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_swvua")
 mesh = SubResource("ArrayMesh_fs0rc")
