@@ -20,8 +20,9 @@ uniform float min_dither_brightness = 0.1; // Below this, force dark output.
 
 // Custom colors for the dithering effect:
 // Here, we use color_a for low brightness areas and color_b for higher brightness areas.
-uniform vec4 color_a = vec4(0.2, 0.0, 0.0, 1.0);
-uniform vec4 color_b = vec4(0.8, 0.4, 0.2, 1.0);
+//uniform vec4 color : source_color = vec4(1.0);
+uniform vec4 color_a : source_color = vec4(0.2, 0.0, 0.0, 1.0);
+uniform vec4 color_b : source_color = vec4(0.8, 0.4, 0.2, 1.0);
 
 // Toggle the Bayer matrix size: set to 4, 8, or 16.
 uniform int bayer_mode = 4;
