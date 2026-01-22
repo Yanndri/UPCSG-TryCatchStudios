@@ -1,0 +1,11 @@
+Model Information:
+* title:	low-poly Wall shelf
+* source:	https://sketchfab.com/3d-models/low-poly-wall-shelf-e13d477b61eb4b55bcb317b875860776
+* author:	drippyskippy (https://sketchfab.com/drippyskippy)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "low-poly Wall shelf" (https://sketchfab.com/3d-models/low-poly-wall-shelf-e13d477b61eb4b55bcb317b875860776) by drippyskippy (https://sketchfab.com/drippyskippy) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

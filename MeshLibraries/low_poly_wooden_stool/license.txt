@@ -1,0 +1,11 @@
+Model Information:
+* title:	Low Poly Wooden Stool
+* source:	https://sketchfab.com/3d-models/low-poly-wooden-stool-c157935029774ccfb5a58f634cc58793
+* author:	jjmax30 (https://sketchfab.com/jjmax30)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Low Poly Wooden Stool" (https://sketchfab.com/3d-models/low-poly-wooden-stool-c157935029774ccfb5a58f634cc58793) by jjmax30 (https://sketchfab.com/jjmax30) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
