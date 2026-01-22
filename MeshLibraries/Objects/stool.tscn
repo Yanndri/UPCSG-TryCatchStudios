@@ -1,7 +1,11 @@
-[gd_scene load_steps=14 format=4 uid="uid://bq5vxgerfb6rg"]
+[gd_scene load_steps=15 format=4 uid="uid://bq5vxgerfb6rg"]
+
+[ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="1_sdl11"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5rr72"]
-albedo_color = Color(0.90588236, 0.21960784, 0.40392157, 1)
+albedo_color = Color(0.99115914, 0.70795023, 0.74393946, 1)
+albedo_texture = ExtResource("1_sdl11")
+uv1_scale = Vector3(2, 2, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_60lec"]
 resource_name = "Flat_Wood_1"
