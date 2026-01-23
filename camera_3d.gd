@@ -12,4 +12,4 @@ func _input(event: InputEvent) -> void:
 		if size < max_zoom:
 			size += 0.2
 	
-	%zoom_label.text = "Zoom : " + str(int(size / default_zoom * 100)) + "%"
+	#%zoom_label.text = "Zoom : " + str(int(size / default_zoom * 100)) + "%"
