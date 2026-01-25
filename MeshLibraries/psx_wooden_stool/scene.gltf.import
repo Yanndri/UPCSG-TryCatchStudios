@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bsikdu8hf5bqw"
-path="res://.godot/imported/scene.gltf-8c22568ec882e50de4a8fe50ea651f2c.scn"
+uid="uid://cl0upd2u8uso4"
+path="res://.godot/imported/scene.gltf-3a3d8827dfb2740bb949660a0da8e2d7.scn"
 
 [deps]
 
-source_file="res://MeshLibraries/cardboard_boxes_set_16_sizes/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-8c22568ec882e50de4a8fe50ea651f2c.scn"]
+source_file="res://MeshLibraries/psx_wooden_stool/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-3a3d8827dfb2740bb949660a0da8e2d7.scn"]
 
 [params]
 
