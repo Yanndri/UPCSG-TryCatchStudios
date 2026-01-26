@@ -1,55 +1,30 @@
-[gd_scene load_steps=53 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=52 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="2_3dxm6"]
-[ext_resource type="Shader" uid="uid://dohhd7g1t72bt" path="res://Theme/dot_dither2d.gdshader" id="2_trn2v"]
 [ext_resource type="Theme" uid="uid://dxf1ac0pdol7e" path="res://Theme/MainTheme.tres" id="3_c6i3y"]
 [ext_resource type="Shader" uid="uid://y5j3apk18mqq" path="res://Theme/dot_dither.gdshader" id="3_lgr22"]
-[ext_resource type="Script" uid="uid://j2g4hc0xclon" path="res://Scripts/notes.gd" id="4_5tuhn"]
+[ext_resource type="Script" uid="uid://j2g4hc0xclon" path="res://Scripts/journal.gd" id="4_5tuhn"]
 [ext_resource type="PackedScene" uid="uid://bpecia17xgykd" path="res://addons/base_button/base_button.tscn" id="4_20pc6"]
 [ext_resource type="Shader" uid="uid://dgg6fspmcxi88" path="res://Theme/dot.gdshader" id="4_trn2v"]
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="5_2gh4u"]
 [ext_resource type="PackedScene" uid="uid://dq2lmhp70qitb" path="res://map.tscn" id="5_03owx"]
 [ext_resource type="Resource" uid="uid://ca75ut82gvdu8" path="res://Theme/Resources/Day1.tres" id="6_devvj"]
+[ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/Fonts/lonely_study/Lonely Study.otf" id="7_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://b4538y6rc2sav" path="res://character.tscn" id="7_lgr22"]
+[ext_resource type="Script" uid="uid://dhtjdo8s3dwdr" path="res://Scripts/main_ui.gd" id="8_2gh4u"]
 [ext_resource type="Script" uid="uid://cycw5rqanjrvk" path="res://interactable.gd" id="8_03owx"]
+[ext_resource type="Script" uid="uid://b6jwaxxgaikj8" path="res://Scripts/camera_manager.gd" id="8_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="8_trn2v"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
 [ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="11_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://oebj8h7qifd4" path="res://MeshLibraries/notepad/textures/lambert1_metallicRoughness.png" id="11_c6i3y"]
 [ext_resource type="Texture2D" uid="uid://vx4jhtdk70d" path="res://MeshLibraries/notepad/textures/lambert1_normal.png" id="12_c2ibq"]
-
-[sub_resource type="Gradient" id="Gradient_bjebc"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.8627451, 0.9529412, 0.9529412, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5rr72"]
-gradient = SubResource("Gradient_bjebc")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gyffv"]
-texture = SubResource("GradientTexture2D_5rr72")
-
-[sub_resource type="Gradient" id="Gradient_1pe0h"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0.20784314, 0.20784314, 0.10980392, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_27bay"]
-gradient = SubResource("Gradient_1pe0h")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sof0w"]
-texture = SubResource("GradientTexture2D_27bay")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_wkp8b"]
-shader = ExtResource("2_trn2v")
-shader_parameter/color_a = Color(0, 0, 0, 1)
-shader_parameter/color_b = Color(1, 1, 1, 1)
-shader_parameter/bayer_mode = 4
-
-[sub_resource type="Gradient" id="Gradient_20pc6"]
-colors = PackedColorArray(0.12591085, 0.12591085, 0.12591082, 1, 0.11415806, 0.1141581, 0.11415804, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_5vvyt"]
-gradient = SubResource("Gradient_20pc6")
+[ext_resource type="Script" uid="uid://cv8e8nfwfrrei" path="res://Scripts/map.gd" id="14_devvj"]
+[ext_resource type="Material" uid="uid://bjsocgfgxmntf" path="res://Theme/StandardMaterials/items.tres" id="15_mxvw5"]
+[ext_resource type="Material" uid="uid://c3h8gmo8quid8" path="res://Theme/StandardMaterials/rations.tres" id="16_xrxkg"]
+[ext_resource type="Material" uid="uid://kppnmq4o1svc" path="res://Theme/StandardMaterials/journal.tres" id="18_3b0ty"]
+[ext_resource type="Material" uid="uid://dp3is5sx1snek" path="res://Theme/StandardMaterials/door.tres" id="18_sqvbp"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vvyt"]
 
@@ -220,6 +195,7 @@ _surfaces = [{
 "format": 34896613377,
 "index_count": 36,
 "index_data": PackedByteArray("AAABAAIAAQAAAAMAAgAEAAAABAADAAAABQACAAEAAwAFAAEABAACAAYAAgAFAAYAAwAEAAcABQADAAcABgAHAAQABwAGAAUA"),
+"material": ExtResource("18_3b0ty"),
 "name": "lambert1",
 "primitive": 3,
 "uv_scale": Vector4(0, 0, 0, 0),
@@ -281,7 +257,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("%Body:modulate")
+tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Body:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -293,7 +269,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("%Day:self_modulate")
+tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Day:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -334,7 +310,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("%Body:modulate")
+tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Body:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -346,7 +322,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("%Day:self_modulate")
+tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Day:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -362,59 +338,20 @@ _data = {
 &"flip": SubResource("Animation_h75vw")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxvw5"]
+size = Vector3(2, 0.2, 1.5)
+
 [node name="Main" type="Node3D" unique_id=362291105]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1860670639]
 
-[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=606328630]
-visible = false
-offset_left = 882.0
-offset_top = 59.0
-offset_right = 1246.0
-offset_bottom = 320.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_gyffv")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=1738267872]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1056943021]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_sof0w")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1629585512]
-layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/PanelContainer/MarginContainer/MarginContainer" unique_id=2107058403]
-layout_mode = 2
-theme_override_colors/default_color = Color(0.8627451, 0.9529412, 0.9529412, 1)
-theme_override_fonts/normal_font = ExtResource("1_fos0i")
-theme_override_font_sizes/normal_font_size = 35
-bbcode_enabled = true
-text = "Hello"
-fit_content = true
-
-[node name="Dither" type="Sprite2D" parent="CanvasLayer" unique_id=1467167003]
-visible = false
-material = SubResource("ShaderMaterial_wkp8b")
-position = Vector2(1069.5, 194.00002)
-scale = Vector2(5.828124, 4.2187505)
-texture = SubResource("GradientTexture2D_5vvyt")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer" unique_id=645424813]
+[node name="Settings" type="MarginContainer" parent="CanvasLayer" unique_id=645424813]
 offset_left = 26.0
 offset_top = 21.0
 offset_right = 188.0
 offset_bottom = 36.0
 
-[node name="zoom_label" type="RichTextLabel" parent="CanvasLayer/MarginContainer" unique_id=716176583]
+[node name="zoom_label" type="RichTextLabel" parent="CanvasLayer/Settings" unique_id=716176583]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(0.8627451, 0.9529412, 0.9529412, 1)
@@ -424,7 +361,9 @@ text = "Zoom: 100%"
 fit_content = true
 metadata/_edit_lock_ = true
 
-[node name="Notes" type="Control" parent="CanvasLayer" unique_id=1422255193]
+[node name="JournalEntries" type="Control" parent="CanvasLayer" unique_id=1422255193]
+unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -433,45 +372,119 @@ theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
 journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj")])
 
-[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Notes" unique_id=86033651]
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
 offset_left = 483.0
 offset_top = 176.0
 offset_right = 883.0
 offset_bottom = 679.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Notes/MarginContainer2" unique_id=1657712378]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/JournalEntries/MarginContainer2" unique_id=1657712378]
 layout_mode = 2
 theme_override_constants/separation = 36
 
-[node name="Day" type="RichTextLabel" parent="CanvasLayer/Notes/MarginContainer2/VBoxContainer" unique_id=766265037]
+[node name="Day" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=766265037]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "[b]Day 1"
 fit_content = true
 
-[node name="Body" type="RichTextLabel" parent="CanvasLayer/Notes/MarginContainer2/VBoxContainer" unique_id=335592899]
+[node name="Body" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=335592899]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
-text = "I don’t know if anyone will ever read this. Maybe I’m writing only to keep my own mind from unraveling. The world outside is already gone.  
+text = "If you're reading this, it means there's no more text to show.
 
-It began this morning, when something appeared in the sky. Not a star, not a comet, not a machine. Just… a presence. A shape that wasn’t a shape. Every glance revealed a new form, each more impossible than the last, until the mind itself begged for blindness.  "
+This page shouldn't show, take a screenshot and report"
 fit_content = true
 horizontal_alignment = 3
 
-[node name="NextPage" parent="CanvasLayer/Notes" unique_id=1770953425 instance=ExtResource("4_20pc6")]
-layout_mode = 0
-offset_left = 790.0
-offset_top = 629.0
-offset_right = 924.0
-offset_bottom = 689.0
+[node name="PickItem" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=1434494314 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_kjvhd")
 theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
-text = "╰┈➤"
+text = "Pick Item"
+
+[node name="NextPage" parent="CanvasLayer/JournalEntries" unique_id=1770953425 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 800.0
+offset_top = 608.0
+offset_right = 934.0
+offset_bottom = 675.0
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
+text = "⎯⌲"
+icon_alignment = 1
+
+[node name="BackPage" parent="CanvasLayer/JournalEntries" unique_id=1662579272 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 576.0
+offset_top = 680.0
+offset_right = 710.0
+offset_bottom = 747.0
+rotation = 3.1415927
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
+text = "⎯⌲"
+
+[node name="MainUI" type="Control" parent="CanvasLayer" unique_id=1444886690]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("3_c6i3y")
+script = ExtResource("8_2gh4u")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainUI" unique_id=88459907]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -86.0
+offset_right = 86.0
+offset_bottom = 26.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 32
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MainUI/MarginContainer" unique_id=378645146]
+layout_mode = 2
+
+[node name="chosenItem" type="RichTextLabel" parent="CanvasLayer/MainUI/MarginContainer" unique_id=46232808]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "[b]Static Test"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PickAnItem" type="RichTextLabel" parent="CanvasLayer/MainUI" unique_id=1052786193]
+layout_mode = 0
+offset_left = 552.0
+offset_top = 8.0
+offset_right = 724.0
+offset_bottom = 34.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "Pick an Item"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=91243872]
 texture_filter = 1
@@ -499,35 +512,46 @@ environment = SubResource("Environment_2a3ug")
 transform = Transform3D(-0.7071068, -0.6830128, -0.1830126, -2.2626695e-08, -0.25881892, 0.9659259, -0.7071068, 0.6830128, 0.1830126, 0, 10, 0)
 light_energy = 0.1
 
-[node name="MainCamera" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1695421303]
+[node name="CameraManager" type="Node" parent="SubViewportContainer/SubViewport" unique_id=404159912 node_paths=PackedStringArray("cameras")]
+unique_name_in_owner = true
+script = ExtResource("8_5tuhn")
+cameras = [NodePath("MainCamera"), NodePath("MovingCamera"), NodePath("IntroCamera")]
+
+[node name="MainCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1695421303]
 unique_name_in_owner = true
 transform = Transform3D(0.5877851, -0.28992587, 0.7552825, 1.1311628e-09, 0.9335804, 0.35836807, -0.8090171, -0.21064341, 0.5487447, 7.5, 4.4239073, 5.5)
 projection = 1
+current = true
 size = 4.0
 far = 97.0
 script = ExtResource("2_3dxm6")
 
-[node name="PostProcessing2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/MainCamera" unique_id=1492459878]
+[node name="PostProcessing2" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/CameraManager/MainCamera" unique_id=1492459878]
 transform = Transform3D(0.58201504, -0.00044637313, -0.81317806, -0.301692, 0.928513, -0.21644002, 0.755142, 0.3713, 0.5402741, 0, 0, 0)
 extra_cull_margin = 16000.0
 mesh = SubResource("QuadMesh_27bay")
 
-[node name="PostProcessing" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/MainCamera" unique_id=1259355503]
+[node name="PostProcessing" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/CameraManager/MainCamera" unique_id=1259355503]
 transform = Transform3D(0.58201504, -0.00044638524, -0.8131782, -0.30169204, 0.928513, -0.21644005, 0.75514203, 0.3713, 0.54027414, 0.060067177, -0.66957533, 1.7443027)
 visible = false
 extra_cull_margin = 16000.0
 mesh = SubResource("QuadMesh_7t0pu")
 
-[node name="MovingCamera" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1847339471]
-transform = Transform3D(-0.62265116, -0.7774106, 0.08909706, -3.1963403e-09, 0.113862135, 0.99349654, -0.78249955, 0.61860186, -0.07089639, 0.30810097, 0.8086971, 0.542235)
-current = true
+[node name="MovingCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1847339471]
+transform = Transform3D(-0.62265116, -0.7774106, 0.08909707, -3.1963403e-09, 0.113862135, 0.9934966, -0.78249955, 0.61860186, -0.070896395, 0.30810097, 0.8086971, 0.542235)
 script = SubResource("GDScript_3dxm6")
 
-[node name="IntroCamera" type="Camera3D" parent="SubViewportContainer/SubViewport" unique_id=1907856644]
+[node name="IntroCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1907856644]
 unique_name_in_owner = true
-transform = Transform3D(-0.5109088, -0.81195056, 0.28232706, 0.26274326, 0.16521531, 0.9506156, -0.8184976, 0.55985737, 0.12892458, 0.3964129, 0.81018835, 0.573675)
+transform = Transform3D(-0.5109088, -0.81195056, 0.2823271, 0.26274326, 0.16521533, 0.9506156, -0.8184976, 0.55985737, 0.12892456, 0.3964129, 0.81018835, 0.573675)
 
 [node name="Map" parent="." unique_id=1853362266 instance=ExtResource("5_03owx")]
+unique_name_in_owner = true
+script = ExtResource("14_devvj")
+items_theme = ExtResource("15_mxvw5")
+rations_theme = ExtResource("16_xrxkg")
+journal_theme = ExtResource("18_3b0ty")
+door_theme = ExtResource("18_sqvbp")
 
 [node name="CharacterPortrait" type="MeshInstance3D" parent="." unique_id=1428025398]
 transform = Transform3D(1.4345268, 0, 1.3936043, 0, 2, 0, -1.3936043, 0, 1.4345268, 6.4073486, 3.6190977, 2.4614868)
@@ -624,20 +648,20 @@ transform = Transform3D(0.20364487, 0, 1.4506783, 0, 0.854117, 0, -0.9491097, 0,
 material_override = SubResource("StandardMaterial3D_wkp8b")
 mesh = SubResource("ArrayMesh_20pc6")
 
-[node name="Journal" type="Node3D" parent="." unique_id=890818767]
-unique_name_in_owner = true
+[node name="JournalMesh" type="Node3D" parent="." unique_id=890818767]
 transform = Transform3D(-0.23563074, -8.1164595e-09, -0.18568294, 0, 0.29999998, -1.3113417e-08, 0.18568294, -1.0299748e-08, -0.23563074, 0.31790632, 0.40262228, 0.5098481)
 
-[node name="defaultMaterial" type="MeshInstance3D" parent="Journal" unique_id=1085766095]
+[node name="defaultMaterial" type="MeshInstance3D" parent="JournalMesh" unique_id=1085766095]
+material_overlay = ExtResource("18_3b0ty")
 mesh = SubResource("ArrayMesh_kjvhd")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Journal/defaultMaterial" unique_id=515617606]
-transform = Transform3D(1, 1.7763568e-15, 2.9802322e-08, 1.7763568e-15, 1, 1.7763568e-15, -2.9802322e-08, 1.7763568e-15, 1, 0.90883505, 0.07363558, -0.12963146)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JournalMesh/defaultMaterial" unique_id=515617606]
+transform = Transform3D(1, 1.7763568e-15, 3.8778676e-08, 1.7763568e-15, 1, 2.3113892e-15, -2.9802322e-08, 1.7763568e-15, 1.3011965, 0.90883505, 0.07363558, 0.002346539)
 material_override = SubResource("StandardMaterial3D_5tuhn")
 mesh = SubResource("PlaneMesh_2gh4u")
 
-[node name="Label3D" type="Label3D" parent="Journal/defaultMaterial" unique_id=1005420303]
+[node name="Label3D" type="Label3D" parent="JournalMesh/defaultMaterial" unique_id=1005420303]
 transform = Transform3D(0.03705842, 3.219553, 0.8626768, 1.4156103e-07, -0.86273, 3.219752, 3.3331265, -0.035795648, -0.009591563, 0.87549895, 0.10654058, 0.3740651)
 pixel_size = 0.004
 texture_filter = 0
@@ -649,32 +673,42 @@ font_size = 8
 outline_size = 0
 metadata/_edit_lock_ = true
 
-[node name="LastPage" type="MeshInstance3D" parent="Journal" unique_id=1946720950]
+[node name="LastPage" type="MeshInstance3D" parent="JournalMesh" unique_id=1946720950]
 transform = Transform3D(-0.99849856, -0.0010955182, 2.9802322e-08, 0.054775912, -0.01996997, 1.6324488e-09, 2.9802322e-08, 5.820766e-11, 1, 1.9955703, 0.02554822, -1.1920929e-07)
 mesh = SubResource("ArrayMesh_kjvhd")
 metadata/_edit_lock_ = true
 
-[node name="LastPage2" type="MeshInstance3D" parent="Journal" unique_id=330316455]
+[node name="LastPage2" type="MeshInstance3D" parent="JournalMesh" unique_id=330316455]
 transform = Transform3D(-0.99849856, -0.0010955182, 2.9802322e-08, 0.054775912, -0.01996997, 1.6324488e-09, 2.9802322e-08, 5.820766e-11, 1, 1.9955703, 0.02554822, -1.1920929e-07)
 mesh = SubResource("ArrayMesh_kjvhd")
 
-[node name="2ndPage" type="Node3D" parent="Journal" unique_id=790197016]
+[node name="2ndPage" type="Node3D" parent="JournalMesh" unique_id=790197016]
 transform = Transform3D(0.99999994, -1.7763567e-15, 2.9802322e-08, 1.7763567e-15, 0.99999994, -1.7763568e-15, -2.980232e-08, 1.7763567e-15, 1, 1.0171621, 3.0485933e-17, -6.0116115e-08)
 
-[node name="2ndPage" type="MeshInstance3D" parent="Journal/2ndPage" unique_id=1260945954]
+[node name="2ndPage" type="MeshInstance3D" parent="JournalMesh/2ndPage" unique_id=1260945954]
 transform = Transform3D(1, 1.110223e-16, 2.9802322e-08, -3.5527137e-15, 0.02, -1.7763568e-15, -2.9802322e-08, 0, 1, -1.0139279, 3.6021956e-15, 4.1508486e-10)
 mesh = SubResource("ArrayMesh_kjvhd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Journal/2ndPage/2ndPage" unique_id=2036128376]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="JournalMesh/2ndPage/2ndPage" unique_id=2036128376]
 transform = Transform3D(1, 1.7763568e-15, 2.9802322e-08, 1.7763568e-15, 1, 1.7763568e-15, -2.9802322e-08, 1.7763568e-15, 1, 0.90883505, 0.07363558, -0.12963146)
 material_override = SubResource("StandardMaterial3D_5tuhn")
 mesh = SubResource("PlaneMesh_2gh4u")
 
-[node name="JournalAnimations" type="AnimationPlayer" parent="Journal" unique_id=993923638]
+[node name="JournalAnimations" type="AnimationPlayer" parent="JournalMesh" unique_id=993923638]
 unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_7vxqa")
 }
 
-[connection signal="pressed" from="CanvasLayer/Notes/NextPage" to="CanvasLayer/Notes" method="_on_next_page_pressed"]
-[connection signal="pressed" from="CanvasLayer/Notes/NextPage" to="CanvasLayer/Notes/NextPage" method="_on_pressed"]
+[node name="interactable" type="Area3D" parent="JournalMesh" unique_id=1019851969]
+script = ExtResource("8_03owx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JournalMesh/interactable" unique_id=1700924378]
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_mxvw5")
+debug_color = Color(1, 0, 0, 1)
+
+[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalEntries/NextPage" to="CanvasLayer/JournalEntries" method="_on_next_page_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalEntries/BackPage" to="CanvasLayer/JournalEntries" method="_on_back_page_pressed"]
+[connection signal="input_event" from="JournalMesh/interactable" to="SubViewportContainer/SubViewport/CameraManager" method="_on_interactable_input_event"]

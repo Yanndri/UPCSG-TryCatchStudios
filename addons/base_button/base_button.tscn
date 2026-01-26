@@ -6,26 +6,22 @@
 resource_name = "sfx_button"
 script/source = "extends AudioStreamPlayer2D
 
+func _ready() -> void:
+	#Whenever the cursor is in the button it turns into a pointing hand only works for Control Nodes
+	get_parent().mouse_default_cursor_shape = Input.CURSOR_POINTING_HAND 
+
 func _on_base_button_pressed() -> void:
-	#play() #comment if you don't want to hear sound effect
+	#play() #comment if you don't want to ahear sound effect
 	pass
-
-func _on_base_button_2_mouse_entered() -> void:
-	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND)
-
-func _on_base_button_2_mouse_exited() -> void:
-	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 "
 
 [node name="baseButton2" type="Button" unique_id=1770953425]
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 40.0
+offset_bottom = 31.0
 text = "ಠ_ಠ"
 
 [node name="clickSFX" type="AudioStreamPlayer2D" parent="." unique_id=1419007476]
 stream = ExtResource("1_asr3w")
 script = SubResource("GDScript_blluw")
 
-[connection signal="mouse_entered" from="." to="clickSFX" method="_on_base_button_2_mouse_entered"]
-[connection signal="mouse_exited" from="." to="clickSFX" method="_on_base_button_2_mouse_exited"]
 [connection signal="pressed" from="." to="clickSFX" method="_on_base_button_pressed"]

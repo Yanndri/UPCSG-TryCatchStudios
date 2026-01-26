@@ -15,6 +15,10 @@ run/main_scene="uid://c5jfehuk150f4"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalValues="*uid://de7hxcyexaby0"
+
 [display]
 
 window/size/viewport_width=1280
@@ -24,6 +28,10 @@ window/stretch/mode="viewport"
 [filesystem]
 
 import/blender/enabled=false
+
+[global_group]
+
+item=""
 
 [input]
 

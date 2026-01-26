@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c3h8gmo8quid8"]
+
+[ext_resource type="Texture2D" uid="uid://cc1m07kka12vx" path="res://Theme/Fonts/zenitha_classic/img/zenitha-classic_poster03.png" id="1_g1w07"]
+
+[resource]
+albedo_texture = ExtResource("1_g1w07")
