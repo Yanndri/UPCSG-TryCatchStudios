@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bdgbumdcc6i1f"
-path="res://.godot/imported/Miskan Oblique.woff-67e843375eec7b512b42efd8c7ea5ad1.fontdata"
+uid="uid://4i3o8mcnm6du"
+path="res://.godot/imported/Miskan Oblique.otf-a079a5df5dc1d0687863d88c894a07ef.fontdata"
 
 [deps]
 
-source_file="res://Theme/miskan/Miskan Oblique.woff"
-dest_files=["res://.godot/imported/Miskan Oblique.woff-67e843375eec7b512b42efd8c7ea5ad1.fontdata"]
+source_file="res://Theme/Fonts/miskan/Miskan Oblique.otf"
+dest_files=["res://.godot/imported/Miskan Oblique.otf-a079a5df5dc1d0687863d88c894a07ef.fontdata"]
 
 [params]
 

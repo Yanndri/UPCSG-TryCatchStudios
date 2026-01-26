@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnlq2hh85b7jg"
-path="res://.godot/imported/zenitha-classic_poster07.png-c5a68e7942831975bfa433671f7e51ea.ctex"
+uid="uid://bc43ufdvsd41v"
+path="res://.godot/imported/zenitha-classic_poster06.png-c6a847d63e6815aae27179135bb63f6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Theme/zenitha_classic/img/zenitha-classic_poster07.png"
-dest_files=["res://.godot/imported/zenitha-classic_poster07.png-c5a68e7942831975bfa433671f7e51ea.ctex"]
+source_file="res://Theme/Fonts/zenitha_classic/img/zenitha-classic_poster06.png"
+dest_files=["res://.godot/imported/zenitha-classic_poster06.png-c6a847d63e6815aae27179135bb63f6a.ctex"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bej3vt1n5mhdd"
-path="res://.godot/imported/ZenithaClassic_PERSONAL_USE_ONLY.otf-53e05d1616c93473a668653aafa43202.fontdata"
+uid="uid://cp0y6ibkcsu52"
+path="res://.godot/imported/Miskan Oblique.ttf-568376788c102113e1022f6566c4721b.fontdata"
 
 [deps]
 
-source_file="res://Theme/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf"
-dest_files=["res://.godot/imported/ZenithaClassic_PERSONAL_USE_ONLY.otf-53e05d1616c93473a668653aafa43202.fontdata"]
+source_file="res://Theme/Fonts/miskan/Miskan Oblique.ttf"
+dest_files=["res://.godot/imported/Miskan Oblique.ttf-568376788c102113e1022f6566c4721b.fontdata"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=3 format=3 uid="uid://dxf1ac0pdol7e"]
 
-[ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/miskan/Miskan.otf" id="1_3kgdn"]
-[ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/lonely_study/Lonely Study.otf" id="2_3kgdn"]
+[ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="1_3kgdn"]
+[ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/Fonts/lonely_study/Lonely Study.otf" id="2_3kgdn"]
 
 [resource]
 Button/colors/font_color = Color(0.2, 0.2, 0.09803922, 1)

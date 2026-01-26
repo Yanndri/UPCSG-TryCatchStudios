@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cqee8qevj553y"
-path="res://.godot/imported/Vogue.ttf-3e6a928f986dc034bb1898761174a7cd.fontdata"
+uid="uid://bej3vt1n5mhdd"
+path="res://.godot/imported/ZenithaClassic_PERSONAL_USE_ONLY.otf-e234d712f86e7af53637d915d327b671.fontdata"
 
 [deps]
 
-source_file="res://Theme/vogue/Vogue.ttf"
-dest_files=["res://.godot/imported/Vogue.ttf-3e6a928f986dc034bb1898761174a7cd.fontdata"]
+source_file="res://Theme/Fonts/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf"
+dest_files=["res://.godot/imported/ZenithaClassic_PERSONAL_USE_ONLY.otf-e234d712f86e7af53637d915d327b671.fontdata"]
 
 [params]
 

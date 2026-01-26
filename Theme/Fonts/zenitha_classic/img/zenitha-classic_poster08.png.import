@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxwufke84tpm4"
-path="res://.godot/imported/zenitha-classic_poster08.png-8db34c5fa6b3766cb8b243a0f8ac6462.ctex"
+path="res://.godot/imported/zenitha-classic_poster08.png-d03621e1a258a97d651e6fe6d033d8ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Theme/zenitha_classic/img/zenitha-classic_poster08.png"
-dest_files=["res://.godot/imported/zenitha-classic_poster08.png-8db34c5fa6b3766cb8b243a0f8ac6462.ctex"]
+source_file="res://Theme/Fonts/zenitha_classic/img/zenitha-classic_poster08.png"
+dest_files=["res://.godot/imported/zenitha-classic_poster08.png-d03621e1a258a97d651e6fe6d033d8ca.ctex"]
 
 [params]
 

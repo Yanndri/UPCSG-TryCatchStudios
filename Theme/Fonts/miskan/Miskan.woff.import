@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ca5j755apg5dx"
-path="res://.godot/imported/Miskan.woff-48fa3a281f935d91dddcff36bde9c2b7.fontdata"
+path="res://.godot/imported/Miskan.woff-a14ef46f6e2e6f14ce425210aabd124d.fontdata"
 
 [deps]
 
-source_file="res://Theme/miskan/Miskan.woff"
-dest_files=["res://.godot/imported/Miskan.woff-48fa3a281f935d91dddcff36bde9c2b7.fontdata"]
+source_file="res://Theme/Fonts/miskan/Miskan.woff"
+dest_files=["res://.godot/imported/Miskan.woff-a14ef46f6e2e6f14ce425210aabd124d.fontdata"]
 
 [params]
 

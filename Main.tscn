@@ -1,19 +1,21 @@
-[gd_scene load_steps=52 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=53 format=4 uid="uid://c5jfehuk150f4"]
 
-[ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/vogue/Vogue.ttf" id="1_fos0i"]
+[ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="2_3dxm6"]
 [ext_resource type="Shader" uid="uid://dohhd7g1t72bt" path="res://Theme/dot_dither2d.gdshader" id="2_trn2v"]
 [ext_resource type="Theme" uid="uid://dxf1ac0pdol7e" path="res://Theme/MainTheme.tres" id="3_c6i3y"]
 [ext_resource type="Shader" uid="uid://y5j3apk18mqq" path="res://Theme/dot_dither.gdshader" id="3_lgr22"]
+[ext_resource type="Script" uid="uid://j2g4hc0xclon" path="res://Scripts/notes.gd" id="4_5tuhn"]
 [ext_resource type="PackedScene" uid="uid://bpecia17xgykd" path="res://addons/base_button/base_button.tscn" id="4_20pc6"]
 [ext_resource type="Shader" uid="uid://dgg6fspmcxi88" path="res://Theme/dot.gdshader" id="4_trn2v"]
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="5_2gh4u"]
 [ext_resource type="PackedScene" uid="uid://dq2lmhp70qitb" path="res://map.tscn" id="5_03owx"]
-[ext_resource type="Script" uid="uid://bjugjvksrc5sc" path="res://Scripts/next_page.gd" id="5_fpfj3"]
+[ext_resource type="Resource" uid="uid://ca75ut82gvdu8" path="res://Theme/Resources/Day1.tres" id="6_devvj"]
 [ext_resource type="PackedScene" uid="uid://b4538y6rc2sav" path="res://character.tscn" id="7_lgr22"]
 [ext_resource type="Script" uid="uid://cycw5rqanjrvk" path="res://interactable.gd" id="8_03owx"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="8_trn2v"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
-[ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/miskan/Miskan.otf" id="11_c2ibq"]
+[ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="11_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://oebj8h7qifd4" path="res://MeshLibraries/notepad/textures/lambert1_metallicRoughness.png" id="11_c6i3y"]
 [ext_resource type="Texture2D" uid="uid://vx4jhtdk70d" path="res://MeshLibraries/notepad/textures/lambert1_normal.png" id="12_c2ibq"]
 
@@ -198,24 +200,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l5hcg")
 
-[sub_resource type="GDScript" id="GDScript_sc1dx"]
-resource_name = "NotepadMesh"
-script/source = "extends Node3D
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-#called by next_page.gd
-func flip_page():
-	$AnimationPlayer.play(\"flip\")
-"
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ku1r7"]
 resource_name = "lambert1"
 cull_mode = 2
@@ -294,6 +278,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Body:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%Day:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_h75vw"]
 resource_name = "flip"
@@ -322,6 +330,30 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [false, true, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("%Body:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.46974918, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("%Day:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.43333334, 0.46666667, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7vxqa"]
@@ -398,6 +430,8 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
+script = ExtResource("4_5tuhn")
+journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/Notes" unique_id=86033651]
 layout_mode = 0
@@ -418,6 +452,7 @@ text = "[b]Day 1"
 fit_content = true
 
 [node name="Body" type="RichTextLabel" parent="CanvasLayer/Notes/MarginContainer2/VBoxContainer" unique_id=335592899]
+unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "I don’t know if anyone will ever read this. Maybe I’m writing only to keep my own mind from unraveling. The world outside is already gone.  
@@ -437,7 +472,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
 text = "╰┈➤"
-script = ExtResource("5_fpfj3")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=91243872]
 texture_filter = 1
@@ -590,21 +624,20 @@ transform = Transform3D(0.20364487, 0, 1.4506783, 0, 0.854117, 0, -0.9491097, 0,
 material_override = SubResource("StandardMaterial3D_wkp8b")
 mesh = SubResource("ArrayMesh_20pc6")
 
-[node name="Notepad" type="Node3D" parent="." unique_id=890818767]
+[node name="Journal" type="Node3D" parent="." unique_id=890818767]
 unique_name_in_owner = true
 transform = Transform3D(-0.23563074, -8.1164595e-09, -0.18568294, 0, 0.29999998, -1.3113417e-08, 0.18568294, -1.0299748e-08, -0.23563074, 0.31790632, 0.40262228, 0.5098481)
-script = SubResource("GDScript_sc1dx")
 
-[node name="defaultMaterial" type="MeshInstance3D" parent="Notepad" unique_id=1085766095]
+[node name="defaultMaterial" type="MeshInstance3D" parent="Journal" unique_id=1085766095]
 mesh = SubResource("ArrayMesh_kjvhd")
 metadata/_edit_lock_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Notepad/defaultMaterial" unique_id=515617606]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Journal/defaultMaterial" unique_id=515617606]
 transform = Transform3D(1, 1.7763568e-15, 2.9802322e-08, 1.7763568e-15, 1, 1.7763568e-15, -2.9802322e-08, 1.7763568e-15, 1, 0.90883505, 0.07363558, -0.12963146)
 material_override = SubResource("StandardMaterial3D_5tuhn")
 mesh = SubResource("PlaneMesh_2gh4u")
 
-[node name="Label3D" type="Label3D" parent="Notepad/defaultMaterial" unique_id=1005420303]
+[node name="Label3D" type="Label3D" parent="Journal/defaultMaterial" unique_id=1005420303]
 transform = Transform3D(0.03705842, 3.219553, 0.8626768, 1.4156103e-07, -0.86273, 3.219752, 3.3331265, -0.035795648, -0.009591563, 0.87549895, 0.10654058, 0.3740651)
 pixel_size = 0.004
 texture_filter = 0
@@ -616,30 +649,32 @@ font_size = 8
 outline_size = 0
 metadata/_edit_lock_ = true
 
-[node name="LastPage" type="MeshInstance3D" parent="Notepad" unique_id=1946720950]
+[node name="LastPage" type="MeshInstance3D" parent="Journal" unique_id=1946720950]
 transform = Transform3D(-0.99849856, -0.0010955182, 2.9802322e-08, 0.054775912, -0.01996997, 1.6324488e-09, 2.9802322e-08, 5.820766e-11, 1, 1.9955703, 0.02554822, -1.1920929e-07)
 mesh = SubResource("ArrayMesh_kjvhd")
 metadata/_edit_lock_ = true
 
-[node name="LastPage2" type="MeshInstance3D" parent="Notepad" unique_id=330316455]
+[node name="LastPage2" type="MeshInstance3D" parent="Journal" unique_id=330316455]
 transform = Transform3D(-0.99849856, -0.0010955182, 2.9802322e-08, 0.054775912, -0.01996997, 1.6324488e-09, 2.9802322e-08, 5.820766e-11, 1, 1.9955703, 0.02554822, -1.1920929e-07)
 mesh = SubResource("ArrayMesh_kjvhd")
 
-[node name="2ndPage" type="Node3D" parent="Notepad" unique_id=790197016]
+[node name="2ndPage" type="Node3D" parent="Journal" unique_id=790197016]
 transform = Transform3D(0.99999994, -1.7763567e-15, 2.9802322e-08, 1.7763567e-15, 0.99999994, -1.7763568e-15, -2.980232e-08, 1.7763567e-15, 1, 1.0171621, 3.0485933e-17, -6.0116115e-08)
 
-[node name="2ndPage" type="MeshInstance3D" parent="Notepad/2ndPage" unique_id=1260945954]
+[node name="2ndPage" type="MeshInstance3D" parent="Journal/2ndPage" unique_id=1260945954]
 transform = Transform3D(1, 1.110223e-16, 2.9802322e-08, -3.5527137e-15, 0.02, -1.7763568e-15, -2.9802322e-08, 0, 1, -1.0139279, 3.6021956e-15, 4.1508486e-10)
 mesh = SubResource("ArrayMesh_kjvhd")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Notepad/2ndPage/2ndPage" unique_id=2036128376]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Journal/2ndPage/2ndPage" unique_id=2036128376]
 transform = Transform3D(1, 1.7763568e-15, 2.9802322e-08, 1.7763568e-15, 1, 1.7763568e-15, -2.9802322e-08, 1.7763568e-15, 1, 0.90883505, 0.07363558, -0.12963146)
 material_override = SubResource("StandardMaterial3D_5tuhn")
 mesh = SubResource("PlaneMesh_2gh4u")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Notepad" unique_id=993923638]
+[node name="JournalAnimations" type="AnimationPlayer" parent="Journal" unique_id=993923638]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_7vxqa")
 }
 
+[connection signal="pressed" from="CanvasLayer/Notes/NextPage" to="CanvasLayer/Notes" method="_on_next_page_pressed"]
 [connection signal="pressed" from="CanvasLayer/Notes/NextPage" to="CanvasLayer/Notes/NextPage" method="_on_pressed"]

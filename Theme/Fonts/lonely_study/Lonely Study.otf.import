@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://du4sd8236kaoq"
-path="res://.godot/imported/Miskan.ttf-ec2128ae1d1b998f85854193f72f9bdf.fontdata"
+uid="uid://dhu2hbpas0apj"
+path="res://.godot/imported/Lonely Study.otf-3fc7d36b4196f9b089f512cf975dfaf5.fontdata"
 
 [deps]
 
-source_file="res://Theme/miskan/Miskan.ttf"
-dest_files=["res://.godot/imported/Miskan.ttf-ec2128ae1d1b998f85854193f72f9bdf.fontdata"]
+source_file="res://Theme/Fonts/lonely_study/Lonely Study.otf"
+dest_files=["res://.godot/imported/Lonely Study.otf-3fc7d36b4196f9b089f512cf975dfaf5.fontdata"]
 
 [params]
 
