@@ -19,15 +19,23 @@ func _input(event: InputEvent) -> void:
 		glow_rations()
 	if Input.is_key_pressed(KEY_4):
 		glow_door()
-	
+
+func _ready() -> void:
+	glow_journal()
+
 func glow_items():
 	items_tween =create_tween()
 	glow(items_tween, items_theme) #now turn on this specific tween
+	
+	disable_monitoring_areas() #disable all interactables
+	toggle_monitoring(true, "item") #enable this interactable
 
 func glow_journal():
 	journal_theme.render_priority = 0 #When -1 the theme will not render, 0 is default
 	journal_tween =create_tween()
 	glow(journal_tween, journal_theme) #now turn on this specific tween
+	
+	disable_monitoring_areas() #disable all interactables
 
 ##Used by camera_manager when on journal view
 func disable_journal_texture(): journal_theme.render_priority = -1 #this makes it so the theme doesnt render
@@ -35,10 +43,16 @@ func disable_journal_texture(): journal_theme.render_priority = -1 #this makes i
 func glow_rations():
 	rations_tween =create_tween()
 	glow(rations_tween, rations_theme) #now turn on this specific tween
+	
+	disable_monitoring_areas() #disable all interactables
+	toggle_monitoring(true, "ration") #enable this interactable
 
 func glow_door():
 	door_tween =create_tween()
 	glow(door_tween, door_theme) #now turn on this specific tween
+	
+	disable_monitoring_areas() #disable all interactables
+	toggle_monitoring(true, "door") #enable this interactable
 
 func glow(tween : Tween, theme : StandardMaterial3D):
 	disable_tweens() #First disable the running tweens 
@@ -53,8 +67,6 @@ func glow(tween : Tween, theme : StandardMaterial3D):
 	tween.tween_property(theme, "albedo_color:g", 0.4, 0.5)\
 	.set_trans(Tween.TRANS_SINE)\
 	.set_ease(Tween.EASE_IN_OUT)
-	
-	print("tween: ", tween)
 
 func disable_tweens():
 	if items_tween != null and items_tween.get_loops_left() == -1: stop_glow(items_tween, items_theme)
@@ -68,3 +80,15 @@ func stop_glow(tween : Tween, theme : StandardMaterial3D):
 	
 	theme.shading_mode = BaseMaterial3D.SHADING_MODE_PER_PIXEL
 	theme.albedo_color.g = 1
+
+func toggle_monitoring(is_working : bool, group_name : String):
+	for node in get_tree().get_nodes_in_group(group_name):
+		if node is Area3D:
+			node.input_ray_pickable = is_working #disabling monitoring and monitorable doesnt work on mouse inputs
+
+func disable_monitoring_areas(): #so when hovering, the mouse isn't getting picked up
+	toggle_monitoring(false, "item")
+	toggle_monitoring(false, "ration")
+
+func _on_pick_item_pressed() -> void:
+	glow_items()

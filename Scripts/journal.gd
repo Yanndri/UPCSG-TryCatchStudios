@@ -7,6 +7,8 @@ var current_journal_entry : JournalEntry
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	%PickAnItemLabel.visible = false
+	
 	current_journal_entry_title = "Day 1"
 	next_page()
 
@@ -55,3 +57,4 @@ func toggle_visibility(journal_entry : JournalEntry):
 
 func _on_pick_item_pressed() -> void:
 	%CameraManager.main_view()
+	%PickAnItemLabel.visible = true
