@@ -21,6 +21,7 @@ func _input(event: InputEvent) -> void:
 		glow_door()
 
 func _ready() -> void:
+	GlobalValues.connect("click_event_type_changed", toggle_glowing_types) #when the clicking types(journal, rations, items, or door) changes, also change which will glow
 	glow_journal()
 
 func glow_items():
@@ -92,5 +93,6 @@ func disable_monitoring_areas(): #so when hovering, the mouse isn't getting pick
 	toggle_monitoring(false, "ration")
 	toggle_monitoring(false, "journal")
 
-func _on_pick_item_pressed() -> void:
-	glow_items()
+func toggle_glowing_types(click_event : int) -> void:
+	if click_event == GlobalValues.click_events.items: glow_items()
+	if click_event == GlobalValues.click_events.rations: glow_rations()

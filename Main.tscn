@@ -305,7 +305,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Body:modulate")
+tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer/Body:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -317,7 +317,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Day:self_modulate")
+tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer/Day:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -358,7 +358,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Body:modulate")
+tracks/2/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer/Body:modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -370,7 +370,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Day:self_modulate")
+tracks/3/path = NodePath("../CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer/Day:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -422,7 +422,7 @@ journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj"), ExtReso
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
-offset_left = 488.0
+offset_left = 472.0
 offset_top = 176.0
 offset_right = 883.0
 offset_bottom = 679.0
@@ -431,14 +431,22 @@ offset_bottom = 679.0
 layout_mode = 2
 theme_override_constants/separation = 36
 
-[node name="Day" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=766265037]
+[node name="NoteTexts" type="MarginContainer" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=1873626645]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts" unique_id=1022875925]
+layout_mode = 2
+theme_override_constants/separation = 36
+
+[node name="Day" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer" unique_id=766265037]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "[b]Day 1"
 fit_content = true
 
-[node name="Body" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=335592899]
+[node name="Body" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/NoteTexts/VBoxContainer" unique_id=335592899]
 unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
@@ -494,6 +502,16 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
 text = "☹"
+
+[node name="PickRations" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=501118358 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_kjvhd")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
+text = "Choose Rations"
 
 [node name="NextPage" parent="CanvasLayer/JournalEntries" unique_id=1850007712 instance=ExtResource("4_20pc6")]
 unique_name_in_owner = true
@@ -594,6 +612,20 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="ChooseRations" type="RichTextLabel" parent="CanvasLayer/MainUI" unique_id=898608278]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 528.0
+offset_top = 8.0
+offset_right = 700.0
+offset_bottom = 34.0
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = "Choose Rations"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=91243872]
 texture_filter = 1
 anchors_preset = 15
@@ -684,7 +716,6 @@ script = SubResource("GDScript_mxvw5")
 
 [node name="Character" parent="." unique_id=116848395 instance=ExtResource("7_lgr22")]
 transform = Transform3D(0.48505384, 0, 0.8744844, 0, 1, 0, -0.8744844, 0, 0.48505384, 1.0228271, 0.42565918, -0.5706482)
-visible = false
 
 [node name="Intro" type="Node" parent="." unique_id=2056802083]
 
@@ -827,7 +858,7 @@ shape = SubResource("BoxShape3D_mxvw5")
 debug_color = Color(1, 0, 0, 1)
 
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
-[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="Map" method="_on_pick_item_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickRations" to="CanvasLayer/JournalEntries" method="_on_pick_rations_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/NextPage" to="CanvasLayer/JournalEntries" method="_on_next_page_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/BackPage" to="CanvasLayer/JournalEntries" method="_on_back_page_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainUI/MarginContainer/UseItem/OkayButton" to="CanvasLayer/MainUI" method="_on_okay_button_pressed"]
