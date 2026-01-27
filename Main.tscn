@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=60 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="2_3dxm6"]
@@ -10,13 +10,16 @@
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="5_2gh4u"]
 [ext_resource type="PackedScene" uid="uid://dq2lmhp70qitb" path="res://map.tscn" id="5_03owx"]
 [ext_resource type="Resource" uid="uid://ca75ut82gvdu8" path="res://Theme/Resources/Day1.tres" id="6_devvj"]
+[ext_resource type="Resource" uid="uid://df45qym3jyxqq" path="res://Theme/Resources/Pipes.tres" id="6_xrxkg"]
 [ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/Fonts/lonely_study/Lonely Study.otf" id="7_kjvhd"]
 [ext_resource type="PackedScene" uid="uid://b4538y6rc2sav" path="res://character.tscn" id="7_lgr22"]
 [ext_resource type="Script" uid="uid://dhtjdo8s3dwdr" path="res://Scripts/main_ui.gd" id="8_2gh4u"]
 [ext_resource type="Script" uid="uid://cycw5rqanjrvk" path="res://interactable.gd" id="8_03owx"]
 [ext_resource type="Script" uid="uid://b6jwaxxgaikj8" path="res://Scripts/camera_manager.gd" id="8_5tuhn"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="8_trn2v"]
+[ext_resource type="FontFile" uid="uid://cp0y6ibkcsu52" path="res://Theme/Fonts/miskan/Miskan Oblique.ttf" id="9_hri7i"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
+[ext_resource type="FontFile" uid="uid://bdgbumdcc6i1f" path="res://Theme/Fonts/miskan/Miskan Oblique.woff" id="10_sqvbp"]
 [ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="11_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://oebj8h7qifd4" path="res://MeshLibraries/notepad/textures/lambert1_metallicRoughness.png" id="11_c6i3y"]
 [ext_resource type="Texture2D" uid="uid://vx4jhtdk70d" path="res://MeshLibraries/notepad/textures/lambert1_normal.png" id="12_c2ibq"]
@@ -31,6 +34,23 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c6i3y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_20pc6"]
+
+[sub_resource type="GDScript" id="GDScript_sqvbp"]
+resource_name = "ChosenItem"
+script/source = "extends RichTextLabel
+
+func _ready() -> void:
+	GlobalValues.connect(\"item_changed\", on_item_changed)
+
+func on_item_changed(item : String):
+	self.text = item
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xrxkg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sqvbp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hri7i"]
 
 [sub_resource type="Environment" id="Environment_2a3ug"]
 background_mode = 1
@@ -398,11 +418,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
-journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj")])
+journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj"), ExtResource("6_xrxkg")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
-offset_left = 483.0
+offset_left = 488.0
 offset_top = 176.0
 offset_right = 883.0
 offset_bottom = 679.0
@@ -426,10 +446,12 @@ text = "If you're reading this, it means there's no more text to show.
 
 This page shouldn't show, take a screenshot and report"
 fit_content = true
-horizontal_alignment = 3
 
-[node name="PickItem" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=1434494314 instance=ExtResource("4_20pc6")]
+[node name="PickEvent" type="VBoxContainer" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=605722898]
 unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PickItem" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent" unique_id=1434494314 instance=ExtResource("4_20pc6")]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("7_kjvhd")
 theme_override_font_sizes/font_size = 32
@@ -438,7 +460,17 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
 text = "Pick Item"
 
+[node name="chosenItem" type="RichTextLabel" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent" unique_id=1189531867]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.3811603, 0.41213077, 0.41211858, 1)
+theme_override_fonts/normal_font = ExtResource("9_hri7i")
+bbcode_enabled = true
+fit_content = true
+horizontal_alignment = 1
+script = SubResource("GDScript_sqvbp")
+
 [node name="YesOrNo" type="HBoxContainer" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=2130576130]
+unique_name_in_owner = true
 clip_contents = true
 layout_mode = 2
 theme_override_constants/separation = 64
@@ -452,7 +484,7 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
-text = "☹"
+text = "☺"
 
 [node name="NoButton" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/YesOrNo" unique_id=10476481 instance=ExtResource("4_20pc6")]
 unique_name_in_owner = true
@@ -461,7 +493,7 @@ theme_override_font_sizes/font_size = 64
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
-text = "☺"
+text = "☹"
 
 [node name="NextPage" parent="CanvasLayer/JournalEntries" unique_id=1850007712 instance=ExtResource("4_20pc6")]
 unique_name_in_owner = true
@@ -508,31 +540,52 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -86.0
-offset_right = 86.0
-offset_bottom = 26.0
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 62.0
 grow_horizontal = 2
 theme_override_constants/margin_top = 32
 
-[node name="Panel" type="Panel" parent="CanvasLayer/MainUI/MarginContainer" unique_id=378645146]
+[node name="UseItem" type="HBoxContainer" parent="CanvasLayer/MainUI/MarginContainer" unique_id=612781481]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer/MainUI/MarginContainer/UseItem" unique_id=219647494]
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
-[node name="chosenItem" type="RichTextLabel" parent="CanvasLayer/MainUI/MarginContainer" unique_id=46232808]
+[node name="chosenItem" type="RichTextLabel" parent="CanvasLayer/MainUI/MarginContainer/UseItem/Panel" unique_id=46232808]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("10_sqvbp")
 bbcode_enabled = true
 text = "[b]Static Test"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="OkayButton" parent="CanvasLayer/MainUI/MarginContainer/UseItem" unique_id=1873048903 instance=ExtResource("4_20pc6")]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("7_kjvhd")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xrxkg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_sqvbp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hri7i")
+text = "OK"
+autowrap_trim_flags = 192
+clip_text = true
+expand_icon = true
+
 [node name="PickAnItemLabel" type="RichTextLabel" parent="CanvasLayer/MainUI" unique_id=1052786193]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 552.0
+offset_left = 528.0
 offset_top = 8.0
-offset_right = 724.0
+offset_right = 700.0
 offset_bottom = 34.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 bbcode_enabled = true
@@ -570,7 +623,7 @@ light_energy = 0.1
 [node name="CameraManager" type="Node" parent="SubViewportContainer/SubViewport" unique_id=404159912 node_paths=PackedStringArray("cameras")]
 unique_name_in_owner = true
 script = ExtResource("8_5tuhn")
-cameras = [NodePath("MainCamera"), NodePath("MovingCamera"), NodePath("IntroCamera")]
+cameras = [NodePath("MainCamera"), NodePath("JournalCamera"), NodePath("IntroCamera")]
 
 [node name="MainCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1695421303]
 unique_name_in_owner = true
@@ -592,7 +645,7 @@ visible = false
 extra_cull_margin = 16000.0
 mesh = SubResource("QuadMesh_7t0pu")
 
-[node name="MovingCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1847339471]
+[node name="JournalCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1847339471]
 transform = Transform3D(-0.62265116, -0.7774106, 0.08909707, -3.1963403e-09, 0.113862135, 0.9934966, -0.78249955, 0.61860186, -0.070896395, 0.30810097, 0.8086971, 0.542235)
 script = SubResource("GDScript_3dxm6")
 
@@ -764,16 +817,18 @@ libraries = {
 &"": SubResource("AnimationLibrary_7vxqa")
 }
 
-[node name="interactable" type="Area3D" parent="JournalMesh" unique_id=1019851969]
+[node name="interactable" type="Area3D" parent="JournalMesh" unique_id=1019851969 groups=["journal"]]
 script = ExtResource("8_03owx")
+item_name = "Journal"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="JournalMesh/interactable" unique_id=1700924378]
 transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_mxvw5")
 debug_color = Color(1, 0, 0, 1)
 
-[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
-[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickItem" to="Map" method="_on_pick_item_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
+[connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="Map" method="_on_pick_item_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/NextPage" to="CanvasLayer/JournalEntries" method="_on_next_page_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/BackPage" to="CanvasLayer/JournalEntries" method="_on_back_page_pressed"]
+[connection signal="pressed" from="CanvasLayer/MainUI/MarginContainer/UseItem/OkayButton" to="CanvasLayer/MainUI" method="_on_okay_button_pressed"]
 [connection signal="input_event" from="JournalMesh/interactable" to="SubViewportContainer/SubViewport/CameraManager" method="_on_interactable_input_event"]

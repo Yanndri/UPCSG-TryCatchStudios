@@ -7,9 +7,9 @@ var current_journal_entry : JournalEntry
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	%PickAnItemLabel.visible = false
+	GlobalValues.connect("item_changed", item_chosen) ##This only works for pick_item event
 	
-	current_journal_entry_title = "Day 1"
+	current_journal_entry_title = "Pipes"
 	next_page()
 
 #Enter a Journal title and this will find the JournalEntry from the array in journal_entries
@@ -33,6 +33,17 @@ func next_page() -> void:
 	
 	%Body.text = note #set the note as the text body
 	toggle_visibility(current_journal_entry) #toggle the buttons in the notes visibility
+	
+	GlobalValues.chosen_item = ""
+	%PickEvent.visible = false
+	%YesOrNo.visible = false
+	if current_journal_entry.pick_event == true:
+		%PickEvent.visible = true
+		%YesOrNo.visible = false
+	if current_journal_entry.yes_or_no_event == true:
+		%PickEvent.visible = false
+		%YesOrNo.visible = true
+	
 
 #Go to back page
 func _on_back_page_pressed() -> void:
@@ -58,3 +69,7 @@ func toggle_visibility(journal_entry : JournalEntry):
 func _on_pick_item_pressed() -> void:
 	%CameraManager.main_view()
 	%PickAnItemLabel.visible = true
+
+func item_chosen(item : String): #This only works for pick_item event
+	if item != "": #Only show when item has been chosen
+		%NextPage.visible = true 

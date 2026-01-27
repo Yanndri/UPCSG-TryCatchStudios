@@ -1,0 +1,8 @@
+Model Information:
+* title:	Bottle
+* source:	https://sketchfab.com/3d-models/bottle-41fbce139a724637b0ba9bb135a3be19
+* author:	fasaivan6 (https://sketchfab.com/fasaivan6)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

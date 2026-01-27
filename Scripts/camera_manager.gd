@@ -27,3 +27,4 @@ func _on_interactable_input_event(camera: Node, event: InputEvent, event_positio
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			journal_view()
+			%Map.disable_monitoring_areas() #so the mouse doesn't detect the area3d of the journal

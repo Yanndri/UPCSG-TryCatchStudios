@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://ddd7pg817r2fm"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_v1nh8"]
+
+[resource]
+script = ExtResource("1_v1nh8")
+Title = "DailyCheck"
+notes = PackedStringArray("David seems to be okay.\n\nRyan seems to be doing just fine.\n\nRussel is hanging in there.\n\nBJ is doing great.")
+metadata/_custom_type_script = "uid://x74fvggltqyk"

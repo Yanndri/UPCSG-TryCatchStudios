@@ -36,6 +36,7 @@ func glow_journal():
 	glow(journal_tween, journal_theme) #now turn on this specific tween
 	
 	disable_monitoring_areas() #disable all interactables
+	toggle_monitoring(true, "journal") #enable this interactable
 
 ##Used by camera_manager when on journal view
 func disable_journal_texture(): journal_theme.render_priority = -1 #this makes it so the theme doesnt render
@@ -46,13 +47,13 @@ func glow_rations():
 	
 	disable_monitoring_areas() #disable all interactables
 	toggle_monitoring(true, "ration") #enable this interactable
+	toggle_monitoring(true, "journal") #enable this interactable
 
 func glow_door():
 	door_tween =create_tween()
 	glow(door_tween, door_theme) #now turn on this specific tween
 	
 	disable_monitoring_areas() #disable all interactables
-	toggle_monitoring(true, "door") #enable this interactable
 
 func glow(tween : Tween, theme : StandardMaterial3D):
 	disable_tweens() #First disable the running tweens 
@@ -89,6 +90,7 @@ func toggle_monitoring(is_working : bool, group_name : String):
 func disable_monitoring_areas(): #so when hovering, the mouse isn't getting picked up
 	toggle_monitoring(false, "item")
 	toggle_monitoring(false, "ration")
+	toggle_monitoring(false, "journal")
 
 func _on_pick_item_pressed() -> void:
 	glow_items()
