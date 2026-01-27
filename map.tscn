@@ -394,9 +394,12 @@ size = Vector3(2, 2.5, 1.81)
 resource_name = "Lamp"
 script/source = "extends RigidBody3D
 
+@export var spotlight : SpotLight3D
+
 func _ready():
-	random_times()
+	swing_loop()
 	swing()
+	flicker_loop()
 
 func _physics_process(delta: float) -> void:
 	apply_impulse(Vector3(randf_range(0, 0.1),0,randf_range(0, 0.05)) * randf_range(0, 0.1))  # push sideway
@@ -405,11 +408,27 @@ func swing():
 	#apply_impulse(Vector3(1,0,1) * 0.6)  # push sideways
 	apply_impulse(Vector3(randf_range(0.5, 1),0,randf_range(0.5, 1)) * randf_range(0.3, 0.8))  # push sideways
 
-func random_times():
+func swing_loop():
 	while true: #So after finishing the block it returns back
 		var random_time = randf_range(10, 69)
 		await get_tree().create_timer(random_time).timeout
 		swing()
+
+func flicker_loop() -> void:
+	while true: #So after finishing the block it returns back
+		var random_time = randf_range(10, 69)
+		await get_tree().create_timer(random_time).timeout
+		flicker()
+
+func flicker():
+	for i in range(randf_range(8, 32)):
+		# Random delay between flickers
+		var delay = randf_range(0.05, 0.3)
+		await get_tree().create_timer(delay).timeout
+
+		# Randomize light energy slightly
+		spotlight.light_energy = randf_range(0.6, 1.2)
+	spotlight.light_energy = 1 #default value
 "
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hn12h"]
@@ -1485,9 +1504,10 @@ transform = Transform3D(1, 2.5331974e-07, -4.1744386e-14, 0, 0.99999976, 1.06581
 shape = SubResource("BoxShape3D_6sq2s")
 debug_color = Color(1, 1, 1, 0.41960785)
 
-[node name="Lamp" type="RigidBody3D" parent="." unique_id=460306781]
+[node name="Lamp" type="RigidBody3D" parent="." unique_id=460306781 node_paths=PackedStringArray("spotlight")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4252048, 0)
 script = SubResource("GDScript_hn12h")
+spotlight = NodePath("SpotLight3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Lamp" unique_id=997389615]
 shape = SubResource("SphereShape3D_hn12h")

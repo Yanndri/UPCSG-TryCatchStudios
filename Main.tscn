@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=53 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="2_3dxm6"]
@@ -127,6 +127,34 @@ billboard_keep_scale = true
 shading_mode = 0
 billboard_mode = 1
 billboard_keep_scale = true
+
+[sub_resource type="GDScript" id="GDScript_mxvw5"]
+resource_name = "Day_transition"
+script/source = "extends Label3D
+
+func _ready() -> void:
+	GlobalValues.connect(\"day_changed\", on_day_changed)
+	show_day_info()
+
+func on_day_changed(day : int):
+	self.text = \"[b]Day \" + str(day)
+	show_day_info()
+
+func show_day_info():
+	var tween = create_tween()
+	
+	self.modulate.a = 0
+	tween.tween_property(self, \"modulate:a\", 1, 2)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
+	#the '\\' allows for newline, so that it's more readable
+	
+	tween.tween_interval(3) #wait time
+	
+	tween.tween_property(self, \"modulate:a\", 0, 2)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
+"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wkp8b"]
 size = Vector3(1, 1, 0.05)
@@ -410,7 +438,32 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
 text = "Pick Item"
 
-[node name="NextPage" parent="CanvasLayer/JournalEntries" unique_id=1770953425 instance=ExtResource("4_20pc6")]
+[node name="YesOrNo" type="HBoxContainer" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer" unique_id=2130576130]
+clip_contents = true
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="YesButton" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/YesOrNo" unique_id=1770953425 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+clip_contents = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
+text = "☹"
+
+[node name="NoButton" parent="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/YesOrNo" unique_id=10476481 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
+text = "☺"
+
+[node name="NextPage" parent="CanvasLayer/JournalEntries" unique_id=1850007712 instance=ExtResource("4_20pc6")]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 800.0
@@ -421,7 +474,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
-text = "⎯⌲"
+text = "⎓⌲"
 icon_alignment = 1
 
 [node name="BackPage" parent="CanvasLayer/JournalEntries" unique_id=1662579272 instance=ExtResource("4_20pc6")]
@@ -436,7 +489,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxEmpty_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_c6i3y")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_20pc6")
-text = "⎯⌲"
+text = "⎓⌲"
 
 [node name="MainUI" type="Control" parent="CanvasLayer" unique_id=1444886690]
 unique_name_in_owner = true
@@ -566,6 +619,15 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5.729248, 4.2337217, 6.069275
 visible = false
 material_override = SubResource("StandardMaterial3D_03owx")
 mesh = SubResource("QuadMesh_03owx")
+
+[node name="DayTransition" type="Label3D" parent="." unique_id=1760219583]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.0872943, 0)
+billboard = 1
+texture_filter = 0
+render_priority = 1
+text = "Day 1"
+font = ExtResource("7_kjvhd")
+script = SubResource("GDScript_mxvw5")
 
 [node name="Character" parent="." unique_id=116848395 instance=ExtResource("7_lgr22")]
 transform = Transform3D(0.48505384, 0, 0.8744844, 0, 1, 0, -0.8744844, 0, 0.48505384, 1.0228271, 0.42565918, -0.5706482)
