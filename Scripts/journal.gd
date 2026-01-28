@@ -1,5 +1,6 @@
 extends Control
 
+@export var starting_journal : JournalEntry
 @export var journal_entries : Array[JournalEntry]
 
 var current_journal_entry : JournalEntry
@@ -10,21 +11,27 @@ var notes_audit : PackedStringArray #All notes used are stored here
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GlobalValues.connect("item_changed", item_chosen) ##This only works for pick_item event
+	GlobalValues.connect("day_changed", func(day): %Day.text = "[b]Day " + str(day))
 	
 	get_journals()
 
 func get_journals():
-	if GlobalValues.Day == 1:
-		start_journal("Day 1")
-		journal_entries.erase(find_journal_entry("Day 1"))
+	if starting_journal != null:
+		current_journal_entry = starting_journal
+		starting_journal = null
+		start_journal(current_journal_entry)
 		return
 	
-	for journal in journal_entries:
-		pass
+	GlobalValues.Day += 1
+	
+	var get_random_index := randi_range(0, journal_entries.size() - 1)
+	current_journal_entry = journal_entries.pop_at(get_random_index)
+	
+	start_journal(current_journal_entry)
 
-func start_journal(journal_title : String): #Start of every Journal Entry meaning page 1
-	current_journal_entry = find_journal_entry(journal_title)#Get the journal entry
-	write_journal(current_journal_entry, 1)
+func start_journal(journal_entry : JournalEntry): #Start of every Journal Entry meaning page 1
+	#current_journal_entry = find_journal_entry(journal_title)#Get the journal entry
+	write_journal(journal_entry, 1)
 
 #Writes the notes from the entry, can toggle between next and back page by changing flip amount either 1 or -1
 func write_journal(journal_entry : JournalEntry, flip_amount : int): 
@@ -36,7 +43,7 @@ func write_journal(journal_entry : JournalEntry, flip_amount : int):
 	toggle_disable_all_buttons(false) #enable all buttons since the animation is finished
 	
 	%Body.text = note #set the note as the text body
-	toggle_visibility(current_journal_entry) #toggle the buttons in the notes visibility based on the journal_entry
+	toggle_visibility(journal_entry) #toggle the buttons in the notes visibility based on the journal_entry
 
 func toggle_disable_all_buttons(is_working : bool): #So while the journal is animating, you can't multi click
 	%NextPage.disabled = is_working
@@ -68,9 +75,12 @@ func toggle_visibility(journal_entry : JournalEntry):
 	%PickEvent.visible = false
 	%YesOrNo.visible = false
 	%PickRations.visible = false
+	%Skip.visible = false
 	if journal_entry.pick_event == true:
 		%PickEvent.visible = true
 		%YesOrNo.visible = false
+		%NextPage.visible = false
+		if GlobalValues.chosen_item != "": %NextPage.visible = true
 	if journal_entry.yes_or_no_event == true:
 		%PickEvent.visible = false
 		%YesOrNo.visible = true
@@ -98,8 +108,7 @@ func _on_skip_pressed() -> void:
 func skip_note(journal_entry : JournalEntry):
 	if journal_entry.is_after_last_page():
 		get_journals()
-		#new_event()
-		#write_journal(journal_entry, 1)
+		%CameraManager.main_view()
 
 func new_event():
 	pass

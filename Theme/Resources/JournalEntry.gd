@@ -59,5 +59,5 @@ func daily_check(note : String): #This shows after all pages are finished
 	return note
 
 func time_for_rations(note : String) -> String:
-	note += "\nIt's time to ration the food and water, we have plenty of rations so maybe rations may not be a problem. \n\nAlthough 1 can and water is good enought for us the whole day"
+	note += "\nIt's time to ration the food and water, we have plenty of rations so maybe rations may not be a problem. \n\nOne can and one water is good enough for all of us we'll share it the whole day" 
 	return note

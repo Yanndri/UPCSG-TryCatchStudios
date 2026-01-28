@@ -158,7 +158,7 @@ func _ready() -> void:
 	show_day_info()
 
 func on_day_changed(day : int):
-	self.text = \"[b]Day \" + str(day)
+	self.text = \"Day \" + str(day)
 	show_day_info()
 
 func show_day_info():
@@ -437,13 +437,15 @@ metadata/_edit_lock_ = true
 
 [node name="JournalEntries" type="Control" parent="CanvasLayer" unique_id=1422255193]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
-journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_devvj"), ExtResource("6_xrxkg")])
+starting_journal = ExtResource("6_devvj")
+journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_xrxkg")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
@@ -588,6 +590,7 @@ grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("3_c6i3y")
 script = ExtResource("8_2gh4u")
+metadata/_edit_lock_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MainUI" unique_id=88459907]
 layout_mode = 1
@@ -743,6 +746,7 @@ material_override = SubResource("StandardMaterial3D_03owx")
 mesh = SubResource("QuadMesh_03owx")
 
 [node name="DayTransition" type="Label3D" parent="." unique_id=1760219583]
+unique_name_in_owner = true
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.0872943, 0)
 billboard = 1
 texture_filter = 0
