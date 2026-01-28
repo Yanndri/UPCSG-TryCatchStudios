@@ -10,7 +10,7 @@ var rations_tween : Tween
 var journal_tween : Tween
 var door_tween : Tween
 
-func _input(event: InputEvent) -> void:
+func _input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_1):
 		glow_items()
 	if Input.is_key_pressed(KEY_2):
@@ -96,3 +96,9 @@ func disable_monitoring_areas(): #so when hovering, the mouse isn't getting pick
 func toggle_glowing_types(click_event : int) -> void:
 	if click_event == GlobalValues.click_events.items: glow_items()
 	if click_event == GlobalValues.click_events.rations: glow_rations()
+	if click_event == GlobalValues.click_events.NA: make_everything_clickable_but_no_glow()
+
+func make_everything_clickable_but_no_glow():
+	toggle_monitoring(true, "item")
+	toggle_monitoring(true, "ration")
+	toggle_monitoring(true, "journal")

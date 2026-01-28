@@ -42,13 +42,18 @@ var characters : Dictionary = {
 	#}
 }
 
+var eat_food : bool #When on ration time and they confirmed to eat food
+var drink_water : bool #When on ration time and they confirmed to drink water
+
 #when in main view and you are prompt to click, used to determine which type should glow in map.gd
-enum click_events{items, journal, rations, door} 
-var click_event_type : click_events :
+#either items, journal, rations, door will glow
+enum click_events{NA, items, journal, rations, door} 
+var click_event_type : click_events = click_events.NA :
 	set(value):
 		click_event_type = value
 		emit_signal("click_event_type_changed", click_event_type)
 
+##SIGNALS
 signal click_event_type_changed
 signal item_changed
 signal day_changed
