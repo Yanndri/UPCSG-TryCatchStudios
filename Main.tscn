@@ -1,4 +1,4 @@
-[gd_scene load_steps=62 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=63 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://dhtjdo8s3dwdr" path="res://Scripts/main_ui.gd" id="8_2gh4u"]
 [ext_resource type="Script" uid="uid://cycw5rqanjrvk" path="res://interactable.gd" id="8_03owx"]
 [ext_resource type="Script" uid="uid://b6jwaxxgaikj8" path="res://Scripts/camera_manager.gd" id="8_5tuhn"]
+[ext_resource type="Resource" uid="uid://dmsi7xitg0qv6" path="res://Theme/Resources/Intruder.tres" id="8_oye8v"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="8_trn2v"]
 [ext_resource type="FontFile" uid="uid://cp0y6ibkcsu52" path="res://Theme/Fonts/miskan/Miskan Oblique.ttf" id="9_hri7i"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
@@ -446,7 +447,7 @@ offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
 starting_journal = ExtResource("6_devvj")
-journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_xrxkg")])
+journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_xrxkg"), ExtResource("8_oye8v")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
@@ -568,6 +569,7 @@ icon_alignment = 1
 
 [node name="BackPage" parent="CanvasLayer/JournalEntries" unique_id=1662579272 instance=ExtResource("4_20pc6")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 576.0
 offset_top = 680.0

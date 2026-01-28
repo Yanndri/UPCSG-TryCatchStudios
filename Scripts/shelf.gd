@@ -5,8 +5,16 @@ var took_water : bool
 
 func _ready() -> void:
 	GlobalValues.connect("item_changed", decide_ration)
+	GlobalValues.connect("click_event_type_changed", ration_time)
 	%food_eaten.visible = false
 	%bottle_eaten.visible = false
+
+func ration_time(click_event : int):
+	if click_event ==  GlobalValues.click_events.rations:
+		%food_eaten.visible = false
+		%bottle_eaten.visible = false
+		took_food = false
+		took_water = false
 
 func decide_ration(item : String):
 	if GlobalValues.click_event_type ==  GlobalValues.click_events.NA: #Meaning no calculations at this click event

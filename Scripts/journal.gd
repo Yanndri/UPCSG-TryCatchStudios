@@ -45,7 +45,7 @@ func write_journal(journal_entry : JournalEntry, flip_amount : int):
 
 func toggle_disable_all_buttons(is_working : bool): #So while the journal is animating, you can't multi click
 	%NextPage.disabled = is_working
-	%BackPage.disabled = is_working
+	#%BackPage.disabled = is_working
 	%PickRations.disabled = is_working
 	%PickItem.disabled = is_working
 	%Skip.disabled = is_working
@@ -66,15 +66,15 @@ func _on_back_page_pressed() -> void: write_journal(current_journal_entry, -1)
 #Toggle the visibility of components in the Journal
 func toggle_visibility(journal_entry : JournalEntry):
 	%Day.visible = journal_entry.is_first_page() #Only visible if the first note of the journal entry
-	%BackPage.visible = not journal_entry.is_first_page() #Only visible if not the first note of the journal entry
-	#%NextPage.visible = not journal_entry.is_last_page() #Only visible if not the last note of the journal entry
+	#%BackPage.visible = not journal_entry.is_first_page() #Only visible if not the first note of the journal entry
+	%NextPage.visible = not journal_entry.is_after_last_page() or not journal_entry.is_ration_time() #Only visible if not the last note of the journal entry
 	
 	GlobalValues.chosen_item = "" #erase the values from the pick item event to start over again
 	%PickEvent.visible = false
 	%YesOrNo.visible = false
 	%PickRations.visible = false
 	%Skip.visible = false
-	if journal_entry.pick_event == true:
+	if journal_entry.pick_event == true and not journal_entry.is_pick_event_finished():
 		%PickEvent.visible = true
 		%YesOrNo.visible = false
 		%NextPage.visible = false
@@ -82,7 +82,7 @@ func toggle_visibility(journal_entry : JournalEntry):
 	if journal_entry.yes_or_no_event == true:
 		%PickEvent.visible = false
 		%YesOrNo.visible = true
-	if journal_entry.is_after_last_page(): 
+	if journal_entry.is_ration_time(): 
 		%PickRations.visible = true
 		%Skip.visible = true
 
