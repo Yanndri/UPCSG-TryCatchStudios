@@ -18,17 +18,20 @@ var feelings : Dictionary = { #values should be the continuation of "is feeling 
 	"Okay": "Okay so far",
 	"Depressed": "Depressed and should be looked after"
 }
+
 const max_hunger = 100
 var characters : Dictionary = {
 	"Character1" : {
 		"name": "Wilson",
 		"feeling" : feelings.Okay,
-		"hunger" : 100
+		"hunger" : 70,
+		"thirst" : 70
 	},
 	"Character2" : {
 		"name": "Wendy",
 		"feeling" : feelings.Okay,
-		"hunger" : 100
+		"hunger" : 70,
+		"thirst" : 70
 	},
 	#"Character3" : {
 		#"name": "Russel",
@@ -51,6 +54,7 @@ enum click_events{NA, items, journal, rations, door}
 var click_event_type : click_events = click_events.NA :
 	set(value):
 		click_event_type = value
+		print("click_event_type: ", click_event_type)
 		emit_signal("click_event_type_changed", click_event_type)
 
 ##SIGNALS

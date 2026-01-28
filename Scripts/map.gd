@@ -22,6 +22,7 @@ func _input(_event: InputEvent) -> void:
 
 func _ready() -> void:
 	GlobalValues.connect("click_event_type_changed", toggle_glowing_types) #when the clicking types(journal, rations, items, or door) changes, also change which will glow
+	
 	glow_journal()
 
 func glow_items():
@@ -102,3 +103,4 @@ func make_everything_clickable_but_no_glow():
 	toggle_monitoring(true, "item")
 	toggle_monitoring(true, "ration")
 	toggle_monitoring(true, "journal")
+	

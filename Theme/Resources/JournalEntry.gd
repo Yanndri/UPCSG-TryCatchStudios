@@ -13,7 +13,7 @@ var item_needed : String
 @export_multiline var bad_pick : String #For events when they picked correctly
 
 var notes_size : int
-var note_count : int :
+var note_count := 0 :
 	set(value):
 		note_count = value
 
@@ -35,7 +35,7 @@ func flip_journal(flip_amount : int) -> String:
 	if is_last_page(): note = daily_check(note) #add the daily check notes
 	if is_after_last_page(): note = time_for_rations(note) #notes to initiate the food 
 	
-	print("Journal Entry-> Size: ", notes_size,  "| note_count: ", note_count)
+	print("Journal Entry-> ", Title, "-> Size: ", notes_size,  "| note_count: ", note_count)
 	print("is_first_page(): ", is_first_page(), " is_last_page(): ", is_last_page())
 	
 	##this replaces the string {item_name} to the item the player chose
@@ -54,9 +54,29 @@ func daily_check(note : String): #This shows after all pages are finished
 	for key in GlobalValues.characters.keys():
 		var character = GlobalValues.characters[key]
 		#print(character["name"] + " is feeling " + character["feeling"])
-		note += "\n" + character["name"] + " is feeling " + character["feeling"]
+		note += "\n" + character["name"] + " is feeling " + character["feeling"] + ". "
+		note += calculate_hunger(character)
+		note += calculate_thirst(character)
 	
 	return note
+
+func calculate_hunger(character : Dictionary) -> String:
+	var hunger = character["hunger"]
+	var hunger_note : String
+	if hunger < 50:
+		hunger_note = character["name"] + " could use a little food"
+	elif hunger >= 90:
+		hunger_note = character["name"] + " is a little full right now"
+	return hunger_note
+
+func calculate_thirst(character : Dictionary) -> String:
+	var thirst = character["thirst"]
+	var thirst_note : String
+	if thirst < 50:
+		thirst_note = character["name"] + " could use a few bits of water"
+	elif thirst >= 90:
+		thirst_note = character["name"] + " is over hydrated"
+	return thirst_note
 
 func time_for_rations(note : String) -> String:
 	note += "\nIt's time to ration the food and water, we have plenty of rations so maybe rations may not be a problem. \n\nOne can and one water is good enough for all of us we'll share it the whole day" 

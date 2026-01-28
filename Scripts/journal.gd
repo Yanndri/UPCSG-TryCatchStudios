@@ -22,8 +22,6 @@ func get_journals():
 		start_journal(current_journal_entry)
 		return
 	
-	GlobalValues.Day += 1
-	
 	var get_random_index := randi_range(0, journal_entries.size() - 1)
 	current_journal_entry = journal_entries.pop_at(get_random_index)
 	
@@ -95,7 +93,6 @@ func _on_pick_item_pressed() -> void:
 
 func _on_pick_rations_pressed() -> void:
 	%CameraManager.main_view()
-	%ChooseRations.visible = true
 	GlobalValues.click_event_type = GlobalValues.click_events.rations
 
 func item_chosen(item : String): #This only works for pick_item event
@@ -106,9 +103,9 @@ func _on_skip_pressed() -> void:
 	skip_note(current_journal_entry)
 
 func skip_note(journal_entry : JournalEntry):
-	if journal_entry.is_after_last_page():
+	if journal_entry.is_after_last_page(): #Go to Next Day
+		GlobalValues.Day += 1
 		get_journals()
 		%CameraManager.main_view()
 
-func new_event():
-	pass
+func _on_confirm_rations_pressed() -> void: skip_note(current_journal_entry)

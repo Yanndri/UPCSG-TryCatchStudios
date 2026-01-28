@@ -4,13 +4,15 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	%PickAnItemLabel.visible = false 
-	%ChooseRations.visible = false
 
 	GlobalValues.connect("item_changed", display_chosen_item)
 	GlobalValues.connect("click_event_type_changed", display_confirm_button)
 	display_chosen_item("")
 
 func display_chosen_item(chosen_item : String):
+	if GlobalValues.click_event_type == GlobalValues.click_events.rations: #Don't want to display items when it's ration time
+		return
+		
 	%chosenItem.text = chosen_item
 	if chosen_item != "":
 		%UseItem.visible = true
