@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://g2eiwddqhqyc"]
+[gd_scene load_steps=3 format=3 uid="uid://g2eiwddqhqyc"]
+
+[ext_resource type="Theme" uid="uid://db85viup2y2xb" path="res://Theme/Settings.tres" id="1_l4u1r"]
 
 [sub_resource type="GDScript" id="GDScript_l4u1r"]
 resource_name = "ControlsDisplay"
@@ -40,6 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("1_l4u1r")
 script = SubResource("GDScript_l4u1r")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=816649520]

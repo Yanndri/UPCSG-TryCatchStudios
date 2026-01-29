@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=102 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
@@ -25,6 +25,9 @@
 [ext_resource type="Script" uid="uid://dapqdx01tltly" path="res://Scripts/selected_rations.gd" id="13_5mvff"]
 [ext_resource type="Script" uid="uid://cv8e8nfwfrrei" path="res://Scripts/map.gd" id="14_devvj"]
 [ext_resource type="Material" uid="uid://bjsocgfgxmntf" path="res://Theme/StandardMaterials/items.tres" id="15_mxvw5"]
+[ext_resource type="AudioStream" uid="uid://cyfa1jrf5xwvt" path="res://addons/base_button/click.wav" id="15_o7g6l"]
+[ext_resource type="Theme" uid="uid://db85viup2y2xb" path="res://Theme/Settings.tres" id="15_vi5kq"]
+[ext_resource type="Script" uid="uid://v5y7slqc7hfb" path="res://addons/modded_settings/settings.gd" id="16_vi5kq"]
 [ext_resource type="Material" uid="uid://c3h8gmo8quid8" path="res://Theme/StandardMaterials/rations.tres" id="16_xrxkg"]
 [ext_resource type="Shader" uid="uid://dt68hwvqchqgb" path="res://Theme/dot_dither3.gdshader" id="17_gb15f"]
 [ext_resource type="Material" uid="uid://kppnmq4o1svc" path="res://Theme/StandardMaterials/journal.tres" id="18_3b0ty"]
@@ -57,6 +60,19 @@ func on_item_changed(item : String):
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hri7i"]
 
+[sub_resource type="GDScript" id="GDScript_blluw"]
+resource_name = "sfx_button"
+script/source = "extends AudioStreamPlayer2D
+
+func _ready() -> void:
+	#Whenever the cursor is in the button it turns into a pointing hand only works for Control Nodes
+	get_parent().mouse_default_cursor_shape = Input.CURSOR_POINTING_HAND 
+
+func _on_base_button_pressed() -> void:
+	#play() #comment if you don't want to ahear sound effect
+	pass
+"
+
 [sub_resource type="Environment" id="Environment_2a3ug"]
 background_mode = 1
 background_color = Color(0.010172402, 0.012225552, 0.0122257015, 1)
@@ -79,7 +95,7 @@ shader_parameter/min_dither_brightness = 0.1
 shader_parameter/color_a = Color(0, 0, 0, 1)
 shader_parameter/color_b = Color(0.8980392, 1, 1, 1)
 shader_parameter/bayer_mode = 4
-shader_parameter/background_blend = 0.50000002375
+shader_parameter/background_blend = 0.10000000475
 
 [sub_resource type="QuadMesh" id="QuadMesh_27bay"]
 lightmap_size_hint = Vector2i(12, 12)
@@ -955,10 +971,10 @@ script = ExtResource("1_w3rk5")
 
 [node name="Settings" type="MarginContainer" parent="CanvasLayer" unique_id=645424813]
 unique_name_in_owner = true
-offset_left = 26.0
-offset_top = 21.0
-offset_right = 188.0
-offset_bottom = 36.0
+offset_left = 72.0
+offset_top = 16.0
+offset_right = 234.0
+offset_bottom = 31.0
 
 [node name="zoom_label" type="RichTextLabel" parent="CanvasLayer/Settings" unique_id=716176583]
 unique_name_in_owner = true
@@ -1242,6 +1258,90 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
 text = "OK"
 
+[node name="settings" type="Button" parent="CanvasLayer" unique_id=1637735140]
+process_mode = 3
+offset_right = 54.0
+offset_bottom = 87.0
+theme = ExtResource("15_vi5kq")
+theme_override_colors/font_color = Color(0.7490196, 0.8156863, 0.8, 1)
+theme_override_colors/font_outline_color = Color(0.4117887, 0.4603755, 0.44930798, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 48
+text = "⎈"
+
+[node name="clickSFX" type="AudioStreamPlayer2D" parent="CanvasLayer/settings" unique_id=1419007476]
+stream = ExtResource("15_o7g6l")
+script = SubResource("GDScript_blluw")
+
+[node name="Settings" type="CanvasLayer" parent="CanvasLayer/settings" unique_id=1023945446]
+script = ExtResource("16_vi5kq")
+
+[node name="PauseDisplay" type="PanelContainer" parent="CanvasLayer/settings/Settings" unique_id=89996534]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 260)
+anchors_preset = -1
+anchor_left = 0.4
+anchor_top = 0.1
+anchor_right = 0.6
+anchor_bottom = 0.8
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = ExtResource("15_vi5kq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/settings/Settings/PauseDisplay" unique_id=410014977]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=1709775745]
+layout_mode = 2
+bbcode_enabled = true
+text = "[center][b]Options"
+fit_content = true
+scroll_active = false
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=1690471501]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="controls" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=1893093386 instance=ExtResource("4_20pc6")]
+layout_mode = 2
+text = "Controls"
+
+[node name="volume" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=1772219789 instance=ExtResource("4_20pc6")]
+layout_mode = 2
+text = "Volume"
+
+[node name="graphics" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=393061614 instance=ExtResource("4_20pc6")]
+layout_mode = 2
+text = "Graphics"
+
+[node name="exit" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=1024456049 instance=ExtResource("4_20pc6")]
+layout_mode = 2
+text = "Exit"
+
+[node name="close" parent="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer" unique_id=765688212 instance=ExtResource("4_20pc6")]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Close"
+
+[node name="back" parent="CanvasLayer/settings/Settings" unique_id=1099864388 instance=ExtResource("4_20pc6")]
+unique_name_in_owner = true
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -144.0
+offset_right = 0.0
+offset_bottom = 48.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme = ExtResource("15_vi5kq")
+theme_override_colors/font_outline_color = Color(0.30544624, 0.3054462, 0.3054462, 1)
+theme_override_constants/outline_size = 4
+text = "Back"
+
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=91243872]
 texture_filter = 1
 anchors_preset = 15
@@ -1295,6 +1395,7 @@ mesh = SubResource("QuadMesh_7t0pu")
 
 [node name="JournalCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1847339471]
 transform = Transform3D(-0.62265116, -0.7774106, 0.08909707, -3.1963403e-09, 0.113862135, 0.9934966, -0.78249955, 0.61860186, -0.070896395, 0.30810097, 0.8086971, 0.542235)
+current = true
 script = SubResource("GDScript_3dxm6")
 
 [node name="MainMenuCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1384124428]
@@ -1748,5 +1849,12 @@ mesh = SubResource("ArrayMesh_0o4t1")
 [connection signal="pressed" from="CanvasLayer/JournalEntries/BackPage" to="CanvasLayer/JournalEntries" method="_on_back_page_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainUI/MarginContainer/UseItem/OkayButton" to="CanvasLayer/MainUI" method="_on_okay_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/MainUI/SelectedRations/VBoxContainer/ConfirmRations" to="CanvasLayer/MainUI/SelectedRations" method="_on_confirm_rations_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings" to="CanvasLayer/settings/clickSFX" method="_on_base_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings" to="CanvasLayer/settings/Settings" method="_on_settings_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer/controls" to="CanvasLayer/settings/Settings" method="_on_controls_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer/volume" to="CanvasLayer/settings/Settings" method="_on_volume_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/Settings/PauseDisplay/VBoxContainer/close" to="CanvasLayer/settings/Settings" method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/settings/Settings/back" to="CanvasLayer/settings/Settings" method="_on_back_pressed"]
 [connection signal="input_event" from="JournalMesh/interactable" to="SubViewportContainer/SubViewport/CameraManager" method="_on_interactable_input_event"]
 [connection signal="input_event" from="MainMenu/Play/play" to="MainMenu" method="_on_play_input_event"]
+[connection signal="input_event" from="MainMenu/Settings/Area3D" to="CanvasLayer/settings/Settings" method="_on_area_3d_input_event"]

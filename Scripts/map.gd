@@ -10,15 +10,15 @@ var rations_tween : Tween
 var journal_tween : Tween
 var door_tween : Tween
 
-func _input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_1):
-		glow_items()
-	if Input.is_key_pressed(KEY_2):
-		glow_journal()
-	if Input.is_key_pressed(KEY_3):
-		glow_rations()
-	if Input.is_key_pressed(KEY_4):
-		glow_door()
+#func _input(_event: InputEvent) -> void:
+	#if Input.is_key_pressed(KEY_1):
+		#glow_items()
+	#if Input.is_key_pressed(KEY_2):
+		#glow_journal()
+	#if Input.is_key_pressed(KEY_3):
+		#glow_rations()
+	#if Input.is_key_pressed(KEY_4):
+		#glow_door()
 
 func _ready() -> void:
 	GlobalValues.connect("click_event_type_changed", toggle_glowing_types) #when the clicking types(journal, rations, items, or door) changes, also change which will glow

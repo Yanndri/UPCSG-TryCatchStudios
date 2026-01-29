@@ -14,7 +14,7 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v4as0"]
 
 [resource]
-Button/colors/font_color = Color(0.4313522, 0.46110195, 0.46108735, 1)
+Button/colors/font_color = Color(0.1272927, 0.14088896, 0.14089632, 1)
 Button/colors/font_hover_color = Color(0.2, 0.2, 0.09803922, 1)
 Button/fonts/font = ExtResource("2_3kgdn")
 Button/styles/disabled = SubResource("StyleBoxEmpty_qu2c6")
@@ -22,7 +22,7 @@ Button/styles/focus = SubResource("StyleBoxEmpty_ti8mq")
 Button/styles/hover = SubResource("StyleBoxEmpty_fccoc")
 Button/styles/normal = SubResource("StyleBoxEmpty_3kgdn")
 Button/styles/pressed = SubResource("StyleBoxEmpty_v4as0")
-RichTextLabel/colors/default_color = Color(0.14509805, 0.16078432, 0.16078432, 1)
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/font_sizes/bold_font_size = 24
 RichTextLabel/font_sizes/normal_font_size = 20
 RichTextLabel/fonts/bold_font = ExtResource("1_3kgdn")

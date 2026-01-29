@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://521s4jxqotxs"]
+[gd_scene load_steps=3 format=3 uid="uid://521s4jxqotxs"]
 
 [ext_resource type="Script" uid="uid://bryrd3mj31kw1" path="res://addons/modded_settings/input_remap.gd" id="1_3pmue"]
+[ext_resource type="Theme" uid="uid://db85viup2y2xb" path="res://Theme/Settings.tres" id="1_guy4m"]
 
 [node name="InputRemap" type="HBoxContainer" unique_id=1669360234]
+theme = ExtResource("1_guy4m")
 alignment = 1
 script = ExtResource("1_3pmue")
 

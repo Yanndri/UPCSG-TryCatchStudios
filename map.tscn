@@ -486,13 +486,25 @@ script/source = "extends RigidBody3D
 
 @export var spotlight : SpotLight3D
 
+var light_value : float
+const default_light_value := 1
+const low_light_value := 0.5
+
 func _ready():
 	GlobalValues.connect(\"day_changed\", _ready_light)
+	GlobalValues.connect(\"click_event_type_changed\", lower_light)
 	
 	_ready_light(1)
 	swing_loop()
 	swing()
 	flicker_loop()
+
+func lower_light(click_event: int):
+	if click_event == GlobalValues.click_events.journal:
+		light_value = low_light_value
+	else:
+		light_value = default_light_value
+	spotlight.light_energy = light_value #default value
 
 func _ready_light(_day : int):
 	var tween = create_tween()
@@ -527,8 +539,8 @@ func flicker():
 		await get_tree().create_timer(delay).timeout
 
 		# Randomize light energy slightly
-		spotlight.light_energy = randf_range(0.6, 1.2)
-	spotlight.light_energy = 1 #default value
+		spotlight.light_energy = randf_range(0.6, 0.8)
+	spotlight.light_energy = light_value #default value
 "
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_hn12h"]
