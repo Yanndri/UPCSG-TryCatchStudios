@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b8mfuptp1qa1c" path="res://Scripts/intro_scene.gd" id="1_y72e6"]
 [ext_resource type="Shader" uid="uid://y5j3apk18mqq" path="res://Theme/dot_dither.gdshader" id="2_u2rf6"]
-[ext_resource type="PackedScene" uid="uid://cfwpi300vmw3p" path="res://main_menu.tscn" id="2_y72e6"]
+[ext_resource type="PackedScene" uid="uid://c5jfehuk150f4" path="res://Main.tscn" id="2_y72e6"]
 [ext_resource type="FontFile" uid="uid://bej3vt1n5mhdd" path="res://Theme/Fonts/zenitha_classic/ZenithaClassic_PERSONAL_USE_ONLY.otf" id="4_0a7ni"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="4_dpxxx"]
 
@@ -330,7 +330,7 @@ size = Vector2(2, 2)
 
 [node name="Intro" type="Node3D" unique_id=1942331724]
 script = ExtResource("1_y72e6")
-menu_scene = ExtResource("2_y72e6")
+main_scene = ExtResource("2_y72e6")
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=1715559169]
 transform = Transform3D(6.5, 0, 0, 0, 0.05, 0, 0, 0, 6.5, 0, -0.05, 0)
