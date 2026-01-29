@@ -1,24 +1,8 @@
 extends Node3D
 
+
+# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	restart()
-
-func restart():
-	%JournalEntries.visible = false
-	%MainUI.visible = false
-	%Settings.visible = false
-	main_menu()
-
-func main_menu():
-	%CameraManager.switch_camera(2)
-
-func play_game(): #Pressed by Main Menu on play
-	%CameraManager.switch_camera(0) #Switch to main camera
-	start_game()
-	%MainUI.visible = true
-	%Settings.visible = true
-
-func start_game():
 	GlobalValues.click_event_type = GlobalValues.click_events.NA
 	GlobalValues.Day = 1
 	
