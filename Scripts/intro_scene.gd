@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var menu_scene : PackedScene
+@export var main_scene : PackedScene
 
 func _ready() -> void:
 	%Lamp._ready_light()
@@ -11,4 +11,4 @@ func _ready() -> void:
 	%center_label.text = "Dark Choices"
 	await %Lamp.flicker(32)
 	await get_tree().create_timer(0.5).timeout
-	get_tree().change_scene_to_packed(menu_scene)
+	get_tree().change_scene_to_packed(main_scene)
