@@ -29,7 +29,6 @@
 [ext_resource type="Shader" uid="uid://dt68hwvqchqgb" path="res://Theme/dot_dither3.gdshader" id="17_gb15f"]
 [ext_resource type="Material" uid="uid://kppnmq4o1svc" path="res://Theme/StandardMaterials/journal.tres" id="18_3b0ty"]
 [ext_resource type="Material" uid="uid://dp3is5sx1snek" path="res://Theme/StandardMaterials/door.tres" id="18_sqvbp"]
-[ext_resource type="Texture2D" uid="uid://cwucmmhanf774" path="res://MeshLibraries/wilson_Material_baseColor.png" id="32_40n85"]
 [ext_resource type="Texture2D" uid="uid://bo3bcono6ouwi" path="res://MeshLibraries/wendy_hair_baseColor.png" id="32_gb15f"]
 [ext_resource type="Script" uid="uid://c4gc68eaxyop0" path="res://Scripts/main_menu.gd" id="32_sph85"]
 [ext_resource type="Texture2D" uid="uid://bx7jjv5eh0cuq" path="res://MeshLibraries/textures/laminate_floor_02_diff_1k.jpg" id="33_o7g6l"]
@@ -574,6 +573,7 @@ _data = {
 &"idle": SubResource("Animation_sph85")
 }
 
+<<<<<<< HEAD
 [sub_resource type="GDScript" id="GDScript_fu7sn"]
 resource_name = "MainMenuLamp"
 script/source = "extends RigidBody3D
@@ -955,6 +955,8 @@ shadow_mesh = SubResource("ArrayMesh_l5hcg")
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
 =======
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
+=======
+>>>>>>> parent of 8326baa (Added wilson to main scene)
 [node name="Main" type="Node3D" unique_id=362291105]
 script = ExtResource("1_w3rk5")
 
@@ -1301,7 +1303,7 @@ extra_cull_margin = 16000.0
 mesh = SubResource("QuadMesh_7t0pu")
 
 [node name="JournalCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1847339471]
-transform = Transform3D(-0.62265116, -0.7774106, 0.08909706, -3.1963403e-09, 0.113862135, 0.9934966, -0.78249955, 0.61860186, -0.07089639, 0.30810097, 0.733909, 0.47850513)
+transform = Transform3D(-0.62265116, -0.7774106, 0.08909707, -3.1963403e-09, 0.113862135, 0.9934966, -0.78249955, 0.61860186, -0.070896395, 0.30810097, 0.8086971, 0.542235)
 script = SubResource("GDScript_3dxm6")
 
 [node name="MainMenuCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1384124428]
@@ -1387,7 +1389,9 @@ mesh = SubResource("PlaneMesh_2gh4u")
 
 [node name="JournalAnimations" type="AnimationPlayer" parent="JournalMesh" unique_id=993923638]
 unique_name_in_owner = true
-libraries/ = SubResource("AnimationLibrary_7vxqa")
+libraries = {
+&"": SubResource("AnimationLibrary_7vxqa")
+}
 
 [node name="interactable" type="Area3D" parent="JournalMesh" unique_id=1019851969 groups=["journal"]]
 script = ExtResource("8_03owx")
@@ -1604,9 +1608,12 @@ skin = SubResource("Skin_k0m7t")
 skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Wendy" unique_id=1037043120]
-libraries/ = SubResource("AnimationLibrary_o7g6l")
+libraries = {
+&"": SubResource("AnimationLibrary_o7g6l")
+}
 autoplay = &"idle"
 
+<<<<<<< HEAD
 [node name="wilson" type="Node3D" parent="." unique_id=294391403]
 transform = Transform3D(0.00286451, -2.6498295e-05, 0.0063870074, -0.00026855973, 0.00699325, 0.00014946004, -0.006381416, -0.00030620335, 0.0028607312, 0.11981878, 0.030011058, -0.8824775)
 
@@ -1972,6 +1979,8 @@ mesh = SubResource("ArrayMesh_0o4t1")
 
 =======
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
+=======
+>>>>>>> parent of 8326baa (Added wilson to main scene)
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickRations" to="CanvasLayer/JournalEntries" method="_on_pick_rations_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Skip" to="CanvasLayer/JournalEntries" method="_on_skip_pressed"]
