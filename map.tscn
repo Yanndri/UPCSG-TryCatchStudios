@@ -487,19 +487,9 @@ script/source = "extends RigidBody3D
 @export var spotlight : SpotLight3D
 
 func _ready():
-	GlobalValues.connect(\"day_changed\", _ready_light)
-	
-	_ready_light(1)
 	swing_loop()
 	swing()
 	flicker_loop()
-
-func _ready_light(_day : int):
-	var tween = create_tween()
-	spotlight.light_energy = 0
-	tween.tween_property(spotlight, \"light_energy\", 1, 1)\\
-	.set_trans(Tween.TRANS_SINE)\\
-	.set_ease(Tween.EASE_IN_OUT)
 
 func _physics_process(_delta: float) -> void:
 	apply_impulse(Vector3(randf_range(0, 0.1),0,randf_range(0, 0.05)) * randf_range(0, 0.1))  # push sideway
