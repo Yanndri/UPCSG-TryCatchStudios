@@ -932,6 +932,7 @@ blend_shape_mode = 0
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="ArrayMesh" id="ArrayMesh_0o4t1"]
 resource_name = "Sketchfab_Scene_shelf_shelf1_0"
 _surfaces = [{
@@ -957,6 +958,8 @@ shadow_mesh = SubResource("ArrayMesh_l5hcg")
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
 =======
 >>>>>>> parent of 8326baa (Added wilson to main scene)
+=======
+>>>>>>> parent of 4ec5ac3 (Initial wilson animation)
 [node name="Main" type="Node3D" unique_id=362291105]
 script = ExtResource("1_w3rk5")
 
@@ -1836,6 +1839,7 @@ skin = SubResource("Skin_nenkc")
 skeleton = NodePath("..")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="AnimationPlayer" type="AnimationPlayer" parent="wilson" unique_id=14462539]
 libraries/ = SubResource("AnimationLibrary_vi5kq")
 autoplay = &"idle"
@@ -1981,6 +1985,8 @@ mesh = SubResource("ArrayMesh_0o4t1")
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
 =======
 >>>>>>> parent of 8326baa (Added wilson to main scene)
+=======
+>>>>>>> parent of 4ec5ac3 (Initial wilson animation)
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickRations" to="CanvasLayer/JournalEntries" method="_on_pick_rations_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Skip" to="CanvasLayer/JournalEntries" method="_on_skip_pressed"]
