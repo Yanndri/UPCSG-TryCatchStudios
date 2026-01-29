@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 [gd_scene load_steps=98 format=4 uid="uid://c5jfehuk150f4"]
-=======
-[gd_scene load_steps=66 format=4 uid="uid://c5jfehuk150f4"]
->>>>>>> parent of 8326baa (Added wilson to main scene)
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
