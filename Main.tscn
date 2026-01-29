@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=98 format=4 uid="uid://c5jfehuk150f4"]
+=======
+[gd_scene load_steps=66 format=4 uid="uid://c5jfehuk150f4"]
+>>>>>>> parent of 8326baa (Added wilson to main scene)
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
@@ -574,6 +578,7 @@ _data = {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="GDScript" id="GDScript_fu7sn"]
 resource_name = "MainMenuLamp"
 script/source = "extends RigidBody3D
@@ -960,6 +965,8 @@ shadow_mesh = SubResource("ArrayMesh_l5hcg")
 >>>>>>> parent of 8326baa (Added wilson to main scene)
 =======
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
+=======
+>>>>>>> parent of 8326baa (Added wilson to main scene)
 [node name="Main" type="Node3D" unique_id=362291105]
 script = ExtResource("1_w3rk5")
 
@@ -1617,6 +1624,7 @@ libraries = {
 autoplay = &"idle"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="wilson" type="Node3D" parent="." unique_id=294391403]
 transform = Transform3D(0.00286451, -2.6498295e-05, 0.0063870074, -0.00026855973, 0.00699325, 0.00014946004, -0.006381416, -0.00030620335, 0.0028607312, 0.11981878, 0.030011058, -0.8824775)
 
@@ -1987,6 +1995,8 @@ mesh = SubResource("ArrayMesh_0o4t1")
 >>>>>>> parent of 8326baa (Added wilson to main scene)
 =======
 >>>>>>> parent of 4ec5ac3 (Initial wilson animation)
+=======
+>>>>>>> parent of 8326baa (Added wilson to main scene)
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickRations" to="CanvasLayer/JournalEntries" method="_on_pick_rations_pressed"]
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/Skip" to="CanvasLayer/JournalEntries" method="_on_skip_pressed"]
