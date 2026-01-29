@@ -41,12 +41,13 @@ func _ready():
 	swing_loop()
 	swing()
 	flicker_loop()
-	_ready_light()
 
 func _ready_light():
 	var tween = create_tween()
 	spotlight.light_energy = 0
-	tween.tween_property(spotlight, \"light_energy\", 1, 12)
+	tween.tween_property(spotlight, \"light_energy\", 1, 12)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
 	#spotlight.light_energy = 1
 
 func _physics_process(_delta: float) -> void:

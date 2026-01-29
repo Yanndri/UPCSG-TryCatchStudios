@@ -892,7 +892,7 @@ light_energy = 0.1
 [node name="CameraManager" type="Node" parent="SubViewportContainer/SubViewport" unique_id=404159912 node_paths=PackedStringArray("cameras")]
 unique_name_in_owner = true
 script = ExtResource("8_5tuhn")
-cameras = [NodePath("MainCamera"), NodePath("JournalCamera"), null]
+cameras = [NodePath("MainCamera"), NodePath("JournalCamera")]
 
 [node name="MainCamera" type="Camera3D" parent="SubViewportContainer/SubViewport/CameraManager" unique_id=1695421303]
 unique_name_in_owner = true

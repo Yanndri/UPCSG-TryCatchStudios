@@ -20,15 +20,16 @@ script/source = "extends RigidBody3D
 
 @export var spotlight : SpotLight3D
 
-func _ready():
+func _ready() -> void:
 	swing_loop()
 	swing()
-	_ready_light()
 
 func _ready_light():
 	var tween = create_tween()
 	spotlight.light_energy = 0
-	tween.tween_property(spotlight, \"light_energy\", 1, 1)
+	tween.tween_property(spotlight, \"light_energy\", 1, 1)\\
+	.set_trans(Tween.TRANS_SINE)\\
+	.set_ease(Tween.EASE_IN_OUT)
 	#spotlight.light_energy = 1
 
 func _physics_process(_delta: float) -> void:
@@ -44,14 +45,14 @@ func swing_loop():
 		await get_tree().create_timer(random_time).timeout
 		swing()
 
-func flicker_loop() -> void:
-	while true: #So after finishing the block it returns back
-		var random_time = randf_range(10, 69)
-		await get_tree().create_timer(random_time).timeout
-		flicker()
+#func flicker_loop() -> void:
+	#while true: #So after finishing the block it returns back
+		#var random_time = randf_range(10, 69)
+		#await get_tree().create_timer(random_time).timeout
+		#flicker(16)
 
-func flicker():
-	for i in range(randf_range(8, 32)):
+func flicker(flicker_count : int):
+	for i in range(flicker_count):
 		# Random delay between flickers
 		var delay = randf_range(0.05, 0.3)
 		await get_tree().create_timer(delay).timeout
@@ -336,7 +337,8 @@ transform = Transform3D(6.5, 0, 0, 0, 0.05, 0, 0, 0, 6.5, 0, -0.05, 0)
 material_overlay = SubResource("StandardMaterial3D_d0rr7")
 mesh = SubResource("CylinderMesh_wby50")
 
-[node name="Label3D" type="Label3D" parent="." unique_id=14245633]
+[node name="center_label" type="Label3D" parent="." unique_id=14245633]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.029190779, 4.74947e-09)
 shaded = true
 texture_filter = 0
