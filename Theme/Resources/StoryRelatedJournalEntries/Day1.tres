@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://ca75ut82gvdu8"]
 
-[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_6f045"]
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_5c4qm"]
 
 [resource]
-script = ExtResource("1_6f045")
-Title = "Day 1"
+script = ExtResource("1_5c4qm")
+Title = "Day1"
 notes = PackedStringArray("I don’t know if anyone will ever read this. Maybe I’m writing only to keep my own mind from unraveling. The world outside is already gone.  \n\nIt began this morning, when something appeared in the sky. Not a star, not a comet, not a machine. Just. a presence. A shape that wasn’t a shape. Every glance revealed a new form, each more impossible than the last, until the mind itself begged for blindness.  \n\nEveryone screamed. Some clawed at their own eyes, others laughed until their throats tore. Cities fell into chaos not because the thing struck us, but because we struck ourselves. Madness spread faster than fire. ", "I ran. I don’t even remember how. My legs carried me here, to this bunker, where the walls are thick and the air is stale but mercifully empty of that vision. I can still hear the echoes above, like the hum of a thought too large for human skulls.  \n\nMaybe tomorrow it will be gone. Maybe tomorrow the sky will be empty again, and we will crawl out of our holes to find what remains. But tonight, I write in the dark, listening to the silence, and praying that blindness is enough to keep me sane.")
 metadata/_custom_type_script = "uid://x74fvggltqyk"

@@ -21,6 +21,8 @@ func play_game(): #Pressed by Main Menu on play
 func start_game():
 	GlobalValues.click_event_type = GlobalValues.click_events.NA
 	GlobalValues.Day = 1
+	GlobalValues.food_amount = 6
+	GlobalValues.water_amount = 6
 	
 	GlobalValues.connect("day_changed", new_day)
 	new_day(1)

@@ -1,5 +1,15 @@
 extends Node
 
+var food_amount : int :
+	set(value):
+		food_amount = value
+		emit_signal("food_amount_changed", food_amount)
+
+var water_amount : int :
+	set(value):
+		water_amount = value
+		emit_signal("water_amount_changed", water_amount)
+
 var Day : int = 1 :
 	set(value):
 		Day = value
@@ -14,24 +24,21 @@ var chosen_item : String : #If no value selected it should be ""
 		print("Chosen Item: ", chosen_item)
 		emit_signal("item_changed", chosen_item)
 
-var feelings : Dictionary = { #values should be the continuation of "is feeling -blank-"
-	"Okay": "Okay so far",
-	"Depressed": "Depressed and should be looked after"
-}
-
 const max_hunger = 100
 var characters : Dictionary = {
 	"Character1" : {
 		"name": "Wilson",
-		"feeling" : feelings.Okay,
+		"pronouns" : "He",
+		"sanity" : 50,
 		"hunger" : 70,
 		"thirst" : 70
 	},
 	"Character2" : {
 		"name": "Wendy",
-		"feeling" : feelings.Okay,
-		"hunger" : 70,
-		"thirst" : 70
+		"pronouns" : "She",
+		"sanity" : 80,
+		"hunger" : 40,
+		"thirst" : 40
 	},
 	#"Character3" : {
 		#"name": "Russel",
@@ -58,6 +65,8 @@ var click_event_type : click_events = click_events.NA :
 		emit_signal("click_event_type_changed", click_event_type)
 
 ##SIGNALS
+signal food_amount_changed
+signal water_amount_changed
 signal click_event_type_changed
 signal item_changed
 signal day_changed

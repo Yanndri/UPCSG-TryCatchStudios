@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://rwkimlhekyhj"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_1gl1t"]
+
+[resource]
+script = ExtResource("1_1gl1t")
+Title = "Cube3"
+notes = PackedStringArray("The cube fits snugly in my hand. It is always invitingly warm to the touch, like a trusted pet or a hug from a good friend.   Looking closely, it\'s pretty welcoming just by the delightful way the light plays across its welcoming surface.")
+metadata/_custom_type_script = "uid://x74fvggltqyk"

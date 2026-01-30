@@ -1,26 +1,30 @@
-[gd_scene load_steps=113 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene load_steps=117 format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
+[ext_resource type="Script" uid="uid://dsow2bgawvgrv" path="res://Scripts/story_manager.gd" id="2_1w2xm"]
 [ext_resource type="Script" uid="uid://bme0rq4k0ylr" path="res://camera_3d.gd" id="2_3dxm6"]
 [ext_resource type="Theme" uid="uid://dxf1ac0pdol7e" path="res://Theme/MainTheme.tres" id="3_c6i3y"]
 [ext_resource type="Script" uid="uid://j2g4hc0xclon" path="res://Scripts/journal.gd" id="4_5tuhn"]
 [ext_resource type="PackedScene" uid="uid://bpecia17xgykd" path="res://addons/base_button/base_button.tscn" id="4_20pc6"]
 [ext_resource type="Shader" uid="uid://dgg6fspmcxi88" path="res://Theme/dot.gdshader" id="4_trn2v"]
-[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="5_2gh4u"]
 [ext_resource type="PackedScene" uid="uid://dq2lmhp70qitb" path="res://map.tscn" id="5_03owx"]
-[ext_resource type="Resource" uid="uid://ca75ut82gvdu8" path="res://Theme/Resources/Day1.tres" id="6_devvj"]
-[ext_resource type="Resource" uid="uid://df45qym3jyxqq" path="res://Theme/Resources/Pipes.tres" id="6_xrxkg"]
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="5_x3yn0"]
+[ext_resource type="Resource" uid="uid://df45qym3jyxqq" path="res://Theme/Resources/RandomEventsJournalEntries/Pipes.tres" id="6_1w2xm"]
+[ext_resource type="Resource" uid="uid://ca75ut82gvdu8" path="res://Theme/Resources/StoryRelatedJournalEntries/Day1.tres" id="6_devvj"]
+[ext_resource type="Resource" uid="uid://dmsi7xitg0qv6" path="res://Theme/Resources/RandomEventsJournalEntries/Intruder.tres" id="7_gngx1"]
 [ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/Fonts/lonely_study/Lonely Study.otf" id="7_kjvhd"]
 [ext_resource type="Script" uid="uid://dhtjdo8s3dwdr" path="res://Scripts/main_ui.gd" id="8_2gh4u"]
 [ext_resource type="Script" uid="uid://cycw5rqanjrvk" path="res://interactable.gd" id="8_03owx"]
 [ext_resource type="Script" uid="uid://b6jwaxxgaikj8" path="res://Scripts/camera_manager.gd" id="8_5tuhn"]
-[ext_resource type="Resource" uid="uid://dmsi7xitg0qv6" path="res://Theme/Resources/Intruder.tres" id="8_oye8v"]
 [ext_resource type="FontFile" uid="uid://cp0y6ibkcsu52" path="res://Theme/Fonts/miskan/Miskan Oblique.ttf" id="9_hri7i"]
+[ext_resource type="Resource" uid="uid://d16shoco48cy2" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube1.tres" id="9_jt61w"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
 [ext_resource type="FontFile" uid="uid://bdgbumdcc6i1f" path="res://Theme/Fonts/miskan/Miskan Oblique.woff" id="10_sqvbp"]
+[ext_resource type="Resource" uid="uid://0gyegnjg1pq" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube2.tres" id="10_v8qla"]
 [ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="11_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://oebj8h7qifd4" path="res://MeshLibraries/notepad/textures/lambert1_metallicRoughness.png" id="11_c6i3y"]
+[ext_resource type="Resource" uid="uid://rwkimlhekyhj" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube3.tres" id="11_y1tbi"]
 [ext_resource type="Texture2D" uid="uid://vx4jhtdk70d" path="res://MeshLibraries/notepad/textures/lambert1_normal.png" id="12_c2ibq"]
 [ext_resource type="Script" uid="uid://dapqdx01tltly" path="res://Scripts/selected_rations.gd" id="13_5mvff"]
 [ext_resource type="Script" uid="uid://cv8e8nfwfrrei" path="res://Scripts/map.gd" id="14_devvj"]
@@ -305,7 +309,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("%JournalEntries:modulate")
+tracks/4/path = NodePath("../CanvasLayer/JournalEntries:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -370,7 +374,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("%JournalEntries:modulate")
+tracks/4/path = NodePath("../CanvasLayer/JournalEntries:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -1218,6 +1222,9 @@ _data = {
 [node name="Main" type="Node3D" unique_id=362291105]
 script = ExtResource("1_w3rk5")
 
+[node name="StoryManager" type="Node" parent="." unique_id=2119413294]
+script = ExtResource("2_1w2xm")
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1860670639]
 
 [node name="Settings" type="MarginContainer" parent="CanvasLayer" unique_id=645424813]
@@ -1246,8 +1253,8 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
-starting_journal = ExtResource("6_devvj")
-journal_entries = Array[ExtResource("5_2gh4u")]([ExtResource("6_xrxkg"), ExtResource("8_oye8v")])
+random_journal_entries = Array[ExtResource("5_x3yn0")]([ExtResource("6_1w2xm"), ExtResource("7_gngx1")])
+story_journal_entries = Array[ExtResource("5_x3yn0")]([ExtResource("6_devvj"), ExtResource("9_jt61w"), ExtResource("10_v8qla"), ExtResource("11_y1tbi")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
 layout_mode = 0
@@ -1525,7 +1532,6 @@ stream = ExtResource("15_o7g6l")
 script = SubResource("GDScript_blluw")
 
 [node name="Settings" type="CanvasLayer" parent="CanvasLayer/settings" unique_id=1023945446]
-visible = false
 script = ExtResource("16_vi5kq")
 
 [node name="PauseDisplay" type="PanelContainer" parent="CanvasLayer/settings/Settings" unique_id=89996534]

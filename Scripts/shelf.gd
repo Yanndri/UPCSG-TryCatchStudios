@@ -3,11 +3,48 @@ extends Node3D
 var took_food : bool
 var took_water : bool
 
+var current_food_count : int
+var current_water_count : int
+
 func _ready() -> void:
+	GlobalValues.connect("food_amount_changed", change_food_amount)
+	GlobalValues.connect("water_amount_changed", change_water_amount)
 	GlobalValues.connect("item_changed", decide_ration)
 	GlobalValues.connect("click_event_type_changed", ration_time)
 	%food_eaten.visible = false
 	%bottle_eaten.visible = false
+
+func change_food_amount(food_amount : int):
+	while current_food_count != food_amount:
+		if current_food_count > food_amount:
+			reduce_food()
+		if current_food_count < food_amount:
+			increase_food()
+		current_food_count = _get_current_food_count()
+
+func change_water_amount(water_amount : int):
+	while current_water_count != water_amount:
+		if current_water_count > water_amount:
+			reduce_water()
+		if current_water_count < water_amount:
+			increase_water()
+		current_water_count = _get_current_water_count()
+
+func _get_current_food_count() -> int:
+	var food_count : int = 0
+	for child in %Food.get_children():
+		if child is MeshInstance3D:
+			if child.visible:
+				food_count += 1
+	return food_count
+
+func _get_current_water_count() -> int:
+	var water_count : int = 0
+	for child in %Water.get_children():
+		if child is MeshInstance3D:
+			if child.visible:
+				water_count += 1
+	return water_count
 
 func ration_time(click_event : int):
 	if click_event ==  GlobalValues.click_events.rations:

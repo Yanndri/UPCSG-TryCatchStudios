@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://0gyegnjg1pq"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_m1ghs"]
+
+[resource]
+script = ExtResource("1_m1ghs")
+Title = "Cube2"
+yes_or_no_event = true
+yes_or_no = 1
+notes = PackedStringArray("Squeak SQueak SQUeak SQUEak SQUEAKKK!!!! These rats are so noisy, I tried screaming at them SHUT UP!! and peeked on the crack to see what they\'re doing.  There I saw a cube, a golden cube, it was dark but I can tell it was gold, I also saw the rats circling the Golden Cube like they\'re praising it, these rats seem to be smarter than your typical rats. I definitely should leave them to whatever their doing or I could stop this madness by trying to take the Cube.")
+good_pick = "I reached my hand on the cracks past all the mice circling around, they don't seem to care much about my presence but when I touched the cube they all looked at me and only when I pulled out the cube they started to attack me.  I pulled my hand out as fast as I can and covered the crack with a rock, I don't know if getting scratches was worth it for this cube."
+bad_pick = "Yeah nope, better leave them to whatever they're doing with the cube, it's too dangerous approaching these weird rats. They probably have rabies that's why their acting so off."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

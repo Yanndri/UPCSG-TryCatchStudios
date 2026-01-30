@@ -3,14 +3,20 @@ extends Resource
 
 @export var Title : String
 @export var pick_event : bool #Choose item event
-@export var yes_or_no_event : bool #Yes or No event
+@export_enum("Shotgun", "Medkit", "Toolbox", "Bag", "Flashlight") var item_needed : String
 
-@export_enum("Shotgun", "Medkit", "Toolbox", "Bag")
-var item_needed : String
+@export var yes_or_no_event : bool #Yes or No event
+enum yes_or_no_options {NA, Yes, No} 
+@export var yes_or_no : yes_or_no_options
+
+enum ration_types {NA, Food, Water} 
+@export var reward_ration : ration_types
+@export var reward_item : bool
 
 @export_multiline var notes : PackedStringArray
 @export_multiline var good_pick : String #For events when they picked correctly
 @export_multiline var bad_pick : String #For events when they picked correctly
+
 
 var notes_size : int
 var note_count := 0 :
@@ -39,6 +45,9 @@ func flip_journal(flip_amount : int) -> String:
 	elif note_count >= 0 and note_count <= notes_size:
 		note = notes[note_count - 1] #this makes it so note_count always starts at 0 index
 	
+	if _have_event() and event_done:
+		pass
+	
 	if not _have_event() or event_done:
 		if is_after_last_page() and not daily_check_finished: 
 			daily_check_finished = true
@@ -64,34 +73,24 @@ func is_all_notes_finished() -> bool: #Check if all journal notes are done read
 	return note_count >= notes_size and pick_event == false and yes_or_no_event == false
 
 func daily_check(note : String): #This shows after all pages are finished
-	note += "\n"
 	for key in GlobalValues.characters.keys():
 		var character = GlobalValues.characters[key]
-		#print(character["name"] + " is feeling " + character["feeling"])
-		note += "\n" + character["name"] + " is feeling " + character["feeling"] + ". "
-		note += calculate_hunger(character)
-		note += calculate_thirst(character)
+		note += "\n\n" + character["name"]
+		note += CharacterStats.get_feeling_comments(character["sanity"])
+		note += character["pronouns"] + "'s "
+		note += CharacterStats.get_hunger_comments(character["hunger"])
+		note += CharacterStats.get_thirst_comments(character["thirst"]) + "."
 	
 	return note
 
-func calculate_hunger(character : Dictionary) -> String:
-	var hunger = character["hunger"]
-	var hunger_note : String
-	if hunger < 50:
-		hunger_note = character["name"] + " could use a little food. "
-	elif hunger >= 90:
-		hunger_note = character["name"] + " is a little full right now. "
-	return hunger_note
-
-func calculate_thirst(character : Dictionary) -> String:
-	var thirst = character["thirst"]
-	var thirst_note : String
-	if thirst < 50:
-		thirst_note = character["name"] + " could use a few bits of water. "
-	elif thirst >= 90:
-		thirst_note = character["name"] + " is over hydrated. "
-	return thirst_note
-
 func time_for_rations(note : String) -> String:
 	note += "\n\nIt's time to ration the food and water, we have plenty of rations so maybe rations may not be a problem. \n\nOne can and one water is good enough for all of us we'll share it the whole day" 
+	return note
+
+func reward() -> String:
+	var note : String
+	
+	#match reward_ration:
+		
+	
 	return note
