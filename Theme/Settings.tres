@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://db85viup2y2xb"]
+[gd_resource type="Theme" format=3 uid="uid://db85viup2y2xb"]
 
 [ext_resource type="FontFile" uid="uid://dhu2hbpas0apj" path="res://Theme/Fonts/lonely_study/Lonely Study.otf" id="1_8ornt"]
 [ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="2_at17d"]

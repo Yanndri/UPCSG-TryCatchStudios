@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://deftxxarvefwm"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_i7eco"]
+
+[resource]
+script = ExtResource("1_i7eco")
+Title = "DarkCorridor"
+pick_event = true
+item_needed = "Shotgun"
+notes = PackedStringArray("The lights flicker.\n\nSomething moves at the edge of your vision inside the bunker.")
+good_pick = "I fired into the darkness.
+
+Whatever it was retreats deeper into the tunnels.
+
+It doesn’t return tonight.
+"
+bad_pick = "I approached it with {item_name}.
+
+Until suddenly something scratched me before disappearing."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

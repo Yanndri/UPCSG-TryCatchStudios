@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://epu2es3fiw7d"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_me0r3"]
+
+[resource]
+script = ExtResource("1_me0r3")
+Title = "FinalWarning"
+notes = PackedStringArray("A symbol is carved into the bunker door overnight.\n\nI don’t recognize it but it feels intentional.\n\nWhoever it is I will stand my ground and wait.\n\nAlthough no one or nothing came.\n\nThis message was a warning.\n")
+metadata/_custom_type_script = "uid://x74fvggltqyk"

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://c30trowlc4v4a"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_n4sqv"]
+
+[resource]
+script = ExtResource("1_n4sqv")
+Title = "HeavyFootsteps"
+pick_event = true
+item_needed = "Shotgun"
+notes = PackedStringArray("Thump.. Thump... Thump....\n\nSlow. Heavy. Too heavy to be human.\n\nThe floor vibrates with each step!")
+good_pick = "Whatever it is I'm gonna shoot it down. 
+
+One shot. BOOM!! 
+
+Then the footsteps stop.
+Something crashes outside and doesn’t move again.
+"
+bad_pick = "You hide using {item_name}.
+The creature circled the bunker all night.
+
+I couldn't get any sleep terrified.
+"
+metadata/_custom_type_script = "uid://x74fvggltqyk"

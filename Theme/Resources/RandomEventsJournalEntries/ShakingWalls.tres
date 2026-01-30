@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://djvlqbosk7xcd"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_5v41y"]
+
+[resource]
+script = ExtResource("1_5v41y")
+Title = "ShakingWalls"
+pick_event = true
+item_needed = "Toolbox"
+notes = PackedStringArray("The walls vibrate violently.\n\n Dust rains from the ceiling.\n\nThis place might collapse.\n")
+good_pick = "You reinforce weak support beams just in time.
+
+The shaking stops.
+
+The bunker holds."
+bad_pick = "You grab {item_name} and hide.
+
+A section collapses, crushing supplies."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://lsjray6rcfix"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_rfmt8"]
+
+[resource]
+script = ExtResource("1_rfmt8")
+Title = "RustedDoor"
+pick_event = true
+item_needed = "Toolbox"
+notes = PackedStringArray("One of the inner bunker doors is stuck halfway shut.\n\nBehind it, you hear faint breathing.\n\nLeaving it like this feels dangerous.")
+good_pick = "Using the Toolbox, you loosen the rusted hinges and seal the door properly.
+
+The breathing stops.
+You feel safer.
+"
+bad_pick = "A metal whip appeared as the bunker door slowly pried open. It swinged very accurately like the whip itself is a creature, I used my {item_name} as a cover and kicked the whip away. Thankfully it ran away, but now {item_name} is broken. "
+metadata/_custom_type_script = "uid://x74fvggltqyk"

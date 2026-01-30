@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://dt3xyy8lkefaq"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_qmh8k"]
+
+[resource]
+script = ExtResource("1_qmh8k")
+Title = "FailingGenerator"
+pick_event = true
+item_needed = "Toolbox"
+notes = PackedStringArray("Power drops suddenly. Darkness floods the bunker.\n\nNo power means no safety.\n")
+good_pick = "You repair the generator just before it dies completely.
+
+Lights return."
+bad_pick = "You try to improvise with {item_name}.
+
+It worked, but it damaged {item_name} in the process."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

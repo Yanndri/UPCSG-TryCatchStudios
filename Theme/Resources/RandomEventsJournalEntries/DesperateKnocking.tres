@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://dp3t8je1u3dsh"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_sw2g4"]
+
+[resource]
+script = ExtResource("1_sw2g4")
+Title = "DesperateKnocking"
+pick_event = true
+item_needed = "Shotgun"
+notes = PackedStringArray("Someone is pounding on the bunker door, screaming for help.\n\nI can’t tell if they’re human anymore.")
+good_pick = "I opened the door while holding {item_name}.
+
+The figure lunges at me and I used the {item_name} it starts fleeing."
+bad_pick = "You open the door while holding {item_name}.
+
+The figure lunges at you before fleeing.
+
+Ouch."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

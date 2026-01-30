@@ -39,7 +39,7 @@ static func get_thirst_comments(thirst : int) -> String:
 	elif thirst < 60:
 		thirst_note = " and is beginning to feel the dryness "
 	elif thirst < 80:
-		thirst_note = " and is aware of his thirst "
+		thirst_note = " and is slightly satiated "
 	elif thirst < 100:
 		thirst_note = " and is well hydrated "
 

@@ -62,21 +62,25 @@ func decide_ration(item : String):
 				took_food = true
 				reduce_food()
 				%food_eaten.visible = true #the food that was took is now on the table
+				GlobalValues.food_ate = true
 		"Removed Food": 
 			if took_food:
 				took_food = false
 				increase_food()
 				%food_eaten.visible = false #the food that was took is now on the table
+				GlobalValues.food_ate = false
 		"Water": 
 			if not took_water:
 				took_water = true
 				reduce_water()
 				%bottle_eaten.visible = true #the bottle that was took is now on the table
+				GlobalValues.water_drank = true
 		"Removed Water":
 			if took_water:
 				took_water = false
 				increase_water()
 				%bottle_eaten.visible = false #the bottle that was took is now on the table
+				GlobalValues.water_drank = false
 	#count_available_food()
 
 func reduce_food(): #Take food

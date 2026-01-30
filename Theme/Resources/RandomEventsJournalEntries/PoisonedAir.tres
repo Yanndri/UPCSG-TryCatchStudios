@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://7dd4kv4tugrj"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_txbvy"]
+
+[resource]
+script = ExtResource("1_txbvy")
+Title = "PoisonedAir"
+pick_event = true
+item_needed = "Medkit"
+notes = PackedStringArray("The air smells wrong. \n\nCough.. cough.. cough..\nMetallic. Burning.\n\nBreathing hUrTsSs.\n")
+good_pick = "You treat your lungs and seal the vents temporarily.
+
+The pain fades."
+bad_pick = "You push through it using {item_name}.
+
+You collapsed coughing."
+metadata/_custom_type_script = "uid://x74fvggltqyk"

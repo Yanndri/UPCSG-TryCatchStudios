@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=4 uid="uid://c5jfehuk150f4"]
+[gd_scene format=4 uid="uid://c5jfehuk150f4"]
 
 [ext_resource type="FontFile" uid="uid://cqee8qevj553y" path="res://Theme/Fonts/vogue/Vogue.ttf" id="1_fos0i"]
 [ext_resource type="Script" uid="uid://b46pbk4puen4k" path="res://main.gd" id="1_w3rk5"]
@@ -19,20 +19,29 @@
 [ext_resource type="Script" uid="uid://b6jwaxxgaikj8" path="res://Scripts/camera_manager.gd" id="8_5tuhn"]
 [ext_resource type="FontFile" uid="uid://cp0y6ibkcsu52" path="res://Theme/Fonts/miskan/Miskan Oblique.ttf" id="9_hri7i"]
 [ext_resource type="Resource" uid="uid://d16shoco48cy2" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube1.tres" id="9_jt61w"]
+[ext_resource type="Resource" uid="uid://lsjray6rcfix" path="res://Theme/Resources/RandomEventsJournalEntries/BloodFloor.tres" id="9_nx4yo"]
+[ext_resource type="Resource" uid="uid://cvk4oxbclpf2s" path="res://Theme/Resources/RandomEventsJournalEntries/RustedDoor.tres" id="10_5tfui"]
 [ext_resource type="Texture2D" uid="uid://ci70evohk6yya" path="res://MeshLibraries/notepad/textures/lambert1_baseColor.jpeg" id="10_5vvyt"]
 [ext_resource type="FontFile" uid="uid://bdgbumdcc6i1f" path="res://Theme/Fonts/miskan/Miskan Oblique.woff" id="10_sqvbp"]
 [ext_resource type="Resource" uid="uid://0gyegnjg1pq" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube2.tres" id="10_v8qla"]
+[ext_resource type="Resource" uid="uid://7dd4kv4tugrj" path="res://Theme/Resources/RandomEventsJournalEntries/PoisonedAir.tres" id="11_38apo"]
 [ext_resource type="FontFile" uid="uid://bv45i2vdnpn27" path="res://Theme/Fonts/miskan/Miskan.otf" id="11_c2ibq"]
 [ext_resource type="Texture2D" uid="uid://oebj8h7qifd4" path="res://MeshLibraries/notepad/textures/lambert1_metallicRoughness.png" id="11_c6i3y"]
 [ext_resource type="Resource" uid="uid://rwkimlhekyhj" path="res://Theme/Resources/StoryRelatedJournalEntries/Cube3.tres" id="11_y1tbi"]
 [ext_resource type="Texture2D" uid="uid://vx4jhtdk70d" path="res://MeshLibraries/notepad/textures/lambert1_normal.png" id="12_c2ibq"]
+[ext_resource type="Resource" uid="uid://deftxxarvefwm" path="res://Theme/Resources/RandomEventsJournalEntries/DarkCorridor.tres" id="12_khphd"]
 [ext_resource type="Script" uid="uid://dapqdx01tltly" path="res://Scripts/selected_rations.gd" id="13_5mvff"]
+[ext_resource type="Resource" uid="uid://epu2es3fiw7d" path="res://Theme/Resources/RandomEventsJournalEntries/FinalWarning.tres" id="13_g4yo4"]
 [ext_resource type="Script" uid="uid://cv8e8nfwfrrei" path="res://Scripts/map.gd" id="14_devvj"]
+[ext_resource type="Resource" uid="uid://djvlqbosk7xcd" path="res://Theme/Resources/RandomEventsJournalEntries/ShakingWalls.tres" id="14_im7ls"]
+[ext_resource type="Resource" uid="uid://c30trowlc4v4a" path="res://Theme/Resources/RandomEventsJournalEntries/HeavyFootsteps.tres" id="15_a34eg"]
 [ext_resource type="Material" uid="uid://bjsocgfgxmntf" path="res://Theme/StandardMaterials/items.tres" id="15_mxvw5"]
 [ext_resource type="AudioStream" uid="uid://cyfa1jrf5xwvt" path="res://addons/base_button/click.wav" id="15_o7g6l"]
 [ext_resource type="Theme" uid="uid://db85viup2y2xb" path="res://Theme/Settings.tres" id="15_vi5kq"]
 [ext_resource type="Script" uid="uid://v5y7slqc7hfb" path="res://addons/modded_settings/settings.gd" id="16_vi5kq"]
+[ext_resource type="Resource" uid="uid://dt3xyy8lkefaq" path="res://Theme/Resources/RandomEventsJournalEntries/FailingGenerator.tres" id="16_via5u"]
 [ext_resource type="Material" uid="uid://c3h8gmo8quid8" path="res://Theme/StandardMaterials/rations.tres" id="16_xrxkg"]
+[ext_resource type="Resource" uid="uid://dp3t8je1u3dsh" path="res://Theme/Resources/RandomEventsJournalEntries/DesperateKnocking.tres" id="17_ac6pf"]
 [ext_resource type="Shader" uid="uid://dt68hwvqchqgb" path="res://Theme/dot_dither3.gdshader" id="17_gb15f"]
 [ext_resource type="Material" uid="uid://kppnmq4o1svc" path="res://Theme/StandardMaterials/journal.tres" id="18_3b0ty"]
 [ext_resource type="Material" uid="uid://dp3is5sx1snek" path="res://Theme/StandardMaterials/door.tres" id="18_sqvbp"]
@@ -1253,7 +1262,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("3_c6i3y")
 script = ExtResource("4_5tuhn")
-random_journal_entries = Array[ExtResource("5_x3yn0")]([ExtResource("6_1w2xm"), ExtResource("7_gngx1")])
+random_journal_entries = Array[ExtResource("5_x3yn0")]([ExtResource("6_1w2xm"), ExtResource("7_gngx1"), ExtResource("9_nx4yo"), ExtResource("10_5tfui"), ExtResource("11_38apo"), ExtResource("12_khphd"), ExtResource("13_g4yo4"), ExtResource("14_im7ls"), ExtResource("15_a34eg"), ExtResource("16_via5u"), ExtResource("17_ac6pf")])
 story_journal_entries = Array[ExtResource("5_x3yn0")]([ExtResource("6_devvj"), ExtResource("9_jt61w"), ExtResource("10_v8qla"), ExtResource("11_y1tbi")])
 
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/JournalEntries" unique_id=86033651]
@@ -1739,9 +1748,7 @@ mesh = SubResource("PlaneMesh_2gh4u")
 
 [node name="JournalAnimations" type="AnimationPlayer" parent="JournalMesh" unique_id=993923638]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_7vxqa")
-}
+libraries/ = SubResource("AnimationLibrary_7vxqa")
 
 [node name="interactable" type="Area3D" parent="JournalMesh" unique_id=1019851969 groups=["journal"]]
 script = ExtResource("8_03owx")
@@ -2095,9 +2102,7 @@ skin = SubResource("Skin_k0m7t")
 skeleton = NodePath("..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Wendy" unique_id=1037043120]
-libraries = {
-&"": SubResource("AnimationLibrary_o7g6l")
-}
+libraries/ = SubResource("AnimationLibrary_o7g6l")
 autoplay = &"idle"
 
 [node name="wolfgang" type="Node3D" parent="." unique_id=1328930495]
@@ -2337,9 +2342,7 @@ skin = SubResource("Skin_lxgr2")
 skeleton = NodePath("..")
 
 [node name="WolfgangAnimation" type="AnimationPlayer" parent="wolfgang" unique_id=479773662]
-libraries = {
-&"": SubResource("AnimationLibrary_x3yn0")
-}
+libraries/ = SubResource("AnimationLibrary_x3yn0")
 autoplay = &"idle"
 
 [connection signal="pressed" from="CanvasLayer/JournalEntries/MarginContainer2/VBoxContainer/PickEvent/PickItem" to="CanvasLayer/JournalEntries" method="_on_pick_item_pressed"]

@@ -5,8 +5,8 @@ extends Node
 func _ready() -> void:
 	GlobalValues.connect("day_changed", new_day)
 
-func new_day(day : int):
-	pass
+func new_day(_day : int):
+	daily_values()
 
 func daily_values():
 	for key in GlobalValues.characters.keys():

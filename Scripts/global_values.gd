@@ -5,6 +5,9 @@ var food_amount : int :
 		food_amount = value
 		emit_signal("food_amount_changed", food_amount)
 
+var food_ate : bool
+var water_drank : bool
+
 var water_amount : int :
 	set(value):
 		water_amount = value
