@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0em0wgina3kn"
-path.s3tc="res://.godot/imported/girl2_Material_baseColor.png-383420bdd67e06438f26ca245c9059e8.s3tc.ctex"
+uid="uid://doia2bs2c3n0j"
+path.s3tc="res://.godot/imported/wabie_Material_baseColor.png-e1d967bd62ffb4b7aac414ff464b5a7a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "147003b92ce066447a8947ddaa97fddc"
+"md5": "fd943515b9f40c912dbf56d1be3f5b87"
 }
 
 [deps]
 
-source_file="res://MeshLibraries/girl2_Material_baseColor.png"
-dest_files=["res://.godot/imported/girl2_Material_baseColor.png-383420bdd67e06438f26ca245c9059e8.s3tc.ctex"]
+source_file="res://MeshLibraries/wabie_Material_baseColor.png"
+dest_files=["res://.godot/imported/wabie_Material_baseColor.png-e1d967bd62ffb4b7aac414ff464b5a7a.s3tc.ctex"]
 
 [params]
 

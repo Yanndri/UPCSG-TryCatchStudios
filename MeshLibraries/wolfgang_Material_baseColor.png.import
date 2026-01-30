@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsw3c6y5grs3q"
-path.s3tc="res://.godot/imported/girl2_hair_baseColor.png-9bb96f6cfa3392e7ecafb9b982672c2d.s3tc.ctex"
+uid="uid://vgeiwdwf82sm"
+path.s3tc="res://.godot/imported/wolfgang_Material_baseColor.png-6c62f3a909a76b291022c6aabe537ec6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "f3e7452bc88af18df74fe98c663b2595"
+"md5": "b8d4fa6a5f43f09e28b1c2e3278e72d4"
 }
 
 [deps]
 
-source_file="res://MeshLibraries/girl2_hair_baseColor.png"
-dest_files=["res://.godot/imported/girl2_hair_baseColor.png-9bb96f6cfa3392e7ecafb9b982672c2d.s3tc.ctex"]
+source_file="res://MeshLibraries/wolfgang_Material_baseColor.png"
+dest_files=["res://.godot/imported/wolfgang_Material_baseColor.png-6c62f3a909a76b291022c6aabe537ec6.s3tc.ctex"]
 
 [params]
 

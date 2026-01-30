@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://j45e2rkqq85v"
-path="res://.godot/imported/girl2.glb-f849928d5083c8cbd7669b226ca00ff0.scn"
+uid="uid://u2dlpdgpejko"
+path="res://.godot/imported/wabie.glb-b09fea1a1cf05d598af26277f7d519cc.scn"
 
 [deps]
 
-source_file="res://MeshLibraries/girl2.glb"
-dest_files=["res://.godot/imported/girl2.glb-f849928d5083c8cbd7669b226ca00ff0.scn"]
+source_file="res://MeshLibraries/wabie.glb"
+dest_files=["res://.godot/imported/wabie.glb-b09fea1a1cf05d598af26277f7d519cc.scn"]
 
 [params]
 
