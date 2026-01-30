@@ -16,6 +16,9 @@ func display_chosen_item(chosen_item : String):
 		return
 		
 	%chosenItem.text = chosen_item
+	#print("GlobalValues.item_durability: ", GlobalValues.item_durability[chosen_item])
+	%durability.text = str(Durability.durability.get(chosen_item, 0))
+	
 	if chosen_item != "":
 		%UseItem.visible = true
 	else:

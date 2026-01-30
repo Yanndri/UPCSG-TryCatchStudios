@@ -42,6 +42,8 @@ func flip_journal(flip_amount : int) -> String:
 			note = good_pick
 		else: #If item chosen is wrong
 			note = bad_pick
+			var random_num := randi_range(6, 23)
+			note += "\n\nThe " + Durability.break_random_item(random_num) + " Lost it's durability"
 	elif note_count >= 0 and note_count <= notes_size:
 		note = notes[note_count - 1] #this makes it so note_count always starts at 0 index
 	

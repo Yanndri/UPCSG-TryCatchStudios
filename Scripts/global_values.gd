@@ -27,6 +27,14 @@ var chosen_item : String : #If no value selected it should be ""
 		print("Chosen Item: ", chosen_item)
 		emit_signal("item_changed", chosen_item)
 
+var item_durability : Dictionary = {
+	"Medkit" : 100,
+	"Toolbox" : 100,
+	"Bag" : 100,
+	"Shotgun" : 100,
+	"Flashligt" : 100
+}
+
 const max_hunger = 100
 var characters : Dictionary = {
 	"Character1" : {
