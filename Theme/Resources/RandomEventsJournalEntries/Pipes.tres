@@ -8,6 +8,7 @@ Title = "Pipes"
 pick_event = true
 item_needed = "Toolbox"
 punish = true
+sanity_punish = true
 notes = PackedStringArray("I woke to the sound of dripping water, rhythmic like a clock counting down. The pipes above me are leaking. \n\nIf the bunker floods, this sanctuary becomes a tomb.")
 good_pick = "Using the {item_name} was a good idea, now we seem to have prevented the sewer pipe from flooding us."
 bad_pick = "Using the {item_name} wasn't helping much, it kept dripping until afternoon but thank god it stopped now. Sadly {item_name} is a little worned out."

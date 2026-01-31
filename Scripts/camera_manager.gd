@@ -16,6 +16,7 @@ func main_view() -> void:
 
 func journal_view():
 	switch_camera(1)
+	GlobalValues.click_event_type = GlobalValues.click_events.journal
 	%JournalEntries.visible = true
 	%Map.disable_tweens() #This stops the glowing
 	%Map.disable_journal_texture() #To stop the very white texture render

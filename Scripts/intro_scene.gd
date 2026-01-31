@@ -1,8 +1,9 @@
 extends Node3D
 
-@export var main_scene : PackedScene
+#@export var main_scene : PackedScene = preload("res://Main.tscn")
 
 func _ready() -> void:
+	var main_scene = load("res://Main.tscn")
 	%Lamp._ready_light()
 	await get_tree().create_timer(3).timeout
 	await %Lamp.flicker(16)

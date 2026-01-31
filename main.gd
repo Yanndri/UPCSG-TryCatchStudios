@@ -6,10 +6,6 @@ func _ready() -> void:
 	restart()
 
 func restart():
-	%JournalEntries.visible = false
-	%MainUI.visible = false
-	%Settings.visible = false
-	%GameOver.visible = false
 	GlobalValues.characters = { "Character1" : {
 		"name": "Wilson",
 		"pronouns" : "He",
@@ -24,6 +20,10 @@ func restart():
 		"hunger" : 90,
 		"thirst" : 120
 	},}
+	%JournalEntries.visible = false
+	%MainUI.visible = false
+	%Settings.visible = false
+	%GameOver.visible = false
 	
 	main_menu()
 
