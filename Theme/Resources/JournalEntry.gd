@@ -3,7 +3,7 @@ extends Resource
 
 @export var Title : String
 @export var pick_event : bool #Choose item event
-@export_enum("Shotgun", "Medkit", "Toolbox", "Bag", "Flashlight") var item_needed : String
+@export_enum("Shotgun", "Medkit", "Toolbox", "Bag", "Flashlight", "Cube") var item_needed : String
 
 @export var yes_or_no_event : bool #Yes or No event
 enum yes_or_no_options {NA, Yes, No} 
@@ -12,11 +12,14 @@ enum yes_or_no_options {NA, Yes, No}
 enum ration_types {NA, Food, Water} 
 @export var reward_ration : ration_types
 @export var reward_item : bool
-
+@export var random_punishment : bool
+@export var punish : bool
+@export var sanity_punish : bool
 @export_multiline var notes : PackedStringArray
 @export_multiline var good_pick : String #For events when they picked correctly
 @export_multiline var bad_pick : String #For events when they picked correctly
 
+@export var the_end : bool
 
 var notes_size : int
 var note_count := 0 :
@@ -27,6 +30,7 @@ var daily_check_finished : bool
 var pick_event_finished : bool
 var event_done : bool
 
+
 func _have_event() -> bool: return pick_event or yes_or_no_event
 func event_finished() -> bool: return _have_event() and (is_pick_event_finished())
 
@@ -36,14 +40,24 @@ func flip_journal(flip_amount : int) -> String:
 	var note : String
 	note_count += flip_amount ##if 1 goes to next page, if -1 goes back page
 	
-	if pick_event and GlobalValues.chosen_item != "": ##This is for pick event
+	if ((pick_event or Title == "Cube2") and GlobalValues.chosen_item != ""): ##This is for pick event
 		pick_event_finished = true #Set to true since the pick event is finished
 		if GlobalValues.chosen_item == item_needed: #If item chosen is correct
 			note = good_pick
+			reward(note)
+			if Title == "Cube2": 
+				GlobalValues.cube_accepted = true
+				note += "\n\nCube Accepted"
 		else: #If item chosen is wrong
 			note = bad_pick
-			var random_num := randi_range(6, 23)
-			note += "\n\nThe " + Durability.break_random_item(random_num) + " Lost it's durability"
+			var random_num := randi_range(-23, -6)
+			if punish:
+				note += "\n\nThe " + Durability.change_durability_item(GlobalValues.chosen_item, random_num) + " Lost a bit of its durability"
+			elif random_punishment:
+				note += "\n\nThe " + Durability.change_durability_random_item(random_num) + " Lost a bit of its durability"
+			if sanity_punish:
+				note += Durability.sanity_punish(note)
+			if Title == "Cube2": GlobalValues.cube_accepted = false
 	elif note_count >= 0 and note_count <= notes_size:
 		note = notes[note_count - 1] #this makes it so note_count always starts at 0 index
 	
@@ -77,11 +91,12 @@ func is_all_notes_finished() -> bool: #Check if all journal notes are done read
 func daily_check(note : String): #This shows after all pages are finished
 	for key in GlobalValues.characters.keys():
 		var character = GlobalValues.characters[key]
-		note += "\n\n" + character["name"]
+		note += "\n\n" + character["name"] + " "
 		note += CharacterStats.get_feeling_comments(character["sanity"])
 		note += character["pronouns"] + "'s "
 		note += CharacterStats.get_hunger_comments(character["hunger"])
 		note += CharacterStats.get_thirst_comments(character["thirst"]) + "."
+		
 	
 	return note
 
@@ -89,10 +104,16 @@ func time_for_rations(note : String) -> String:
 	note += "\n\nIt's time to ration the food and water, we have plenty of rations so maybe rations may not be a problem. \n\nOne can and one water is good enough for all of us we'll share it the whole day" 
 	return note
 
-func reward() -> String:
-	var note : String
-	
-	#match reward_ration:
-		
+func reward(note : String) -> String:
+	var random_num := randi_range(6, 23)
+	if reward_item:
+		note += "\n\nThe " + Durability.change_durability_random_item(random_num) + " Gained more durability"
+	if reward_ration != ration_types.NA:
+		if reward_ration == ration_types.Food: 
+			GlobalValues.food_amount += 1
+			note += "\n\nFood +1"
+		elif reward_ration == ration_types.Water: 
+			GlobalValues.water_amount += 1
+			note += "\n\nWater +1"
 	
 	return note

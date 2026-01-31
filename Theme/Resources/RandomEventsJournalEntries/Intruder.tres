@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://dmsi7xitg0qv6"]
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://dmsi7xitg0qv6"]
 
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_xyx03"]
 
@@ -7,9 +7,10 @@ script = ExtResource("1_xyx03")
 Title = "Intruder"
 pick_event = true
 item_needed = "Shotgun"
+punish = true
 notes = PackedStringArray("SOMETHING . or SOMEONE. is trying to get in. \n\nThe sound is steady, deliberate, like claws dragging across steel.\n\nI don’t know if it’s desperate survivors or something worse. Either way, I need to be ready.\n")
 good_pick = "A metal whip appeared as the bunker door slowly pried open.
 
 BOOM!! I squeeze my {item_name} in the tiny whole where the whip was and shot through it. It seems that worked as the disturbance seems to be gone but it might come back again."
-bad_pick = "A metal whip appeared as the bunker door slowly pried open. It swinged very accurately like the whip itself is a creature, I used my {item_name} as a cover and kicked the whip away. Thankfully it ran away, but now {item_name} is broken. "
+bad_pick = "A metal whip appeared as the bunker door slowly pried open. It swinged very accurately like the whip itself is a creature, I used my {item_name} as a cover and kicked the whip away. Thankfully it ran away, but now {item_name} is a little broken. "
 metadata/_custom_type_script = "uid://x74fvggltqyk"

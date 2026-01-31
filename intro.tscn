@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://jskih3iupa5"]
+[gd_scene format=4 uid="uid://jskih3iupa5"]
 
 [ext_resource type="Script" uid="uid://b8mfuptp1qa1c" path="res://Scripts/intro_scene.gd" id="1_y72e6"]
 [ext_resource type="Shader" uid="uid://y5j3apk18mqq" path="res://Theme/dot_dither.gdshader" id="2_u2rf6"]

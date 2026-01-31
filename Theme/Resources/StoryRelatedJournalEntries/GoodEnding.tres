@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://b11kuxrnyu5ie"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_5llns"]
+
+[resource]
+script = ExtResource("1_5llns")
+Title = "GoodEnding"
+notes = PackedStringArray("Everything goes silent.\n\nNo noises. No movement. No signs of life.\n\nThis feels worse than danger.\n", "I think it\'s time for us to head out.\n\nIt\'s time to be ready and face the outside world")
+the_end = true
+metadata/_custom_type_script = "uid://x74fvggltqyk"

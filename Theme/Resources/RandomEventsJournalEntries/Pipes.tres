@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://df45qym3jyxqq"]
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://df45qym3jyxqq"]
 
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_uavxu"]
 
@@ -7,7 +7,8 @@ script = ExtResource("1_uavxu")
 Title = "Pipes"
 pick_event = true
 item_needed = "Toolbox"
+punish = true
 notes = PackedStringArray("I woke to the sound of dripping water, rhythmic like a clock counting down. The pipes above me are leaking. \n\nIf the bunker floods, this sanctuary becomes a tomb.")
 good_pick = "Using the {item_name} was a good idea, now we seem to have prevented the sewer pipe from flooding us."
-bad_pick = "Using the {item_name} wasn't helping much, it kept dripping until afternoon but thank god it stopped now. Sadly {item_name} can't be retrieved anymore."
+bad_pick = "Using the {item_name} wasn't helping much, it kept dripping until afternoon but thank god it stopped now. Sadly {item_name} is a little worned out."
 metadata/_custom_type_script = "uid://x74fvggltqyk"

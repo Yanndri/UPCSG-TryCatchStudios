@@ -1,17 +1,16 @@
-[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://lsjray6rcfix"]
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://cvk4oxbclpf2s"]
 
-[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_rfmt8"]
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_o66wb"]
 
 [resource]
-script = ExtResource("1_rfmt8")
-Title = "RustedDoor"
+script = ExtResource("1_o66wb")
+Title = "BloodFloor"
 pick_event = true
-item_needed = "Toolbox"
-notes = PackedStringArray("One of the inner bunker doors is stuck halfway shut.\n\nBehind it, you hear faint breathing.\n\nLeaving it like this feels dangerous.")
-good_pick = "Using the Toolbox, you loosen the rusted hinges and seal the door properly.
+item_needed = "Medkit"
+sanity_punish = true
+notes = PackedStringArray("Fresh blood trails from the bunker stairs.\n\n It’s not mine.\n\nSomeone or something was here recently.\n\nI noticed a small cut in my shoulder, I just noticed this now")
+good_pick = "I carefully clean the blood and treat the small cut.
 
-The breathing stops.
-You feel safer.
-"
-bad_pick = "A metal whip appeared as the bunker door slowly pried open. It swinged very accurately like the whip itself is a creature, I used my {item_name} as a cover and kicked the whip away. Thankfully it ran away, but now {item_name} is broken. "
+It's better to be safe than sorry."
+bad_pick = "It's probably nothing to fret about, There's other things that I have to focus in."
 metadata/_custom_type_script = "uid://x74fvggltqyk"

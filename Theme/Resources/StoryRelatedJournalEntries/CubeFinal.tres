@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://7wecgx5efg0b"]
+
+[ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_rfyoa"]
+
+[resource]
+script = ExtResource("1_rfyoa")
+Title = "CubeFinal"
+notes = PackedStringArray("The Cube emits a small light, I can feel it\'s power.\n\nI touched the cube with my hand.", "Everything fades to black.\n\nTHE END......")
+the_end = true
+metadata/_custom_type_script = "uid://x74fvggltqyk"

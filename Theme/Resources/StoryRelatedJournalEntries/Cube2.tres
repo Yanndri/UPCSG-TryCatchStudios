@@ -1,10 +1,12 @@
-[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://0gyegnjg1pq"]
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://0gyegnjg1pq"]
 
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_m1ghs"]
 
 [resource]
 script = ExtResource("1_m1ghs")
 Title = "Cube2"
+pick_event = true
+item_needed = "Cube"
 yes_or_no_event = true
 yes_or_no = 1
 notes = PackedStringArray("Squeak SQueak SQUeak SQUEak SQUEAKKK!!!! These rats are so noisy, I tried screaming at them SHUT UP!! and peeked on the crack to see what they\'re doing.  There I saw a cube, a golden cube, it was dark but I can tell it was gold, I also saw the rats circling the Golden Cube like they\'re praising it, these rats seem to be smarter than your typical rats. I definitely should leave them to whatever their doing or I could stop this madness by trying to take the Cube.")

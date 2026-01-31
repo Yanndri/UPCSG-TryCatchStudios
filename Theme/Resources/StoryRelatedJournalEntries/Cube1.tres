@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="JournalEntry" load_steps=2 format=3 uid="uid://d16shoco48cy2"]
+[gd_resource type="Resource" script_class="JournalEntry" format=3 uid="uid://d16shoco48cy2"]
 
 [ext_resource type="Script" uid="uid://x74fvggltqyk" path="res://Theme/Resources/JournalEntry.gd" id="1_t8w12"]
 
@@ -7,6 +7,7 @@ script = ExtResource("1_t8w12")
 Title = "Cube1"
 pick_event = true
 item_needed = "Flashlight"
+reward_ration = 1
 notes = PackedStringArray("I heard a mouse squeaking inside a crack in the bunker walls, I almost kinda thought there wouldn\'t be any critters inside because there hasn\'t been any even for the past few days here shockingly.  I should look inside the crack see what I can find, maybe I can even find something Useful.")
 good_pick = "I flashed a light with my {item_name} through the cracks, I saw..... RATS! shocking. Oh and there's also a can of dried beans nice."
 bad_pick = "Well I used {item_name} to look through the cracks, not very helpful, I guess I'll leave the rats be for now."

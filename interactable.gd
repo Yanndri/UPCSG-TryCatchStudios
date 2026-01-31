@@ -20,6 +20,9 @@ func _toggle_input_ray_pickable(item : String): #Check if item is already presse
 			self.input_ray_pickable = false
 		else:
 			self.input_ray_pickable = true
+	if item_type == category.items:
+		if Durability.get_durability(item_name) <= 85:
+			get_parent().visible = false
 
 func _on_area_3d_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:

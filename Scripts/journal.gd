@@ -9,8 +9,9 @@ var journal_entries_audit : Array[JournalEntry] #All journal entries used are st
 var notes_audit : PackedStringArray #All notes used are stored here
 
 ##SPOILERS>>
-var cube_accepted : bool #if the player chooses to use the cube
 ##<<<<<<<<<<<<
+
+var flip_sfx : AudioStreamMP3 = load("res://Music/page-flip-47177.mp3")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -28,8 +29,11 @@ func get_journals(day : int):
 		6: current_journal_entry = find_journal_entry("Cube1",  story_journal_entries)
 		7: current_journal_entry = find_journal_entry("Cube2",  story_journal_entries)
 		8:
-			if cube_accepted: current_journal_entry = find_journal_entry("Cube3",  story_journal_entries)
+			if GlobalValues.cube_accepted: current_journal_entry = find_journal_entry("Cube3",  story_journal_entries)
 			else: current_journal_entry = get_random_journal_entry()
+		15:
+			if GlobalValues.cube_accepted: current_journal_entry = find_journal_entry("CubeFinal",  story_journal_entries)
+			else: current_journal_entry = find_journal_entry("GoodEnding",  story_journal_entries)
 		_: current_journal_entry = get_random_journal_entry()
 	
 	if current_journal_entry != null:
@@ -46,7 +50,8 @@ func start_journal(journal_entry : JournalEntry): #Start of every Journal Entry 
 #Writes the notes from the entry, can toggle between next and back page by changing flip amount either 1 or -1
 func write_journal(journal_entry : JournalEntry, flip_amount : int): 
 	var note : String = journal_entry.flip_journal(flip_amount) #Get the note from the next page of the journal
-	
+	AudioUtility.add_sfx_mp3(self, flip_sfx)
+
 	%JournalAnimations.play("flip") #Animation only, the animation also changes transparency of text label
 	toggle_disable_all_buttons(true) #disable buttons while the animation is ongoing
 	await get_tree().create_timer(0.5).timeout #for animation
@@ -82,18 +87,19 @@ func toggle_visibility(journal_entry : JournalEntry):
 	%Day.visible = journal_entry.is_first_page() #Only visible if the first note of the journal entry
 	#%BackPage.visible = not journal_entry.is_first_page() #Only visible if not the first note of the journal entry
 	%NextPage.visible = not journal_entry.is_after_last_page() or not journal_entry.is_ration_time() #Only visible if not the last note of the journal entry
-	
+	if journal_entry.the_end and (journal_entry.is_ration_time() or journal_entry.is_after_last_page()):
+		%TheEnd.visible = true
 	GlobalValues.chosen_item = "" #erase the values from the pick item event to start over again
 	%PickEvent.visible = false
 	%YesOrNo.visible = false
 	%PickRations.visible = false
 	%Skip.visible = false
-	if journal_entry.pick_event == true and not journal_entry.is_pick_event_finished():
+	if journal_entry.pick_event == true and not journal_entry.is_pick_event_finished() and not current_journal_entry.Title == "Cube2":
 		%PickEvent.visible = true
 		%YesOrNo.visible = false
 		%NextPage.visible = false
 		if GlobalValues.chosen_item != "": %NextPage.visible = true
-	if journal_entry.yes_or_no_event == true:
+	if journal_entry.yes_or_no_event == true and not GlobalValues.cube_finished:
 		%PickEvent.visible = false
 		%YesOrNo.visible = true
 	if journal_entry.is_ration_time(): 
@@ -122,3 +128,16 @@ func skip_note(journal_entry : JournalEntry):
 		%CameraManager.main_view()
 
 func _on_confirm_rations_pressed() -> void: skip_note(current_journal_entry)
+
+func _on_yes_button_pressed() -> void:
+	if current_journal_entry.Title == "Cube2":
+		GlobalValues.chosen_item = "Cube"
+		write_journal(current_journal_entry, 1)
+		GlobalValues.cube_finished = true
+
+
+func _on_no_button_pressed() -> void:
+	if current_journal_entry.Title == "Cube2":
+		GlobalValues.chosen_item = "Shotgun"
+		write_journal(current_journal_entry, 1)
+		GlobalValues.cube_finished = true

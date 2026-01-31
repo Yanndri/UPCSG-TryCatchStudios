@@ -40,16 +40,16 @@ var characters : Dictionary = {
 	"Character1" : {
 		"name": "Wilson",
 		"pronouns" : "He",
-		"sanity" : 50,
-		"hunger" : 70,
-		"thirst" : 70
+		"sanity" : 69,
+		"hunger" : 120,
+		"thirst" : 90
 	},
 	"Character2" : {
 		"name": "Wendy",
 		"pronouns" : "She",
-		"sanity" : 80,
-		"hunger" : 40,
-		"thirst" : 40
+		"sanity" : 100,
+		"hunger" : 90,
+		"thirst" : 120
 	},
 	#"Character3" : {
 		#"name": "Russel",
@@ -65,6 +65,12 @@ var characters : Dictionary = {
 
 var eat_food : bool #When on ration time and they confirmed to eat food
 var drink_water : bool #When on ration time and they confirmed to drink water
+var cube_accepted : bool :
+	set(value):
+		cube_accepted = value
+		emit_signal("cube_changed", cube_accepted)
+
+var cube_finished : bool
 
 #when in main view and you are prompt to click, used to determine which type should glow in map.gd
 #either items, journal, rations, door will glow
@@ -81,3 +87,4 @@ signal water_amount_changed
 signal click_event_type_changed
 signal item_changed
 signal day_changed
+signal cube_changed

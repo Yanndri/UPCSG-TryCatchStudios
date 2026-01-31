@@ -10,7 +10,7 @@ static func get_feeling_comments(sanity : int) -> String:
 		sanity_note = " is feeling okay, managing to stay balanced "
 	elif sanity < 80:
 		sanity_note = " is doing well, and keeping a steady rhythm "
-	elif sanity < 100:
+	elif sanity < 100 or sanity >= 100:
 		sanity_note = " is feeling great, and full of positivity "
 
 	return sanity_note
@@ -25,7 +25,7 @@ static func get_hunger_comments(hunger : int) -> String:
 		hunger_note = " starting to feel hungry "
 	elif hunger < 80:
 		hunger_note = " well fed "
-	elif hunger < 100:
+	elif hunger < 100 or hunger >= 100:
 		hunger_note = " full from food "
 
 	return hunger_note
@@ -40,7 +40,7 @@ static func get_thirst_comments(thirst : int) -> String:
 		thirst_note = " and is beginning to feel the dryness "
 	elif thirst < 80:
 		thirst_note = " and is slightly satiated "
-	elif thirst < 100:
+	elif thirst < 100 or thirst >= 100:
 		thirst_note = " and is well hydrated "
 
 	return thirst_note

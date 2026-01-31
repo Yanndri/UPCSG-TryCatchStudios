@@ -7,7 +7,8 @@ script = ExtResource("1_qmh8k")
 Title = "FailingGenerator"
 pick_event = true
 item_needed = "Toolbox"
-notes = PackedStringArray("Power drops suddenly. Darkness floods the bunker.\n\nNo power means no safety.\n")
+punish = true
+notes = PackedStringArray("Power drops occasionaly. Darkness will flood the bunker.\n\nNo power means no safety.\n")
 good_pick = "You repair the generator just before it dies completely.
 
 Lights return."

@@ -7,6 +7,8 @@ script = ExtResource("1_txbvy")
 Title = "PoisonedAir"
 pick_event = true
 item_needed = "Medkit"
+punish = true
+sanity_punish = true
 notes = PackedStringArray("The air smells wrong. \n\nCough.. cough.. cough..\nMetallic. Burning.\n\nBreathing hUrTsSs.\n")
 good_pick = "You treat your lungs and seal the vents temporarily.
 

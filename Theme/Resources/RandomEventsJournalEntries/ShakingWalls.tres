@@ -7,13 +7,14 @@ script = ExtResource("1_5v41y")
 Title = "ShakingWalls"
 pick_event = true
 item_needed = "Toolbox"
+random_punishment = true
 notes = PackedStringArray("The walls vibrate violently.\n\n Dust rains from the ceiling.\n\nThis place might collapse.\n")
 good_pick = "You reinforce weak support beams just in time.
 
 The shaking stops.
 
 The bunker holds."
-bad_pick = "You grab {item_name} and hide.
+bad_pick = "You tried to use {item_name} to stop the shaking but it didn't seem to work.
 
 A section collapses, crushing supplies."
 metadata/_custom_type_script = "uid://x74fvggltqyk"
